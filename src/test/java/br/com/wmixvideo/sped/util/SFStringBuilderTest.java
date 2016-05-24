@@ -25,9 +25,9 @@ public class SFStringBuilderTest {
         Assert.assertEquals("|0001|FERNANDO|", new SFStringBuilder().append("0001").append(" FERNANDO ").toString());
     }
 
-    @Test(expected = java.lang.NullPointerException.class)
-    public void deveGerarNullPointerExceptionQuandoTextoNulo() {
-        new SFStringBuilder().append(null);
+    @Test
+    public void deveGerarEmBrancoQuandoTextoNulo() {
+        Assert.assertEquals("||", new SFStringBuilder().append(null).toString());
     }
 
     @Test

@@ -5,12 +5,26 @@
     <artifactId>sped</artifactId>
     <packaging>jar</packaging>
     <version>0.1-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <name>sped</name>
     <description>Biblioteca de geração do Sped Fiscal</description>
     <url>https://github.com/wmixlabs/sped</url>
 
     <properties>
         <junit.version>4.12</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
     </properties>
 
     <dependencies>
@@ -19,6 +33,18 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+
+        <!-- Commons Lang -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
         </dependency>
     </dependencies>
 </project>

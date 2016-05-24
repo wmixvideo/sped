@@ -10,7 +10,10 @@ public final class SFStringBuilder {
     }
 
     public SFStringBuilder append(final String string) {
-        this.stringBuilder.append(string.trim().replaceAll("\\|", " ")).append(SEPARADOR);
+        if (string != null) {
+            this.stringBuilder.append(string.trim().replaceAll("\\|", " "));
+        }
+        this.stringBuilder.append(SEPARADOR);
         return this;
     }
 
