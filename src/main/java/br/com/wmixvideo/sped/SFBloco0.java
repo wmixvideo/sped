@@ -32,20 +32,37 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class SFBloco0 {
+public class SFBloco0 implements SFBloco {
 
-    public static List<SFRegistro> gerarLinhas(final SFEntidade entidade, final SFReferencia referencia, final SFFinalidadeArquivo finalidade, final List<SFItem> itens, final List<String> informacoesComplementares, final SFObservacaoLancamentoFiscal observacaoLancamentoFiscal) {
+    private final SFEntidade entidade;
+    private final SFReferencia referencia;
+    private final SFFinalidadeArquivo finalidade;
+    private final List<SFItem> itens;
+    private final List<String> informacoesComplementares;
+    private final SFObservacaoLancamentoFiscal observacaoLancamentoFiscal;
+
+    public SFBloco0(final SFEntidade entidade, final SFReferencia referencia, final SFFinalidadeArquivo finalidade, final List<SFItem> itens, final List<String> informacoesComplementares, final SFObservacaoLancamentoFiscal observacaoLancamentoFiscal) {
+        this.entidade = entidade;
+        this.referencia = referencia;
+        this.finalidade = finalidade;
+        this.itens = itens;
+        this.informacoesComplementares = informacoesComplementares;
+        this.observacaoLancamentoFiscal = observacaoLancamentoFiscal;
+    }
+
+    @Override
+    public List<SFRegistro> gerarLinhas() {
         final List<SFRegistro> linhas = new ArrayList<>();
-        linhas.add(gerarLinhaAberturaArquivoDigital(entidade, referencia, finalidade));
+        linhas.add(gerarLinhaAberturaArquivoDigital(this.entidade, this.referencia, this.finalidade));
         linhas.add(gerarLinhaAberturaBloco());
-        linhas.add(gerarLinhaDadosComplementaresEntidade(entidade));
-        linhas.addAll(gerarLinhasDadosContribuinte(entidade.getContribuinteSubstituicoes()));
-        linhas.add(gerarLinhaDadosContabilista(entidade.getContador()));
-        linhas.addAll(gerarLinhasPaticipantes(entidade.getParticipantes()));
-        linhas.addAll(gerarLinhasUnidadesMedida(itens.stream().map(SFItem::getUnidadeMedida).collect(Collectors.toSet())));
-        linhas.addAll(gerarLinhasItens(itens));
-        linhas.addAll(gerarLinhasInformacoesComplementares(informacoesComplementares));
-        linhas.add(gerarLinhaObservacaoLancamentoFiscal(observacaoLancamentoFiscal));
+        linhas.add(gerarLinhaDadosComplementaresEntidade(this.entidade));
+        linhas.addAll(gerarLinhasDadosContribuinte(this.entidade.getContribuinteSubstituicoes()));
+        linhas.add(gerarLinhaDadosContabilista(this.entidade.getContador()));
+        linhas.addAll(gerarLinhasPaticipantes(this.entidade.getParticipantes()));
+        linhas.addAll(gerarLinhasUnidadesMedida(this.itens.stream().map(SFItem::getUnidadeMedida).collect(Collectors.toSet())));
+        linhas.addAll(gerarLinhasItens(this.itens));
+        linhas.addAll(gerarLinhasInformacoesComplementares(this.informacoesComplementares));
+        linhas.add(gerarLinhaObservacaoLancamentoFiscal(this.observacaoLancamentoFiscal));
         linhas.add(gerarLinhaEncerramentoBloco(linhas.size() + 1));
         return linhas;
     }
