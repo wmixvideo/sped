@@ -28,7 +28,6 @@ public class SFSpedFiscalTest {
     @Test
     public void deveGerarArquivoDeSpedFiscal() throws Exception {
         final File file = new File("/tmp/sped.txt");
-        System.out.println(file.getAbsolutePath());
 
         if (file.exists()) {
             file.delete();

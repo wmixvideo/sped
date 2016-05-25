@@ -19,6 +19,7 @@ public class SFSpedFiscal {
         sped.addAll(new SFBloco0(entidade, referencia, finalidade, itens, informacoesComplementares, observacaoLancamentoFiscal).gerarLinhas());
         //sped.addAll(new SFBlocoC(entidade.getEndereco().getUf(), new ArrayList<>()).gerarLinhas());
         sped.addAll(new SFBlocoH(referencia, inventarios).gerarLinhas());
+        sped.addAll(new SFBlocoK(referencia, inventarios).gerarLinhas());
         return sped.stream().map(SFRegistro::toString).collect(Collectors.toList());
     }
 }

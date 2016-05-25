@@ -24,6 +24,7 @@ public class SFEntidade implements Serializable {
 
     public SFEntidade() {
         this.endereco = new SFEndereco();
+        this.contador = new SFContador();
         this.participantes = new ArrayList<>();
         this.contribuinteSubstituicoes = new ArrayList<>();
     }
@@ -126,8 +127,9 @@ public class SFEntidade implements Serializable {
         return contador;
     }
 
-    public void setContador(SFContador contador) {
+    public SFEntidade setContador(SFContador contador) {
         this.contador = contador;
+        return this;
     }
 
     public List<SFParticipante> getParticipantes() {
@@ -138,7 +140,8 @@ public class SFEntidade implements Serializable {
         return endereco;
     }
 
-    public void setEndereco(SFEndereco endereco) {
+    public SFEntidade setEndereco(SFEndereco endereco) {
         this.endereco = endereco;
+        return this;
     }
 }
