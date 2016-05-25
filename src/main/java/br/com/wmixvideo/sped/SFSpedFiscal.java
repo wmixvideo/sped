@@ -17,9 +17,10 @@ public class SFSpedFiscal {
     public static List<String> gerarSpedFiscal(final SFEntidade entidade, final SFReferencia referencia, final SFFinalidadeArquivo finalidade, final List<SFItem> itens, final List<String> informacoesComplementares, final SFObservacaoLancamentoFiscal observacaoLancamentoFiscal, List<SFInventario> inventarios) throws Exception {
         final List<SFRegistro> sped = new ArrayList<>();
         sped.addAll(new SFBloco0(entidade, referencia, finalidade, itens, informacoesComplementares, observacaoLancamentoFiscal).gerarLinhas());
-        //sped.addAll(new SFBlocoC(entidade.getEndereco().getUf(), new ArrayList<>()).gerarLinhas());
+        sped.addAll(new SFBlocoC(entidade.getEndereco().getUf(), new ArrayList<>()).gerarLinhas());
         sped.addAll(new SFBlocoH(referencia, inventarios).gerarLinhas());
         sped.addAll(new SFBlocoK(referencia, inventarios).gerarLinhas());
+        sped.addAll(new SFBloco1().gerarLinhas());
         return sped.stream().map(SFRegistro::toString).collect(Collectors.toList());
     }
 }
