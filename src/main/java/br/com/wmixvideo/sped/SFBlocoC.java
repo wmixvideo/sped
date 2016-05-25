@@ -3,8 +3,8 @@ package br.com.wmixvideo.sped;
 import br.com.wmixvideo.sped.leiaute.SFAberturaBloco;
 import br.com.wmixvideo.sped.leiaute.SFIndicadorMovimento;
 import br.com.wmixvideo.sped.leiaute.SFRegistro;
-import br.com.wmixvideo.sped.leiaute.blocoC.SFC100NotaFiscal;
-import br.com.wmixvideo.sped.leiaute.blocoC.SFC101NotaFiscalInformacaoComplementar;
+import br.com.wmixvideo.sped.leiaute.blococ.SFC100NotaFiscal;
+import br.com.wmixvideo.sped.leiaute.blococ.SFC101NotaFiscalInformacaoComplementar;
 import br.com.wmixvideo.sped.modelo.SFNotaFiscal;
 import br.com.wmixvideo.sped.modelo.SFUnidadeFederativa;
 

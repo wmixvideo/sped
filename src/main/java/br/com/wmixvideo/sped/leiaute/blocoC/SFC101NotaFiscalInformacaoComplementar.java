@@ -1,4 +1,4 @@
-package br.com.wmixvideo.sped.leiaute.blocoC;
+package br.com.wmixvideo.sped.leiaute.blococ;
 
 import br.com.wmixvideo.sped.leiaute.SFRegistro;
 import br.com.wmixvideo.sped.modelo.SFNotaFiscal;

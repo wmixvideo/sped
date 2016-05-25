@@ -5,6 +5,7 @@ import br.com.wmixvideo.sped.modelo.SFContador;
 import br.com.wmixvideo.sped.modelo.SFContribuinteSubstituicao;
 import br.com.wmixvideo.sped.modelo.SFEndereco;
 import br.com.wmixvideo.sped.modelo.SFEntidade;
+import br.com.wmixvideo.sped.modelo.SFInventario;
 import br.com.wmixvideo.sped.modelo.SFItem;
 import br.com.wmixvideo.sped.modelo.SFItemTipo;
 import br.com.wmixvideo.sped.modelo.SFObservacaoLancamentoFiscal;
@@ -83,8 +84,9 @@ public class SFSpedFiscalTest {
         final SFReferencia referencia = SFReferencia.of(2016, Month.FEBRUARY);
         final SFFinalidadeArquivo finalidadeArquivo = SFFinalidadeArquivo.REMESSA_ORIGINAL;
         final SFObservacaoLancamentoFiscal observacaoLancamentoFiscal = new SFObservacaoLancamentoFiscal("", "");
+        final List<SFInventario> inventarios = Collections.emptyList();
 
-        final List<String> linhas = SFSpedFiscal.gerarSpedFiscal(entidade, referencia, finalidadeArquivo, itens, informacoesComplementares, observacaoLancamentoFiscal);
+        final List<String> linhas = SFSpedFiscal.gerarSpedFiscal(entidade, referencia, finalidadeArquivo, itens, informacoesComplementares, observacaoLancamentoFiscal, inventarios);
         try (final FileOutputStream stream = new FileOutputStream(file)) {
             for (String linha : linhas) {
                 stream.write(linha.concat("\n").getBytes());
