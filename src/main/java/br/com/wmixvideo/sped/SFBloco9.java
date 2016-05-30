@@ -1,9 +1,9 @@
 package br.com.wmixvideo.sped;
 
-public class SFBlocoK extends SFBloco {
+public class SFBloco9 extends SFBloco {
 
     @Override
     String getIdentificadorBloco() {
-        return "K";
+        return "9";
     }
 }

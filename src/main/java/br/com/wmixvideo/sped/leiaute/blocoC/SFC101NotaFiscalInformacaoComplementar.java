@@ -1,17 +1,17 @@
 package br.com.wmixvideo.sped.leiaute.blococ;
 
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
-import br.com.wmixvideo.sped.modelo.SFNotaFiscal;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
 
-public class SFC101NotaFiscalInformacaoComplementar implements SFRegistro {
+import java.math.BigDecimal;
 
-    private final SFNotaFiscal nota;
+public class SFC101NotaFiscalInformacaoComplementar implements SFLinha {
 
-    public SFC101NotaFiscalInformacaoComplementar(final SFNotaFiscal nota) {
-        this.nota = nota;
-    }
+
+    private BigDecimal valorIcmsPartilhaOrigem;
+    private BigDecimal valorIcmsPartilhaDestino;
+    private BigDecimal valorIcmsPartilhaDestinoFundoCombatePobreza;
 
     @Override
     public String getCodigoRegistro() {
@@ -22,9 +22,24 @@ public class SFC101NotaFiscalInformacaoComplementar implements SFRegistro {
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
         texto.append(this.getCodigoRegistro());
-        texto.append(SFUtil.formatToString(this.nota.getValorIcmsPartilhaDestinoFundoCombatePobreza()));
-        texto.append(SFUtil.formatToString(this.nota.getValorIcmsPartilhaDestino()));
-        texto.append(SFUtil.formatToString(this.nota.getValorIcmsPartilhaOrigem()));
+        texto.append(SFUtil.formatToString(this.valorIcmsPartilhaDestinoFundoCombatePobreza));
+        texto.append(SFUtil.formatToString(this.valorIcmsPartilhaDestino));
+        texto.append(SFUtil.formatToString(this.valorIcmsPartilhaOrigem));
         return texto.toString();
+    }
+
+    public SFC101NotaFiscalInformacaoComplementar setValorIcmsPartilhaDestino(BigDecimal valorIcmsPartilhaDestino) {
+        this.valorIcmsPartilhaDestino = valorIcmsPartilhaDestino;
+        return this;
+    }
+
+    public SFC101NotaFiscalInformacaoComplementar setValorIcmsPartilhaDestinoFundoCombatePobreza(BigDecimal valorIcmsPartilhaDestinoFundoCombatePobreza) {
+        this.valorIcmsPartilhaDestinoFundoCombatePobreza = valorIcmsPartilhaDestinoFundoCombatePobreza;
+        return this;
+    }
+
+    public SFC101NotaFiscalInformacaoComplementar setValorIcmsPartilhaOrigem(BigDecimal valorIcmsPartilhaOrigem) {
+        this.valorIcmsPartilhaOrigem = valorIcmsPartilhaOrigem;
+        return this;
     }
 }

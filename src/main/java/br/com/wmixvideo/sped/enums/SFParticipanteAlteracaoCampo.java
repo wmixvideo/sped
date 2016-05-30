@@ -1,10 +1,12 @@
-package br.com.wmixvideo.sped.modelo;
+package br.com.wmixvideo.sped.enums;
 
 public enum SFParticipanteAlteracaoCampo {
     NOME("03"),
     CODIGO_PAIS("04"),
     CNPJ("05"),
     CPF("06"),
+    @Deprecated
+    INSCRICAO_ESTADUAL("07"),
     CODIDO_MUNICIPIO("08"),
     SUFRAMA("09"),
     ENDERECO("10"),
@@ -14,11 +16,11 @@ public enum SFParticipanteAlteracaoCampo {
 
     private final String numero;
 
-    SFParticipanteAlteracaoCampo(String numero) {
+    private SFParticipanteAlteracaoCampo(String numero) {
         this.numero = numero;
     }
 
     public String getNumero() {
-        return numero;
+        return this.numero;
     }
 }

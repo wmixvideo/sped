@@ -1,17 +1,17 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
-import br.com.wmixvideo.sped.modelo.SFParticipanteAlteracao;
+import br.com.wmixvideo.sped.enums.SFParticipanteAlteracaoCampo;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
 
-public class SF0175AlteracaoCadastroParticipante implements SFRegistro {
+import java.time.LocalDate;
 
-    private final SFParticipanteAlteracao participanteAlteracao;
+public class SF0175AlteracaoCadastroParticipante implements SFLinha {
 
-    public SF0175AlteracaoCadastroParticipante(final SFParticipanteAlteracao participanteAlteracao) {
-        this.participanteAlteracao = participanteAlteracao;
-    }
+    private LocalDate data;
+    private SFParticipanteAlteracaoCampo campo;
+    private String conteudoAnterior;
 
     @Override
     public String getCodigoRegistro() {
@@ -22,10 +22,24 @@ public class SF0175AlteracaoCadastroParticipante implements SFRegistro {
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
         texto.append(this.getCodigoRegistro());
-        texto.append(SFUtil.formatToString(this.participanteAlteracao.getData()));
-        texto.append(this.participanteAlteracao.getCampo().getNumero());
-        texto.append(this.participanteAlteracao.getConteudoAnterior());
-
+        texto.append(SFUtil.formatToString(this.data));
+        texto.append(this.campo.getNumero());
+        texto.append(this.conteudoAnterior);
         return texto.toString();
+    }
+
+    public SF0175AlteracaoCadastroParticipante setCampo(SFParticipanteAlteracaoCampo campo) {
+        this.campo = campo;
+        return this;
+    }
+
+    public SF0175AlteracaoCadastroParticipante setConteudoAnterior(String conteudoAnterior) {
+        this.conteudoAnterior = conteudoAnterior;
+        return this;
+    }
+
+    public SF0175AlteracaoCadastroParticipante setData(LocalDate data) {
+        this.data = data;
+        return this;
     }
 }

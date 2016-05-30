@@ -1,16 +1,12 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
-import br.com.wmixvideo.sped.modelo.SFObservacaoLancamentoFiscal;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 
-public class SF0460ObservacaoLancamentoFiscal implements SFRegistro {
+public class SF0460ObservacaoLancamentoFiscal implements SFLinha {
 
-    private final SFObservacaoLancamentoFiscal observacaoLancamentoFiscal;
-
-    public SF0460ObservacaoLancamentoFiscal(final SFObservacaoLancamentoFiscal observacaoLancamentoFiscal) {
-        this.observacaoLancamentoFiscal = observacaoLancamentoFiscal;
-    }
+    private String codigo;
+    private String observacao;
 
     @Override
     public String getCodigoRegistro() {
@@ -21,8 +17,18 @@ public class SF0460ObservacaoLancamentoFiscal implements SFRegistro {
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
         texto.append(this.getCodigoRegistro());
-        texto.append(this.observacaoLancamentoFiscal.getCodigo());
-        texto.append(this.observacaoLancamentoFiscal.getObservacao());
+        texto.append(this.codigo);
+        texto.append(this.observacao);
         return texto.toString();
+    }
+
+    public SF0460ObservacaoLancamentoFiscal setCodigo(String codigo) {
+        this.codigo = codigo;
+        return this;
+    }
+
+    public SF0460ObservacaoLancamentoFiscal setObservacao(String observacao) {
+        this.observacao = observacao;
+        return this;
     }
 }

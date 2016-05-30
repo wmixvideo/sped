@@ -1,5 +1,6 @@
 package br.com.wmixvideo.sped.leiaute;
 
-public interface SFRegistro {
+public interface SFLinha {
+
     String getCodigoRegistro();
 }

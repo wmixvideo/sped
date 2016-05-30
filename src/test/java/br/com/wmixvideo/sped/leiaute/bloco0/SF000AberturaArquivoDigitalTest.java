@@ -1,10 +1,9 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
+import br.com.wmixvideo.sped.enums.SFUnidadeFederativa;
 import br.com.wmixvideo.sped.leiaute.SFFinalidadeArquivo;
 import br.com.wmixvideo.sped.leiaute.SFIndicadorTipoAtividade;
 import br.com.wmixvideo.sped.leiaute.SFPerfilApresentacaoArquivoFiscal;
-import br.com.wmixvideo.sped.modelo.SFEntidade;
-import br.com.wmixvideo.sped.modelo.SFUnidadeFederativa;
 import br.com.wmixvideo.sped.util.SFReferencia;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,20 +14,19 @@ public class SF000AberturaArquivoDigitalTest {
 
     @Test
     public void deveGerarLinhaCompleta() {
-        final SFEntidade entidade = new SFEntidade()
+        final SF000AberturaArquivoDigital header = new SF000AberturaArquivoDigital()
+                .setReferencia(SFReferencia.of(2016, Month.FEBRUARY))
+                .setFinalidade(SFFinalidadeArquivo.REMESSA_ORIGINAL)
+                .setPerfilApresentacaoArquivoFiscal(SFPerfilApresentacaoArquivoFiscal.PERFIL_B)
+                .setIndicadorTipoAtividade(SFIndicadorTipoAtividade.OUTROS)
                 .setRazaoSocial("Empresa LTDA")
                 .setCnpj("00000000000000")
                 .setCpf("00000000000")
                 .setInscricaoEstadual("00000")
                 .setInscricaoMunicipal("000")
-                .setSuframa("00");
-
-        entidade.getEndereco().setUf(SFUnidadeFederativa.SC);
-        entidade.getEndereco().setCodigoMunicipio("4216602");
-
-        final SF000AberturaArquivoDigital header = new SF000AberturaArquivoDigital(entidade, SFReferencia.of(2016, Month.FEBRUARY), SFFinalidadeArquivo.REMESSA_ORIGINAL)
-                .setPerfilApresentacaoArquivoFiscal(SFPerfilApresentacaoArquivoFiscal.PERFIL_B)
-                .setIndicadorTipoAtividade(SFIndicadorTipoAtividade.OUTROS);
+                .setSuframa("00")
+                .setUf(SFUnidadeFederativa.SC)
+                .setCodigoMunicipio("4216602");
 
         Assert.assertEquals("|0000|010|0|01022016|29022016|Empresa LTDA|00000000000000|00000000000|SC|00000|4216602|000|00|B|1|", header.toString());
     }

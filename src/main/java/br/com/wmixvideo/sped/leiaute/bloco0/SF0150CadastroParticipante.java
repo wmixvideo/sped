@@ -1,33 +1,29 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
-import br.com.wmixvideo.sped.modelo.SFParticipante;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import org.apache.commons.lang3.StringUtils;
 
-public class SF0150CadastroParticipante implements SFRegistro {
-    final SFParticipante participante;
+public class SF0150CadastroParticipante implements SFLinha {
 
-    public SF0150CadastroParticipante(final SFParticipante participante) {
-        this.participante = participante;
-    }
+    private String codigoParticipante, nome, codigoPais, cnpj, cpf, inscricaoEstadual, codigoMunicipio, suframa, logradouro, numero, complemento, bairro;
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
         texto.append(this.getCodigoRegistro());
-        texto.append(this.participante.getCodigoParticipante());
-        texto.append(this.participante.getNome());
-        texto.append(this.participante.getEndereco().getPais().getCodigo());
-        texto.append(this.participante.getCnpj());
-        texto.append(this.participante.getCpf());
-        texto.append(this.participante.getInscricaoEstadual());
-        texto.append(this.participante.getEndereco().getCodigoMunicipio());
-        texto.append(this.participante.getSuframa());
-        texto.append(StringUtils.trimToEmpty(this.participante.getEndereco().getLogradouro()));
-        texto.append(StringUtils.trimToEmpty(this.participante.getEndereco().getNumero()));
-        texto.append(this.participante.getEndereco().getComplemento());
-        texto.append(StringUtils.trimToEmpty(this.participante.getEndereco().getBairro()));
+        texto.append(this.codigoParticipante);
+        texto.append(this.nome);
+        texto.append(this.codigoPais);
+        texto.append(this.cnpj);
+        texto.append(this.cpf);
+        texto.append(this.inscricaoEstadual);
+        texto.append(this.codigoMunicipio);
+        texto.append(this.suframa);
+        texto.append(StringUtils.trimToEmpty(this.logradouro));
+        texto.append(StringUtils.trimToEmpty(this.numero));
+        texto.append(this.complemento);
+        texto.append(StringUtils.trimToEmpty(this.bairro));
         return texto.toString();
     }
 
@@ -36,14 +32,63 @@ public class SF0150CadastroParticipante implements SFRegistro {
         return "0150";
     }
 
-    public boolean isPossuiAlteracoes() {
-        return this.participante.isPossuiAlteracoes();
+    public SF0150CadastroParticipante setBairro(String bairro) {
+        this.bairro = bairro;
+        return this;
     }
 
-//    public String[] getCampos(final SFReferencia referencia) {
-//        if (referencia.getInicio().isBefore(LocalDate.of(2013, Month.SEPTEMBER, 1))) {
-//            return new String[]{"cgc", "razaosocial", "inscricaoestadual", "endereco", "numero", "complemento", "bairro"};
-//        }
-//        return new String[]{"cgc", "razaosocial", "endereco", "numero", "complemento", "bairro"};
-//    }
+    public SF0150CadastroParticipante setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setCodigoMunicipio(String codigoMunicipio) {
+        this.codigoMunicipio = codigoMunicipio;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setCodigoPais(String codigoPais) {
+        this.codigoPais = codigoPais;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setCodigoParticipante(String codigoParticipante) {
+        this.codigoParticipante = codigoParticipante;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setComplemento(String complemento) {
+        this.complemento = complemento;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setCpf(String cpf) {
+        this.cpf = cpf;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setInscricaoEstadual(String inscricaoEstadual) {
+        this.inscricaoEstadual = inscricaoEstadual;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setNome(String nome) {
+        this.nome = nome;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setNumero(String numero) {
+        this.numero = numero;
+        return this;
+    }
+
+    public SF0150CadastroParticipante setSuframa(String suframa) {
+        this.suframa = suframa;
+        return this;
+    }
 }

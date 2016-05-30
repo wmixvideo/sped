@@ -1,28 +1,33 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
-import br.com.wmixvideo.sped.modelo.SFContribuinteSubstituicao;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 
-public class SF0015DadosContribuinteSubstitutoOuResponsavelICMSDestino implements SFRegistro {
+public class SF0015DadosContribuinteSubstitutoOuResponsavelICMSDestino implements SFLinha {
 
-    private final SFContribuinteSubstituicao contribuinteSubstituicao;
-
-    public SF0015DadosContribuinteSubstitutoOuResponsavelICMSDestino(final SFContribuinteSubstituicao contribuinteSubstituicao) {
-        this.contribuinteSubstituicao = contribuinteSubstituicao;
-    }
+    private String uf, inscricaoEstadual;
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
         texto.append(this.getCodigoRegistro());
-        texto.append(this.contribuinteSubstituicao.getUf().getCodigo());
-        texto.append(this.contribuinteSubstituicao.getInscricaoEstadual());
+        texto.append(this.uf);
+        texto.append(this.inscricaoEstadual);
         return texto.toString();
     }
 
     @Override
     public String getCodigoRegistro() {
         return "0015";
+    }
+
+    public SF0015DadosContribuinteSubstitutoOuResponsavelICMSDestino setInscricaoEstadual(String inscricaoEstadual) {
+        this.inscricaoEstadual = inscricaoEstadual;
+        return this;
+    }
+
+    public SF0015DadosContribuinteSubstitutoOuResponsavelICMSDestino setUf(String uf) {
+        this.uf = uf;
+        return this;
     }
 }

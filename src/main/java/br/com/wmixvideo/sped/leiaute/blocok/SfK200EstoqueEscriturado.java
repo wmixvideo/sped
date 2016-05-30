@@ -1,13 +1,13 @@
 package br.com.wmixvideo.sped.leiaute.blocok;
 
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
 import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDate;
 
-public class SFK200EstoqueEscriturado implements SFRegistro {
+public class SFK200EstoqueEscriturado implements SFLinha {
 
     private static final String CODIGO_DO_PARTICIPANTE = StringUtils.EMPTY;
     private static final String ESTOQUE_DE_PROPRIEDADE_DO_INFORMANTE_E_EM_SEU_PODER = "0";

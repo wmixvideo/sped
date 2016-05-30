@@ -1,11 +1,11 @@
 package br.com.wmixvideo.sped.leiaute.blocok;
 
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFReferencia;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
 
-public class SFK100PeriodoApuracaoICMSIPI implements SFRegistro {
+public class SFK100PeriodoApuracaoICMSIPI implements SFLinha {
 
     private final SFReferencia referencia;
 

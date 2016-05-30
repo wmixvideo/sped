@@ -1,4 +1,4 @@
-package br.com.wmixvideo.sped.modelo;
+package br.com.wmixvideo.sped.enums;
 
 public enum SFUnidadeFederativa {
 

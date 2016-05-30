@@ -2,7 +2,7 @@ package br.com.wmixvideo.sped.leiaute;
 
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 
-public class SFAberturaBloco implements SFRegistro {
+public class SFAberturaBloco implements SFLinha {
     private final SFIndicadorMovimento indicadorMovimento;
     private final String codigoRegistro;
 

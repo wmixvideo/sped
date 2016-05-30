@@ -1,30 +1,50 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
-import br.com.wmixvideo.sped.modelo.SFItemAlteracao;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
 
-public class SF0205AlteracaoItem implements SFRegistro {
-    private final SFItemAlteracao itemAlteracao;
+import java.time.LocalDate;
 
-    public SF0205AlteracaoItem(final SFItemAlteracao itemAlteracao) {
-        this.itemAlteracao = itemAlteracao;
-    }
+public class SF0205AlteracaoItem implements SFLinha {
+    private String codigoAnterior;
+    private String descricaoAnterior;
+    private LocalDate dataInicialUtilizacaoDescricao;
+    private LocalDate dataFinalUtilizacaoDescricao;
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
         texto.append(this.getCodigoRegistro());
-        texto.append(this.itemAlteracao.getDescricaoAnterior());
-        texto.append(SFUtil.formatToString(this.itemAlteracao.getDataInicialUtilizacaoDescricao()));
-        texto.append(SFUtil.formatToString(this.itemAlteracao.getDataFinalUtilizacaoDescricao()));
-        texto.append(this.itemAlteracao.getCodigoAnterior());
+        texto.append(this.descricaoAnterior);
+        texto.append(SFUtil.formatToString(this.dataInicialUtilizacaoDescricao));
+        texto.append(SFUtil.formatToString(this.dataFinalUtilizacaoDescricao));
+        texto.append(this.codigoAnterior);
         return texto.toString();
     }
 
     @Override
     public String getCodigoRegistro() {
         return "0205";
+    }
+
+    public SF0205AlteracaoItem setCodigoAnterior(String codigoAnterior) {
+        this.codigoAnterior = codigoAnterior;
+        return this;
+    }
+
+    public SF0205AlteracaoItem setDataFinalUtilizacaoDescricao(LocalDate dataFinalUtilizacaoDescricao) {
+        this.dataFinalUtilizacaoDescricao = dataFinalUtilizacaoDescricao;
+        return this;
+    }
+
+    public SF0205AlteracaoItem setDataInicialUtilizacaoDescricao(LocalDate dataInicialUtilizacaoDescricao) {
+        this.dataInicialUtilizacaoDescricao = dataInicialUtilizacaoDescricao;
+        return this;
+    }
+
+    public SF0205AlteracaoItem setDescricaoAnterior(String descricaoAnterior) {
+        this.descricaoAnterior = descricaoAnterior;
+        return this;
     }
 }

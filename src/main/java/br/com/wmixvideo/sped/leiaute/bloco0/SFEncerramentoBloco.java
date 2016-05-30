@@ -1,9 +1,9 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 
-public class SFEncerramentoBloco implements SFRegistro {
+public class SFEncerramentoBloco implements SFLinha {
     private final int totalLinhas;
     private final String codigoRegistro;
 

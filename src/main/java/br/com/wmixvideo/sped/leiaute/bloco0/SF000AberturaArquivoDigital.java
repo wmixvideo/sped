@@ -1,10 +1,10 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
+import br.com.wmixvideo.sped.enums.SFUnidadeFederativa;
 import br.com.wmixvideo.sped.leiaute.SFFinalidadeArquivo;
 import br.com.wmixvideo.sped.leiaute.SFIndicadorTipoAtividade;
+import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.leiaute.SFPerfilApresentacaoArquivoFiscal;
-import br.com.wmixvideo.sped.leiaute.SFRegistro;
-import br.com.wmixvideo.sped.modelo.SFEntidade;
 import br.com.wmixvideo.sped.util.SFReferencia;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
@@ -12,22 +12,20 @@ import br.com.wmixvideo.sped.util.SFUtil;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class SF000AberturaArquivoDigital implements SFRegistro {
+public class SF000AberturaArquivoDigital implements SFLinha {
 
-    private SFEntidade entidade;
+    private String razaoSocial;
+    private String cnpj;
+    private String cpf;
+    private String inscricaoEstadual;
+    private String inscricaoMunicipal;
+    private String suframa;
+    private String codigoMunicipio;
+    private SFUnidadeFederativa uf;
     private SFReferencia referencia;
     private SFFinalidadeArquivo finalidade;
     private SFPerfilApresentacaoArquivoFiscal perfilApresentacaoArquivoFiscal;
     private SFIndicadorTipoAtividade indicadorTipoAtividade;
-
-    public SF000AberturaArquivoDigital() {
-    }
-
-    public SF000AberturaArquivoDigital(final SFEntidade entidade, final SFReferencia referencia, final SFFinalidadeArquivo finalidade) {
-        this.entidade = entidade;
-        this.referencia = referencia;
-        this.finalidade = finalidade;
-    }
 
     @Override
     public String toString() {
@@ -41,14 +39,14 @@ public class SF000AberturaArquivoDigital implements SFRegistro {
         texto.append(this.finalidade != null ? this.finalidade.getCodigo() : "");
         texto.append(SFUtil.formatToString(this.referencia.getInicio()));
         texto.append(SFUtil.formatToString(this.referencia.getFim()));
-        texto.append(this.entidade != null ? this.entidade.getRazaoSocial() : "");
-        texto.append(this.entidade != null ? this.entidade.getCnpj() : "");
-        texto.append(this.entidade != null ? this.entidade.getCpf() : "");
-        texto.append(this.entidade != null && this.entidade.getEndereco().getUf() != null ? this.entidade.getEndereco().getUf().getCodigo() : "");
-        texto.append(this.entidade != null ? this.entidade.getInscricaoEstadual() : "");
-        texto.append(this.entidade != null ? this.entidade.getEndereco().getCodigoMunicipio() : "");
-        texto.append(this.entidade != null ? this.entidade.getInscricaoMunicipal() : "");
-        texto.append(this.entidade != null ? this.entidade.getSuframa() : "");
+        texto.append(this.razaoSocial);
+        texto.append(this.cnpj);
+        texto.append(this.cpf);
+        texto.append(this.uf != null ? this.uf.getCodigo() : "");
+        texto.append(this.inscricaoEstadual);
+        texto.append(this.codigoMunicipio);
+        texto.append(this.inscricaoMunicipal);
+        texto.append(this.suframa);
         texto.append(this.perfilApresentacaoArquivoFiscal != null ? this.perfilApresentacaoArquivoFiscal.getCodigo() : "");
         texto.append(this.indicadorTipoAtividade != null ? this.indicadorTipoAtividade.getCodigo() : "");
         return texto.toString();
@@ -82,6 +80,20 @@ public class SF000AberturaArquivoDigital implements SFRegistro {
         return "0000";
     }
 
+    public SF000AberturaArquivoDigital setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+        return this;
+    }
+
+    public SF000AberturaArquivoDigital setCodigoMunicipio(String codigoMunicipio) {
+        this.codigoMunicipio = codigoMunicipio;
+        return this;
+    }
+
+    public SF000AberturaArquivoDigital setCpf(String cpf) {
+        this.cpf = cpf;
+        return this;
+    }
 
     public SF000AberturaArquivoDigital setFinalidade(SFFinalidadeArquivo finalidade) {
         this.finalidade = finalidade;
@@ -93,8 +105,23 @@ public class SF000AberturaArquivoDigital implements SFRegistro {
         return this;
     }
 
+    public SF000AberturaArquivoDigital setInscricaoEstadual(String inscricaoEstadual) {
+        this.inscricaoEstadual = inscricaoEstadual;
+        return this;
+    }
+
+    public SF000AberturaArquivoDigital setInscricaoMunicipal(String inscricaoMunicipal) {
+        this.inscricaoMunicipal = inscricaoMunicipal;
+        return this;
+    }
+
     public SF000AberturaArquivoDigital setPerfilApresentacaoArquivoFiscal(SFPerfilApresentacaoArquivoFiscal perfilApresentacaoArquivoFiscal) {
         this.perfilApresentacaoArquivoFiscal = perfilApresentacaoArquivoFiscal;
+        return this;
+    }
+
+    public SF000AberturaArquivoDigital setRazaoSocial(String razaoSocial) {
+        this.razaoSocial = razaoSocial;
         return this;
     }
 
@@ -103,8 +130,13 @@ public class SF000AberturaArquivoDigital implements SFRegistro {
         return this;
     }
 
-    public SF000AberturaArquivoDigital setEntidade(SFEntidade entidade) {
-        this.entidade = entidade;
+    public SF000AberturaArquivoDigital setSuframa(String suframa) {
+        this.suframa = suframa;
+        return this;
+    }
+
+    public SF000AberturaArquivoDigital setUf(SFUnidadeFederativa uf) {
+        this.uf = uf;
         return this;
     }
 }

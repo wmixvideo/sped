@@ -1,7 +1,6 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
-import br.com.wmixvideo.sped.modelo.SFParticipanteAlteracao;
-import br.com.wmixvideo.sped.modelo.SFParticipanteAlteracaoCampo;
+import br.com.wmixvideo.sped.enums.SFParticipanteAlteracaoCampo;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,31 +10,31 @@ import java.time.Month;
 public class SF0175ParticipanteAlteracaoTest {
     @Test
     public void geraTextoAlteracaoRazaoSocial() {
-        SFParticipanteAlteracao alteracao = new SFParticipanteAlteracao();
-        alteracao.setCampo(SFParticipanteAlteracaoCampo.NOME);
-        alteracao.setData(LocalDate.of(2008, Month.OCTOBER, 16));
-        alteracao.setConteudoAnterior("CONSORTE VIDEO LTDA ME");
+        final SF0175AlteracaoCadastroParticipante linha = new SF0175AlteracaoCadastroParticipante()
+                .setCampo(SFParticipanteAlteracaoCampo.NOME)
+                .setData(LocalDate.of(2008, Month.OCTOBER, 16))
+                .setConteudoAnterior("CONSORTE VIDEO LTDA ME");
 
-        Assert.assertEquals("|0175|16102008|03|CONSORTE VIDEO LTDA ME|", new SF0175AlteracaoCadastroParticipante(alteracao).toString());
+        Assert.assertEquals("|0175|16102008|03|CONSORTE VIDEO LTDA ME|", linha.toString());
     }
 
     @Test
     public void geraTextoAlteracaoCpf() {
-        SFParticipanteAlteracao alteracao = new SFParticipanteAlteracao();
-        alteracao.setCampo(SFParticipanteAlteracaoCampo.CPF);
-        alteracao.setData(LocalDate.of(2008, Month.OCTOBER, 16));
-        alteracao.setConteudoAnterior("12345678910");
+        final SF0175AlteracaoCadastroParticipante linha = new SF0175AlteracaoCadastroParticipante()
+                .setCampo(SFParticipanteAlteracaoCampo.CPF)
+                .setData(LocalDate.of(2008, Month.OCTOBER, 16))
+                .setConteudoAnterior("12345678910");
 
-        Assert.assertEquals("|0175|16102008|06|12345678910|", new SF0175AlteracaoCadastroParticipante(alteracao).toString());
+        Assert.assertEquals("|0175|16102008|06|12345678910|", linha.toString());
     }
 
     @Test
     public void geraTextoAlteracaoComplemento() {
-        SFParticipanteAlteracao alteracao = new SFParticipanteAlteracao();
-        alteracao.setCampo(SFParticipanteAlteracaoCampo.COMPLEMENTO);
-        alteracao.setData(LocalDate.of(2008, Month.OCTOBER, 16));
-        alteracao.setConteudoAnterior("CASA");
+        final SF0175AlteracaoCadastroParticipante linha = new SF0175AlteracaoCadastroParticipante()
+                .setCampo(SFParticipanteAlteracaoCampo.COMPLEMENTO)
+                .setData(LocalDate.of(2008, Month.OCTOBER, 16))
+                .setConteudoAnterior("CASA");
 
-        Assert.assertEquals("|0175|16102008|12|CASA|", new SF0175AlteracaoCadastroParticipante(alteracao).toString());
+        Assert.assertEquals("|0175|16102008|12|CASA|", linha.toString());
     }
 }
