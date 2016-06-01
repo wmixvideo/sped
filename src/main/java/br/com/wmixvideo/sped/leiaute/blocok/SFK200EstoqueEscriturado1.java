@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDate;
 
-public class SFK200EstoqueEscriturado implements SFLinha {
+public class SFK200EstoqueEscriturado1 implements SFLinha {
 
     private static final String CODIGO_DO_PARTICIPANTE = StringUtils.EMPTY;
     private static final String ESTOQUE_DE_PROPRIEDADE_DO_INFORMANTE_E_EM_SEU_PODER = "0";
@@ -15,7 +15,7 @@ public class SFK200EstoqueEscriturado implements SFLinha {
     private final String codigoProduto;
     private final int quantidadeEmEstoque;
 
-    public SFK200EstoqueEscriturado(final LocalDate dataEstoqueFinal, final String codigoProduto, final int quantidadeEmEstoque) {
+    public SFK200EstoqueEscriturado1(final LocalDate dataEstoqueFinal, final String codigoProduto, final int quantidadeEmEstoque) {
         this.dataEstoqueFinal = dataEstoqueFinal;
         this.codigoProduto = codigoProduto;
         this.quantidadeEmEstoque = quantidadeEmEstoque;
@@ -33,8 +33,8 @@ public class SFK200EstoqueEscriturado implements SFLinha {
         builder.append(SFUtil.formatToString(this.dataEstoqueFinal));
         builder.append(this.codigoProduto);
         builder.append(this.quantidadeEmEstoque);
-        builder.append(SFK200EstoqueEscriturado.ESTOQUE_DE_PROPRIEDADE_DO_INFORMANTE_E_EM_SEU_PODER);
-        builder.append(SFK200EstoqueEscriturado.CODIGO_DO_PARTICIPANTE);
+        builder.append(SFK200EstoqueEscriturado1.ESTOQUE_DE_PROPRIEDADE_DO_INFORMANTE_E_EM_SEU_PODER);
+        builder.append(SFK200EstoqueEscriturado1.CODIGO_DO_PARTICIPANTE);
         return builder.toString();
     }
 }
