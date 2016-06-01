@@ -4,17 +4,17 @@ import br.com.wmixvideo.sped.leiaute.SFLinha;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class SFSpedFiscal {
 
-    private final SFBloco bloco0, blocoC, blocoH, blocoK, bloco1, bloco9;
+    private final SFBloco bloco0, blocoC, blocoG, blocoH, blocoK, bloco1, bloco9;
 
     public SFSpedFiscal() {
         bloco0 = new SFBloco();
         blocoC = new SFBloco();
+        blocoG = new SFBloco();
         blocoH = new SFBloco();
         blocoK = new SFBloco();
         bloco1 = new SFBloco();
@@ -22,23 +22,18 @@ public class SFSpedFiscal {
     }
 
     public List<String> gerarSpedFiscal() {
-        final List<SFLinha> sped = new ArrayList<>();
-        for (SFBloco bloco : this.getBlocos()) {
-            sped.addAll(bloco.getLinhas());
-        }
-        return sped.stream().map(SFLinha::toString).collect(Collectors.toList());
+        final List<SFLinha> linhas = new ArrayList<>();
+        this.getBlocos().forEach(b -> linhas.addAll(b.getLinhas()));
+        return linhas.stream().map(SFLinha::toString).collect(Collectors.toList());
     }
 
     @Override
     public String toString() {
-        final List<String> linhas = this.gerarSpedFiscal();
-
-        Collections.sort(linhas, ((o1, o2) -> o1.toString().compareTo(o2.toString())));
-        return String.join(System.lineSeparator(), linhas);
+        return String.join(System.lineSeparator(), this.gerarSpedFiscal());
     }
 
     public List<SFBloco> getBlocos() {
-        return Arrays.asList(bloco0, blocoC, blocoH, blocoK, bloco1, bloco9);
+        return Arrays.asList(this.bloco0, this.blocoC, this.blocoG, this.blocoH, this.blocoK, this.bloco1, this.bloco9);
     }
 
     public SFBloco getBloco0() {
@@ -47,6 +42,10 @@ public class SFSpedFiscal {
 
     public SFBloco getBlocoC() {
         return this.blocoC;
+    }
+
+    public SFBloco getBlocoG() {
+        return this.blocoG;
     }
 
     public SFBloco getBlocoH() {
