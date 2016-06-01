@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.time.LocalDate;
 
-public class SFK200EstoqueEscrituradoTest {
+public class SFK200EstoqueEscrituradoTest1 {
 
     @Test
     public void deveObterSeuCodigo() {
