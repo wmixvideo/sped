@@ -7,10 +7,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public final class SFUtil {
-    private static final String DATA_FORMATO_SEM_BARRA = "ddMMyyyy";
+    private static final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("ddMMyyyy");
 
     public static String formatToString(final LocalDate data) {
-        return data.format(DateTimeFormatter.ofPattern(DATA_FORMATO_SEM_BARRA));
+        return data != null ? data.format(DATE_PATTERN) : "";
     }
 
     public static String formatToString(final BigDecimal valor) {
