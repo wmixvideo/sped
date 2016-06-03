@@ -1,12 +1,13 @@
 package br.com.wmixvideo.sped.leiaute;
 
+import br.com.wmixvideo.sped.enums.SFIndicadorMovimentoAberturaBloco;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 
 public class SFAberturaBloco implements SFLinha {
-    private final SFIndicadorMovimento indicadorMovimento;
+    private final SFIndicadorMovimentoAberturaBloco indicadorMovimento;
     private final String codigoRegistro;
 
-    public SFAberturaBloco(final String codigoRegistro, final SFIndicadorMovimento indicadorMovimento) {
+    public SFAberturaBloco(final String codigoRegistro, final SFIndicadorMovimentoAberturaBloco indicadorMovimento) {
         this.indicadorMovimento = indicadorMovimento;
         this.codigoRegistro = codigoRegistro;
     }

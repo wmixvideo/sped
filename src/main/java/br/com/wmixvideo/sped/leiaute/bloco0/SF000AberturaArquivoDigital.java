@@ -1,8 +1,8 @@
 package br.com.wmixvideo.sped.leiaute.bloco0;
 
+import br.com.wmixvideo.sped.enums.SFFinalidadeArquivo;
+import br.com.wmixvideo.sped.enums.SFIndicadorTipoAtividade;
 import br.com.wmixvideo.sped.enums.SFUnidadeFederativa;
-import br.com.wmixvideo.sped.leiaute.SFFinalidadeArquivo;
-import br.com.wmixvideo.sped.leiaute.SFIndicadorTipoAtividade;
 import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.leiaute.SFPerfilApresentacaoArquivoFiscal;
 import br.com.wmixvideo.sped.util.SFReferencia;

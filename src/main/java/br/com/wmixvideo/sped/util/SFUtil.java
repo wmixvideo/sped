@@ -1,5 +1,7 @@
 package br.com.wmixvideo.sped.util;
 
+import br.com.wmixvideo.sped.enums.SFUnidadeFederativa;
+
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.time.LocalDate;
@@ -31,5 +33,13 @@ public final class SFUtil {
         fmt.setMaximumFractionDigits(casasDecimais);
         fmt.setMinimumFractionDigits(casasDecimais);
         return fmt.format(valor);
+    }
+
+    public static String formatToString(SFUnidadeFederativa uf) {
+        return uf != null ? uf.getCodigo() : "";
+    }
+
+    public static String formatToString(Enum<?> objeto) {
+        return objeto != null ? objeto.toString() : "";
     }
 }
