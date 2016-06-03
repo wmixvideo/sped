@@ -9,11 +9,12 @@ import java.util.stream.Collectors;
 
 public class SFSpedFiscal {
 
-    private final SFBloco bloco0, blocoC, blocoE, blocoG, blocoH, blocoK, bloco1, bloco9;
+    private final SFBloco bloco0, blocoC, blocoD, blocoE, blocoG, blocoH, blocoK, bloco1, bloco9;
 
     public SFSpedFiscal() {
         bloco0 = new SFBloco();
         blocoC = new SFBloco();
+        blocoD = new SFBloco();
         blocoE = new SFBloco();
         blocoG = new SFBloco();
         blocoH = new SFBloco();
@@ -34,7 +35,7 @@ public class SFSpedFiscal {
     }
 
     public List<SFBloco> getBlocos() {
-        return Arrays.asList(this.bloco0, this.blocoC, this.blocoE, this.blocoG, this.blocoH, this.blocoK, this.bloco1, this.bloco9);
+        return Arrays.asList(this.bloco0, this.blocoC, this.blocoD, this.blocoE, this.blocoG, this.blocoH, this.blocoK, this.bloco1, this.bloco9);
     }
 
     public SFBloco getBloco0() {
@@ -43,6 +44,10 @@ public class SFSpedFiscal {
 
     public SFBloco getBlocoC() {
         return this.blocoC;
+    }
+
+    public SFBloco getBlocoD() {
+        return this.blocoD;
     }
 
     public SFBloco getBlocoE() {
