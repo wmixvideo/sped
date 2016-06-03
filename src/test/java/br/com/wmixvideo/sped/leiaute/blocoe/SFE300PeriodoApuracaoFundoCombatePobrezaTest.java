@@ -7,15 +7,15 @@ import org.junit.Test;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class SFE200PeriodoApuracaoSTTest {
+public class SFE300PeriodoApuracaoFundoCombatePobrezaTest {
 
     @Test
     public void testeToString() {
-        final SFE200PeriodoApuracaoST linha = new SFE200PeriodoApuracaoST()
+        final SFE300PeriodoApuracaoFundoCombatePobreza linha = new SFE300PeriodoApuracaoFundoCombatePobreza()
                 .setUf(SFUnidadeFederativa.BA)
                 .setDataInicial(LocalDate.of(2016, Month.FEBRUARY, 1))
                 .setDataFinal(LocalDate.of(2016, Month.FEBRUARY, 28));
 
-        Assert.assertEquals("|E200|BA|01022016|28022016|", linha.toString());
+        Assert.assertEquals("|E300|BA|01022016|28022016|", linha.toString());
     }
 }

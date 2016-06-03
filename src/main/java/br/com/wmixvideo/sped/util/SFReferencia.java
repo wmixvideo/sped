@@ -27,4 +27,9 @@ public class SFReferencia implements Serializable {
         final LocalDate inicio = this.getInicio();
         return inicio.withDayOfMonth(inicio.lengthOfMonth());
     }
+
+    @Override
+    public String toString() {
+        return String.format("%02d%s", this.mes.getValue(), this.ano);
+    }
 }

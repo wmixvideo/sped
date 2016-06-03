@@ -9,7 +9,7 @@ import br.com.wmixvideo.sped.util.SFUtil;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class SFE116ObrigacoesICMSRecolherOperacoesProprias implements SFLinha {
+public class SFE316ObrigacoesFundoCombatePobreza implements SFLinha {
 
     private String codigo, codigoReceita, numeroProcesso, descricaoResumida, descricaoComplementar;
     private BigDecimal valor;
@@ -19,7 +19,7 @@ public class SFE116ObrigacoesICMSRecolherOperacoesProprias implements SFLinha {
 
     @Override
     public String getCodigoRegistro() {
-        return "E116";
+        return "E316";
     }
 
     @Override
@@ -38,47 +38,47 @@ public class SFE116ObrigacoesICMSRecolherOperacoesProprias implements SFLinha {
         return texto.toString();
     }
 
-    public SFE116ObrigacoesICMSRecolherOperacoesProprias setCodigo(String codigo) {
+    public SFE316ObrigacoesFundoCombatePobreza setCodigo(String codigo) {
         this.codigo = codigo;
         return this;
     }
 
-    public SFE116ObrigacoesICMSRecolherOperacoesProprias setCodigoReceita(String codigoReceita) {
+    public SFE316ObrigacoesFundoCombatePobreza setCodigoReceita(String codigoReceita) {
         this.codigoReceita = codigoReceita;
         return this;
     }
 
-    public SFE116ObrigacoesICMSRecolherOperacoesProprias setDataVencimento(LocalDate dataVencimento) {
+    public SFE316ObrigacoesFundoCombatePobreza setDataVencimento(LocalDate dataVencimento) {
         this.dataVencimento = dataVencimento;
         return this;
     }
 
-    public SFE116ObrigacoesICMSRecolherOperacoesProprias setDescricaoComplementar(String descricaoComplementar) {
+    public SFE316ObrigacoesFundoCombatePobreza setDescricaoComplementar(String descricaoComplementar) {
         this.descricaoComplementar = descricaoComplementar;
         return this;
     }
 
-    public SFE116ObrigacoesICMSRecolherOperacoesProprias setDescricaoResumida(String descricaoResumida) {
+    public SFE316ObrigacoesFundoCombatePobreza setDescricaoResumida(String descricaoResumida) {
         this.descricaoResumida = descricaoResumida;
         return this;
     }
 
-    public SFE116ObrigacoesICMSRecolherOperacoesProprias setIndicadorProcessoOrigem(SFIndicadorProcessoOrigem indicadorProcessoOrigem) {
+    public SFE316ObrigacoesFundoCombatePobreza setIndicadorProcessoOrigem(SFIndicadorProcessoOrigem indicadorProcessoOrigem) {
         this.indicadorProcessoOrigem = indicadorProcessoOrigem;
         return this;
     }
 
-    public SFE116ObrigacoesICMSRecolherOperacoesProprias setNumeroProcesso(String numeroProcesso) {
+    public SFE316ObrigacoesFundoCombatePobreza setNumeroProcesso(String numeroProcesso) {
         this.numeroProcesso = numeroProcesso;
         return this;
     }
 
-    public SFE116ObrigacoesICMSRecolherOperacoesProprias setReferencia(SFReferencia referencia) {
+    public SFE316ObrigacoesFundoCombatePobreza setReferencia(SFReferencia referencia) {
         this.referencia = referencia;
         return this;
     }
 
-    public SFE116ObrigacoesICMSRecolherOperacoesProprias setValor(BigDecimal valor) {
+    public SFE316ObrigacoesFundoCombatePobreza setValor(BigDecimal valor) {
         this.valor = valor;
         return this;
     }

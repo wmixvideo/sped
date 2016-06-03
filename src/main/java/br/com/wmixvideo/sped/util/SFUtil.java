@@ -42,4 +42,8 @@ public final class SFUtil {
     public static String formatToString(Enum<?> objeto) {
         return objeto != null ? objeto.toString() : "";
     }
+
+    public static String formatToString(SFReferencia referencia) {
+        return referencia != null ? referencia.toString() : "";
+    }
 }

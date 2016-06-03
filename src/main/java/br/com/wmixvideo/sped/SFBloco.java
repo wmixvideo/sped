@@ -3,7 +3,6 @@ package br.com.wmixvideo.sped;
 import br.com.wmixvideo.sped.leiaute.SFLinha;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class SFBloco {
@@ -31,8 +30,6 @@ public class SFBloco {
     }
 
     public List<SFLinha> getLinhas() {
-        final List<SFLinha> linhas = new ArrayList<>(this.linhas);
-        Collections.sort(linhas, (o1, o2) -> o1.getCodigoRegistro().compareTo(o2.getCodigoRegistro()));
-        return linhas;
+        return this.linhas;
     }
 }

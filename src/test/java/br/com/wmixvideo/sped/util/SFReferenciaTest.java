@@ -17,4 +17,10 @@ public class SFReferenciaTest {
     public void deveCalcularADataFinalDaReferencia() throws Exception {
         Assert.assertEquals(LocalDate.of(2015, Month.FEBRUARY, 28), SFReferencia.of(2015, Month.FEBRUARY).getFim());
     }
+
+    @Test
+    public void toStringDeveFormatarReferenciaMmAaaa() throws Exception {
+        Assert.assertEquals("022016", SFUtil.formatToString(SFReferencia.of(2016, Month.FEBRUARY)));
+        Assert.assertEquals("112016", SFUtil.formatToString(SFReferencia.of(2016, Month.NOVEMBER)));
+    }
 }
