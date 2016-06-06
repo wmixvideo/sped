@@ -13,4 +13,9 @@ public enum SFIndicadorMovimentoAberturaBloco {
     public int getCodigo() {
         return this.codigo;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(this.codigo);
+    }
 }

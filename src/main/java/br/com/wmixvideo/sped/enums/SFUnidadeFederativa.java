@@ -48,7 +48,7 @@ public enum SFUnidadeFederativa {
 
     @Override
     public String toString() {
-        return this.getDescricao();
+        return this.getCodigo();
     }
 
     /**

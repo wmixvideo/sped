@@ -31,4 +31,9 @@ public enum SFNotaFiscalSituacao {
     public boolean isInutilizada() {
         return Arrays.asList(NFE_NUMERACAO_INUTILIZADA).contains(this);
     }
+
+    @Override
+    public String toString() {
+        return this.codigo;
+    }
 }

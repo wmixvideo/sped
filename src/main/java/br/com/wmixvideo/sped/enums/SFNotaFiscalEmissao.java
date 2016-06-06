@@ -14,4 +14,9 @@ public enum SFNotaFiscalEmissao {
     public String getCodigo() {
         return codigo;
     }
+
+    @Override
+    public String toString() {
+        return this.codigo;
+    }
 }

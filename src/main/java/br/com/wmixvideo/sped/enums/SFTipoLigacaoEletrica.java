@@ -1,13 +1,14 @@
 package br.com.wmixvideo.sped.enums;
 
-public enum SFConfirmacao {
+public enum SFTipoLigacaoEletrica {
 
-    SIM("S"),
-    NAO("N");
+    MONOFASICO("1"),
+    BIFASICO("2"),
+    TRIFASICO("3");
 
     private final String codigo;
 
-    SFConfirmacao(final String codigo) {
+    SFTipoLigacaoEletrica(final String codigo) {
         this.codigo = codigo;
     }
 

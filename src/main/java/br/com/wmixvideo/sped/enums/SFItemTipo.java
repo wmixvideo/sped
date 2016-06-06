@@ -30,4 +30,9 @@ public enum SFItemTipo {
     public String getDescricao() {
         return descricao;
     }
+
+    @Override
+    public String toString() {
+        return this.codigo;
+    }
 }

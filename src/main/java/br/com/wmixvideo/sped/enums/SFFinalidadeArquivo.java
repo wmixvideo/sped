@@ -14,4 +14,9 @@ public enum SFFinalidadeArquivo {
     public String getCodigo() {
         return this.codigo;
     }
+
+    @Override
+    public String toString() {
+        return this.codigo;
+    }
 }

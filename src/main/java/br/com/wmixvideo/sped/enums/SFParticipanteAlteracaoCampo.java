@@ -23,4 +23,9 @@ public enum SFParticipanteAlteracaoCampo {
     public String getNumero() {
         return this.numero;
     }
+
+    @Override
+    public String toString() {
+        return this.numero;
+    }
 }

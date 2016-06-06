@@ -1,13 +1,18 @@
 package br.com.wmixvideo.sped.enums;
 
-public enum SFConfirmacao {
+public enum SFTipoTransporte {
 
-    SIM("S"),
-    NAO("N");
+    RODOVIARIO("0"),
+    FERROVIARIO("1"),
+    RODO_FERROVIARIO("2"),
+    AQUAVIARIO("3"),
+    DUTOVIARIO("4"),
+    AEREO("5"),
+    OUTROS("9");
 
     private final String codigo;
 
-    SFConfirmacao(final String codigo) {
+    SFTipoTransporte(String codigo) {
         this.codigo = codigo;
     }
 
