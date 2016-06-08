@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 public class SFC170ItemDocumento implements SFLinha {
 
     private int quantidade;
-    private String numero;
+    private String ordem;
     private String codigo;
     private String descricao;
     private String unidade;
@@ -56,7 +56,7 @@ public class SFC170ItemDocumento implements SFLinha {
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
         linha.append(this.getCodigoRegistro());
-        linha.append(this.numero);
+        linha.append(this.ordem);
         linha.append(this.codigo);
         linha.append(this.descricao);
         linha.append(this.quantidade);
@@ -155,8 +155,8 @@ public class SFC170ItemDocumento implements SFLinha {
         return this;
     }
 
-    public SFC170ItemDocumento setNumero(String numero) {
-        this.numero = numero;
+    public SFC170ItemDocumento setOrdem(String ordem) {
+        this.ordem = ordem;
         return this;
     }
 

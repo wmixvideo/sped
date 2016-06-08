@@ -15,7 +15,7 @@ public class SFC170ItemDocumentoTest {
                 .setMovimentacaoFisica(SFMovimentacaoFisica.SIM)
                 .setIndicadorPeriodo(SFIndicadorPeriodo.MENSAL)
                 .setQuantidade(10)
-                .setNumero("000000")
+                .setOrdem("000000")
                 .setCodigo("000001")
                 .setDescricao("000010")
                 .setUnidade("000011")
