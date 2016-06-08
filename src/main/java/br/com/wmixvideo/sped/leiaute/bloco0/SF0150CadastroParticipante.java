@@ -4,7 +4,9 @@ import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import org.apache.commons.lang3.StringUtils;
 
-public class SF0150CadastroParticipante implements SFLinha {
+import java.util.Objects;
+
+public class SF0150CadastroParticipante implements SFLinha, Comparable<SF0150CadastroParticipante> {
 
     private String codigoParticipante, nome, codigoPais, cnpj, cpf, inscricaoEstadual, codigoMunicipio, suframa, logradouro, numero, complemento, bairro;
 
@@ -30,6 +32,27 @@ public class SF0150CadastroParticipante implements SFLinha {
     @Override
     public String getCodigoRegistro() {
         return "0150";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SF0150CadastroParticipante that = (SF0150CadastroParticipante) o;
+        return Objects.equals(cnpj, that.cnpj) &&
+                Objects.equals(cpf, that.cpf);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cnpj, cpf);
+    }
+
+    @Override
+    public int compareTo(SF0150CadastroParticipante o) {
+        final String cnpjBase = StringUtils.defaultIfBlank(this.cnpj, StringUtils.defaultIfBlank(this.cpf, StringUtils.EMPTY));
+        final String cnpjComparador = StringUtils.defaultIfBlank(o.cnpj, StringUtils.defaultIfBlank(o.cpf, StringUtils.EMPTY));
+        return cnpjBase.compareTo(cnpjComparador);
     }
 
     public SF0150CadastroParticipante setBairro(String bairro) {

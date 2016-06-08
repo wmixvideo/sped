@@ -7,8 +7,9 @@ import br.com.wmixvideo.sped.util.SFUtil;
 import org.apache.commons.lang3.StringUtils;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
-public class SF0200IdentificacaoItem implements SFLinha {
+public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200IdentificacaoItem> {
 
     private String codigo;
     private String codigoAnterior;
@@ -105,5 +106,25 @@ public class SF0200IdentificacaoItem implements SFLinha {
     public SF0200IdentificacaoItem setUnidadeMedida(String unidadeMedida) {
         this.unidadeMedida = unidadeMedida;
         return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SF0200IdentificacaoItem that = (SF0200IdentificacaoItem) o;
+        return Objects.equals(codigo, that.codigo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigo);
+    }
+
+    @Override
+    public int compareTo(SF0200IdentificacaoItem o) {
+        final String codigoBase = StringUtils.defaultIfBlank(this.codigo, StringUtils.EMPTY);
+        final String codigoComparador = StringUtils.defaultIfBlank(o.codigo, StringUtils.EMPTY);
+        return codigoBase.compareTo(codigoComparador);
     }
 }

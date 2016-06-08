@@ -31,7 +31,7 @@ public class SFSpedFiscal {
 
     @Override
     public String toString() {
-        return String.join(System.lineSeparator(), this.gerarSpedFiscal());
+        return String.join(System.lineSeparator(), this.gerarSpedFiscal()).concat(System.lineSeparator());
     }
 
     public List<SFBloco> getBlocos() {
