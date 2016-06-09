@@ -9,7 +9,7 @@ import java.time.Month;
 public class SFK100PeriodoApuracaoICMSIPITest {
     @Test
     public void deveObterSeuCodigo() {
-        Assert.assertEquals("K100", new SFK100PeriodoApuracaoICMSIPI(null).getCodigoRegistro());
+        Assert.assertEquals("K100", new SFK100PeriodoApuracaoICMSIPI(null).getCampo01CodigoRegistro());
     }
 
     @Test

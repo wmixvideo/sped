@@ -13,7 +13,7 @@ public class SF0150CadastroParticipante implements SFLinha, Comparable<SF0150Cad
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.codigoParticipante);
         texto.append(this.nome);
         texto.append(this.codigoPais);
@@ -30,7 +30,7 @@ public class SF0150CadastroParticipante implements SFLinha, Comparable<SF0150Cad
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "0150";
     }
 

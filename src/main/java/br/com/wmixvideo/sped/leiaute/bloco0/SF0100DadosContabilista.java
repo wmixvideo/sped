@@ -10,7 +10,7 @@ public class SF0100DadosContabilista implements SFLinha {
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.nome);
         texto.append(this.cpf);
         texto.append(this.crc);
@@ -29,7 +29,7 @@ public class SF0100DadosContabilista implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "0100";
     }
 

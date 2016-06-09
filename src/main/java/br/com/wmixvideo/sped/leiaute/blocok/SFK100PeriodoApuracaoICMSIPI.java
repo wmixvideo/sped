@@ -14,14 +14,14 @@ public class SFK100PeriodoApuracaoICMSIPI implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "K100";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder builder = new SFStringBuilder();
-        builder.append(this.getCodigoRegistro());
+        builder.append(this.getCampo01CodigoRegistro());
         builder.append(SFUtil.formatToString(this.referencia.getInicio()));
         builder.append(SFUtil.formatToString(this.referencia.getFim()));
         return builder.toString();

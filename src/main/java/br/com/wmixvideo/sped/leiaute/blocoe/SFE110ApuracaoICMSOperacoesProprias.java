@@ -41,14 +41,14 @@ public class SFE110ApuracaoICMSOperacoesProprias implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "E110";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(SFUtil.formatToString(this.valorTotalDebitos));
         texto.append(SFUtil.formatToString(this.valorAjusteDebitos));
         texto.append(SFUtil.formatToString(this.valorTotalAjusteDebitos));

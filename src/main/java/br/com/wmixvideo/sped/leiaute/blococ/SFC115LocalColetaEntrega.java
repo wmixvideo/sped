@@ -12,14 +12,14 @@ public class SFC115LocalColetaEntrega implements SFLinha {
     private SFTipoTransporte tipoTransporte;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "C115";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
-        linha.append(this.getCodigoRegistro());
+        linha.append(this.getCampo01CodigoRegistro());
         linha.append(SFUtil.formatToString(this.tipoTransporte));
         linha.append(this.coletaCnpj);
         linha.append(this.coletaInscricaoEstadual);

@@ -34,7 +34,7 @@ public class SF000AberturaArquivoDigital implements SFLinha {
         }
 
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.getCodigoVersaoLeiaute());
         texto.append(this.finalidade != null ? this.finalidade.getCodigo() : "");
         texto.append(SFUtil.formatToString(this.referencia.getInicio()));
@@ -76,7 +76,7 @@ public class SF000AberturaArquivoDigital implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "0000";
     }
 

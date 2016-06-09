@@ -15,7 +15,7 @@ public class SF0205AlteracaoItem implements SFLinha {
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.descricaoAnterior);
         texto.append(SFUtil.formatToString(this.dataInicialUtilizacaoDescricao));
         texto.append(SFUtil.formatToString(this.dataFinalUtilizacaoDescricao));
@@ -24,7 +24,7 @@ public class SF0205AlteracaoItem implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "0205";
     }
 

@@ -11,14 +11,14 @@ public class SF0190IdentificacaoUnidadeMedida implements SFLinha {
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.codigo);
         texto.append(this.descricao);
         return texto.toString();
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "0190";
     }
 

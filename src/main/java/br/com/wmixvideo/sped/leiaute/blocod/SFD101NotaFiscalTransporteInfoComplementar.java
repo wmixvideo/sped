@@ -11,14 +11,14 @@ public class SFD101NotaFiscalTransporteInfoComplementar implements SFLinha {
     private BigDecimal valorFundoCombatePobreza, valorICMSDestino, valorICMSRemetente;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "D101";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(SFUtil.formatToString(this.valorFundoCombatePobreza));
         texto.append(SFUtil.formatToString(this.valorICMSDestino));
         texto.append(SFUtil.formatToString(this.valorICMSRemetente));

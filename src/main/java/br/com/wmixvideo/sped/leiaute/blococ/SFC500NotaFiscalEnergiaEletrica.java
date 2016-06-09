@@ -15,198 +15,198 @@ import java.time.LocalDate;
 
 public class SFC500NotaFiscalEnergiaEletrica implements SFLinha {
 
-    private SFNotaFiscalEmissao emissao;
-    private SFNotaFiscalOperacao operacao;
-    private SFNotaFiscalSituacao situacao;
-    private SFClasseConsumoEnergial classe;
-    private SFTipoLigacaoEletrica tipoLigacao;
-    private SFGrupoTensaoEletrica grupoTensao;
-    private String numero;
-    private String serie;
-    private String subserie;
-    private String codigoParticipante;
-    private String codigoModeloFiscal;
-    private String codigoInformacaoComplementar;
-    private LocalDate dataEmissao;
-    private LocalDate dataOperacao;
-    private BigDecimal valorDocumento;
-    private BigDecimal valorDesconto;
-    private BigDecimal valorFornecido;
-    private BigDecimal valorNaoTributado;
-    private BigDecimal valorEmNomeDeTerceiros;
-    private BigDecimal valorDespesasAcessorias;
-    private BigDecimal valorBaseCalculoIcms;
-    private BigDecimal valorIcms;
-    private BigDecimal valorBaseCalculoIcmsSt;
-    private BigDecimal valorIcmsSt;
-    private BigDecimal valorPis;
-    private BigDecimal valorCofins;
+    private SFNotaFiscalEmissao campo03Emissao;
+    private SFNotaFiscalOperacao campo02Operacao;
+    private SFNotaFiscalSituacao campo06Situacao;
+    private SFClasseConsumoEnergial campo09Classe;
+    private SFTipoLigacaoEletrica campo26TipoLigacao;
+    private SFGrupoTensaoEletrica campo27GrupoTensao;
+    private String campo10Numero;
+    private String campo07Serie;
+    private String campo08Subserie;
+    private String campo04CodigoParticipante;
+    private String campo05CodigoModeloFiscal;
+    private String campo23CodigoInformacaoComplementar;
+    private LocalDate campo11DataEmissao;
+    private LocalDate campo12DataOperacao;
+    private BigDecimal campo13ValorDocumento;
+    private BigDecimal campo14ValorDesconto;
+    private BigDecimal campo15ValorFornecido;
+    private BigDecimal campo16ValorNaoTributado;
+    private BigDecimal campo17ValorEmNomeDeTerceiros;
+    private BigDecimal campo18ValorDespesasAcessorias;
+    private BigDecimal campo19ValorBaseCalculoIcms;
+    private BigDecimal campo20ValorIcms;
+    private BigDecimal campo21ValorBaseCalculoIcmsSt;
+    private BigDecimal campo22ValorIcmsSt;
+    private BigDecimal campo24ValorPis;
+    private BigDecimal campo25ValorCofins;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "C500";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
-        linha.append(this.getCodigoRegistro());
-        linha.append(SFUtil.formatToString(this.operacao));
-        linha.append(SFUtil.formatToString(this.emissao));
-        linha.append(this.codigoParticipante);
-        linha.append(this.codigoModeloFiscal);
-        linha.append(SFUtil.formatToString(this.situacao));
-        linha.append(this.serie);
-        linha.append(this.subserie);
-        linha.append(SFUtil.formatToString(this.classe));
-        linha.append(this.numero);
-        linha.append(SFUtil.formatToString(this.dataEmissao));
-        linha.append(SFUtil.formatToString(this.dataOperacao));
-        linha.append(SFUtil.formatToString(this.valorDocumento));
-        linha.append(SFUtil.formatToString(this.valorDesconto));
-        linha.append(SFUtil.formatToString(this.valorFornecido));
-        linha.append(SFUtil.formatToString(this.valorNaoTributado));
-        linha.append(SFUtil.formatToString(this.valorEmNomeDeTerceiros));
-        linha.append(SFUtil.formatToString(this.valorDespesasAcessorias));
-        linha.append(SFUtil.formatToString(this.valorBaseCalculoIcms));
-        linha.append(SFUtil.formatToString(this.valorIcms));
-        linha.append(SFUtil.formatToString(this.valorBaseCalculoIcmsSt));
-        linha.append(SFUtil.formatToString(this.valorIcmsSt));
-        linha.append(this.codigoInformacaoComplementar);
-        linha.append(SFUtil.formatToString(this.valorPis));
-        linha.append(SFUtil.formatToString(this.valorCofins));
-        linha.append(SFUtil.formatToString(this.tipoLigacao));
-        linha.append(SFUtil.formatToString(this.grupoTensao));
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02Operacao));
+        linha.append(SFUtil.formatToString(this.campo03Emissao));
+        linha.append(this.campo04CodigoParticipante);
+        linha.append(this.campo05CodigoModeloFiscal);
+        linha.append(SFUtil.formatToString(this.campo06Situacao));
+        linha.append(this.campo07Serie);
+        linha.append(this.campo08Subserie);
+        linha.append(SFUtil.formatToString(this.campo09Classe));
+        linha.append(this.campo10Numero);
+        linha.append(SFUtil.formatToString(this.campo11DataEmissao));
+        linha.append(SFUtil.formatToString(this.campo12DataOperacao));
+        linha.append(SFUtil.formatToString(this.campo13ValorDocumento));
+        linha.append(SFUtil.formatToString(this.campo14ValorDesconto));
+        linha.append(SFUtil.formatToString(this.campo15ValorFornecido));
+        linha.append(SFUtil.formatToString(this.campo16ValorNaoTributado));
+        linha.append(SFUtil.formatToString(this.campo17ValorEmNomeDeTerceiros));
+        linha.append(SFUtil.formatToString(this.campo18ValorDespesasAcessorias));
+        linha.append(SFUtil.formatToString(this.campo19ValorBaseCalculoIcms));
+        linha.append(SFUtil.formatToString(this.campo20ValorIcms));
+        linha.append(SFUtil.formatToString(this.campo21ValorBaseCalculoIcmsSt));
+        linha.append(SFUtil.formatToString(this.campo22ValorIcmsSt));
+        linha.append(this.campo23CodigoInformacaoComplementar);
+        linha.append(SFUtil.formatToString(this.campo24ValorPis));
+        linha.append(SFUtil.formatToString(this.campo25ValorCofins));
+        linha.append(SFUtil.formatToString(this.campo26TipoLigacao));
+        linha.append(SFUtil.formatToString(this.campo27GrupoTensao));
         return linha.toString();
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setClasse(SFClasseConsumoEnergial classe) {
-        this.classe = classe;
+    public SFC500NotaFiscalEnergiaEletrica setCampo09Classe(SFClasseConsumoEnergial campo09Classe) {
+        this.campo09Classe = campo09Classe;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setCodigoInformacaoComplementar(String codigoInformacaoComplementar) {
-        this.codigoInformacaoComplementar = codigoInformacaoComplementar;
+    public SFC500NotaFiscalEnergiaEletrica setCampo23CodigoInformacaoComplementar(String campo23CodigoInformacaoComplementar) {
+        this.campo23CodigoInformacaoComplementar = campo23CodigoInformacaoComplementar;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setCodigoModeloFiscal(String codigoModeloFiscal) {
-        this.codigoModeloFiscal = codigoModeloFiscal;
+    public SFC500NotaFiscalEnergiaEletrica setCampo05CodigoModeloFiscal(String campo05CodigoModeloFiscal) {
+        this.campo05CodigoModeloFiscal = campo05CodigoModeloFiscal;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setCodigoParticipante(String codigoParticipante) {
-        this.codigoParticipante = codigoParticipante;
+    public SFC500NotaFiscalEnergiaEletrica setCampo04CodigoParticipante(String campo04CodigoParticipante) {
+        this.campo04CodigoParticipante = campo04CodigoParticipante;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setDataEmissao(LocalDate dataEmissao) {
-        this.dataEmissao = dataEmissao;
+    public SFC500NotaFiscalEnergiaEletrica setCampo11DataEmissao(LocalDate campo11DataEmissao) {
+        this.campo11DataEmissao = campo11DataEmissao;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setDataOperacao(LocalDate dataOperacao) {
-        this.dataOperacao = dataOperacao;
+    public SFC500NotaFiscalEnergiaEletrica setCampo12DataOperacao(LocalDate campo12DataOperacao) {
+        this.campo12DataOperacao = campo12DataOperacao;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setEmissao(SFNotaFiscalEmissao emissao) {
-        this.emissao = emissao;
+    public SFC500NotaFiscalEnergiaEletrica setCampo03Emissao(SFNotaFiscalEmissao campo03Emissao) {
+        this.campo03Emissao = campo03Emissao;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setGrupoTensao(SFGrupoTensaoEletrica grupoTensao) {
-        this.grupoTensao = grupoTensao;
+    public SFC500NotaFiscalEnergiaEletrica setCampo27GrupoTensao(SFGrupoTensaoEletrica campo27GrupoTensao) {
+        this.campo27GrupoTensao = campo27GrupoTensao;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setNumero(String numero) {
-        this.numero = numero;
+    public SFC500NotaFiscalEnergiaEletrica setCampo10Numero(String campo10Numero) {
+        this.campo10Numero = campo10Numero;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setOperacao(SFNotaFiscalOperacao operacao) {
-        this.operacao = operacao;
+    public SFC500NotaFiscalEnergiaEletrica setCampo02Operacao(SFNotaFiscalOperacao campo02Operacao) {
+        this.campo02Operacao = campo02Operacao;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setSerie(String serie) {
-        this.serie = serie;
+    public SFC500NotaFiscalEnergiaEletrica setCampo07Serie(String campo07Serie) {
+        this.campo07Serie = campo07Serie;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setSituacao(SFNotaFiscalSituacao situacao) {
-        this.situacao = situacao;
+    public SFC500NotaFiscalEnergiaEletrica setCampo06Situacao(SFNotaFiscalSituacao campo06Situacao) {
+        this.campo06Situacao = campo06Situacao;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setSubserie(String subserie) {
-        this.subserie = subserie;
+    public SFC500NotaFiscalEnergiaEletrica setCampo08Subserie(String campo08Subserie) {
+        this.campo08Subserie = campo08Subserie;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setTipoLigacao(SFTipoLigacaoEletrica tipoLigacao) {
-        this.tipoLigacao = tipoLigacao;
+    public SFC500NotaFiscalEnergiaEletrica setCampo26TipoLigacao(SFTipoLigacaoEletrica campo26TipoLigacao) {
+        this.campo26TipoLigacao = campo26TipoLigacao;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorBaseCalculoIcms(BigDecimal valorBaseCalculoIcms) {
-        this.valorBaseCalculoIcms = valorBaseCalculoIcms;
+    public SFC500NotaFiscalEnergiaEletrica setCampo19ValorBaseCalculoIcms(BigDecimal campo19ValorBaseCalculoIcms) {
+        this.campo19ValorBaseCalculoIcms = campo19ValorBaseCalculoIcms;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorBaseCalculoIcmsSt(BigDecimal valorBaseCalculoIcmsSt) {
-        this.valorBaseCalculoIcmsSt = valorBaseCalculoIcmsSt;
+    public SFC500NotaFiscalEnergiaEletrica setCampo21ValorBaseCalculoIcmsSt(BigDecimal campo21ValorBaseCalculoIcmsSt) {
+        this.campo21ValorBaseCalculoIcmsSt = campo21ValorBaseCalculoIcmsSt;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorCofins(BigDecimal valorCofins) {
-        this.valorCofins = valorCofins;
+    public SFC500NotaFiscalEnergiaEletrica setCampo25ValorCofins(BigDecimal campo25ValorCofins) {
+        this.campo25ValorCofins = campo25ValorCofins;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorDesconto(BigDecimal valorDesconto) {
-        this.valorDesconto = valorDesconto;
+    public SFC500NotaFiscalEnergiaEletrica setCampo14ValorDesconto(BigDecimal campo14ValorDesconto) {
+        this.campo14ValorDesconto = campo14ValorDesconto;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorDespesasAcessorias(BigDecimal valorDespesasAcessorias) {
-        this.valorDespesasAcessorias = valorDespesasAcessorias;
+    public SFC500NotaFiscalEnergiaEletrica setCampo18ValorDespesasAcessorias(BigDecimal campo18ValorDespesasAcessorias) {
+        this.campo18ValorDespesasAcessorias = campo18ValorDespesasAcessorias;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorDocumento(BigDecimal valorDocumento) {
-        this.valorDocumento = valorDocumento;
+    public SFC500NotaFiscalEnergiaEletrica setCampo13ValorDocumento(BigDecimal campo13ValorDocumento) {
+        this.campo13ValorDocumento = campo13ValorDocumento;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorEmNomeDeTerceiros(BigDecimal valorEmNomeDeTerceiros) {
-        this.valorEmNomeDeTerceiros = valorEmNomeDeTerceiros;
+    public SFC500NotaFiscalEnergiaEletrica setCampo17ValorEmNomeDeTerceiros(BigDecimal campo17ValorEmNomeDeTerceiros) {
+        this.campo17ValorEmNomeDeTerceiros = campo17ValorEmNomeDeTerceiros;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorFornecido(BigDecimal valorFornecido) {
-        this.valorFornecido = valorFornecido;
+    public SFC500NotaFiscalEnergiaEletrica setCampo15ValorFornecido(BigDecimal campo15ValorFornecido) {
+        this.campo15ValorFornecido = campo15ValorFornecido;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorIcms(BigDecimal valorIcms) {
-        this.valorIcms = valorIcms;
+    public SFC500NotaFiscalEnergiaEletrica setCampo20ValorIcms(BigDecimal campo20ValorIcms) {
+        this.campo20ValorIcms = campo20ValorIcms;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorIcmsSt(BigDecimal valorIcmsSt) {
-        this.valorIcmsSt = valorIcmsSt;
+    public SFC500NotaFiscalEnergiaEletrica setCampo22ValorIcmsSt(BigDecimal campo22ValorIcmsSt) {
+        this.campo22ValorIcmsSt = campo22ValorIcmsSt;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorNaoTributado(BigDecimal valorNaoTributado) {
-        this.valorNaoTributado = valorNaoTributado;
+    public SFC500NotaFiscalEnergiaEletrica setCampo16ValorNaoTributado(BigDecimal campo16ValorNaoTributado) {
+        this.campo16ValorNaoTributado = campo16ValorNaoTributado;
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setValorPis(BigDecimal valorPis) {
-        this.valorPis = valorPis;
+    public SFC500NotaFiscalEnergiaEletrica setCampo24ValorPis(BigDecimal campo24ValorPis) {
+        this.campo24ValorPis = campo24ValorPis;
         return this;
     }
 }

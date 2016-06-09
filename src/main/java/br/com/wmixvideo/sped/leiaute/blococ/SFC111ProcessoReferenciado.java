@@ -11,14 +11,14 @@ public class SFC111ProcessoReferenciado implements SFLinha {
     private SFIndicadorProcessoOrigem indicadorOrigem;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "C111";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
-        linha.append(this.getCodigoRegistro());
+        linha.append(this.getCampo01CodigoRegistro());
         linha.append(this.numero);
         linha.append(SFUtil.formatToString(this.indicadorOrigem));
         return linha.toString();

@@ -29,14 +29,14 @@ public class SF1010ObrigatoriedadeRegistrosBloco1 implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "1010";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.distribuidoraDeEnergiaOutraUF.getCodigo());
         texto.append(this.ehComercioVarejistaDeCombustiveis.getCodigo());
         texto.append(this.existemInformacoesASeremPrestadasNesteRegistro.getCodigo());

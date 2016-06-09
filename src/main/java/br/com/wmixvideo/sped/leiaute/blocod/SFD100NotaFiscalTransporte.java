@@ -36,14 +36,14 @@ public class SFD100NotaFiscalTransporte implements SFLinha {
     private SFIndicadorEmitente indicadorEmitente;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "D100";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(SFUtil.formatToString(this.indicadorOperacao));
         texto.append(SFUtil.formatToString(this.indicadorEmitente));
         texto.append(this.codigoParticipante);

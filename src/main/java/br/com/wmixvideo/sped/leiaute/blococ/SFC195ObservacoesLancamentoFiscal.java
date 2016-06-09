@@ -8,14 +8,14 @@ public class SFC195ObservacoesLancamentoFiscal implements SFLinha {
     private String codigo, descricao;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "C195";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
-        linha.append(this.getCodigoRegistro());
+        linha.append(this.getCampo01CodigoRegistro());
         linha.append(this.codigo);
         linha.append(this.descricao);
         return linha.toString();

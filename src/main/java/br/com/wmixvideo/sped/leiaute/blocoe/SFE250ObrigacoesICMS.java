@@ -18,14 +18,14 @@ public class SFE250ObrigacoesICMS implements SFLinha {
     private SFReferencia referencia;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "E250";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
-        linha.append(this.getCodigoRegistro());
+        linha.append(this.getCampo01CodigoRegistro());
         linha.append(this.codigo);
         linha.append(SFUtil.formatToString(this.valor));
         linha.append(SFUtil.formatToString(this.dataVencimento));

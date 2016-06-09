@@ -14,12 +14,12 @@ public class SF9999EncerramentoArquivoDigital implements SFLinha {
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.totalLinhasArquivo);
         return texto.toString();
     }
 
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "9999";
     }
 }

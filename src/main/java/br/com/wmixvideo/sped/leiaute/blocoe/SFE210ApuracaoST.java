@@ -25,14 +25,14 @@ public class SFE210ApuracaoST implements SFLinha {
     private BigDecimal valorExtraApuracao;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "E210";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
-        linha.append(this.getCodigoRegistro());
+        linha.append(this.getCampo01CodigoRegistro());
         linha.append(SFUtil.formatToString(this.indicadorMovimento));
         linha.append(SFUtil.formatToString(this.valorSaldoCredorAnterior));
         linha.append(SFUtil.formatToString(this.valorDevolucao));

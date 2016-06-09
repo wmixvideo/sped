@@ -9,14 +9,14 @@ public class SF0450InformacaoComplementarDocumentoFiscal implements SFLinha {
     private String observacao;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "0450";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(StringUtils.leftPad(String.valueOf(this.contador), 6, "0"));
         texto.append(this.observacao);
         return texto.toString();

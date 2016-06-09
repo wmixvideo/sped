@@ -19,14 +19,14 @@ public class SFC190RegistroAnaliticoDocumento implements SFLinha {
     private BigDecimal valorIpi;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "C190";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
-        linha.append(this.getCodigoRegistro());
+        linha.append(this.getCampo01CodigoRegistro());
         linha.append(this.codigoSituacaoTributaria);
         linha.append(this.codigoFiscalOperacaoPrestacao);
         linha.append(SFUtil.formatToString(this.aliquotaIcms));

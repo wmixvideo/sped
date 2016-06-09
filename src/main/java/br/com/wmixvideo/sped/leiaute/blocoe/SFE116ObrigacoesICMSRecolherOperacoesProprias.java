@@ -18,14 +18,14 @@ public class SFE116ObrigacoesICMSRecolherOperacoesProprias implements SFLinha {
     private SFReferencia referencia;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "E116";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.codigo);
         texto.append(SFUtil.formatToString(this.valor));
         texto.append(SFUtil.formatToString(this.dataVencimento));

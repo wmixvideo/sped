@@ -10,14 +10,14 @@ public class SF0015DadosContribuinteSubstitutoOuResponsavelICMSDestino implement
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.uf);
         texto.append(this.inscricaoEstadual);
         return texto.toString();
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "0015";
     }
 

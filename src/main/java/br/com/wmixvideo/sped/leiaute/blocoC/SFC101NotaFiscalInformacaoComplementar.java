@@ -14,14 +14,14 @@ public class SFC101NotaFiscalInformacaoComplementar implements SFLinha {
     private BigDecimal valorIcmsPartilhaDestinoFundoCombatePobreza;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "C101";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(SFUtil.formatToString(this.valorIcmsPartilhaDestinoFundoCombatePobreza));
         texto.append(SFUtil.formatToString(this.valorIcmsPartilhaDestino));
         texto.append(SFUtil.formatToString(this.valorIcmsPartilhaOrigem));

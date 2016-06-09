@@ -16,7 +16,7 @@ public class SFH005TotaisInventario implements SFLinha {
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(SFUtil.formatToString(this.dataInventario));
         texto.append(SFUtil.formatToString(this.valorTotalEstoque));
         texto.append(this.motivoInventario.getCodigo());
@@ -24,7 +24,7 @@ public class SFH005TotaisInventario implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "H005";
     }
 

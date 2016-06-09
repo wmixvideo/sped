@@ -12,14 +12,14 @@ public class SFC197OutrasObrigacoesTributarias implements SFLinha {
     private BigDecimal baseCalculo, aliquota, valor, outros;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "C197";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
-        linha.append(this.getCodigoRegistro());
+        linha.append(this.getCampo01CodigoRegistro());
         linha.append(this.codigo);
         linha.append(this.descricao);
         linha.append(this.codigoItem);

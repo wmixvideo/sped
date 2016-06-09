@@ -18,14 +18,14 @@ public class SFD190RegistroAnaliticoTransporte implements SFLinha {
     private BigDecimal valorNaoTributado;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "D190";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.codigoSituacaoTributaria);
         texto.append(this.codigoFiscalOperacaoPrestacao);
         texto.append(SFUtil.formatToString(this.valorICMSAliquota));

@@ -47,7 +47,7 @@ public class SFC100NotaFiscal implements SFLinha {
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.operacao != null ? this.operacao.getCodigo() : StringUtils.EMPTY);
         texto.append(this.emissao != null ? this.emissao.getCodigo() : StringUtils.EMPTY);
         texto.append(this.codigoParticipante);
@@ -80,7 +80,7 @@ public class SFC100NotaFiscal implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "C100";
     }
 

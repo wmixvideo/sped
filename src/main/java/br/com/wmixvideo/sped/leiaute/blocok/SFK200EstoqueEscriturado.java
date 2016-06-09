@@ -22,14 +22,14 @@ public class SFK200EstoqueEscriturado implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "K200";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder builder = new SFStringBuilder();
-        builder.append(this.getCodigoRegistro());
+        builder.append(this.getCampo01CodigoRegistro());
         builder.append(SFUtil.formatToString(this.dataEstoqueFinal));
         builder.append(this.codigoProduto);
         builder.append(this.quantidadeEmEstoque);

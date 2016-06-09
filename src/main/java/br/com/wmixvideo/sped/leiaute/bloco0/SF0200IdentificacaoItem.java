@@ -18,7 +18,6 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
     private String codigoExIpi;
     private String codigoGenero;
     private String codigoServico;
-    private String codigoSubstituicaoTributaria;
     private String descricao;
     private String unidadeMedida;
     private SFItemTipo tipo;
@@ -27,7 +26,7 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(this.codigo);
         texto.append(this.descricao);
         texto.append(StringUtils.trimToEmpty(this.codigoBarras));
@@ -39,12 +38,11 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
         texto.append(this.codigoGenero);
         texto.append(this.codigoServico);
         texto.append(SFUtil.formatToString(this.aliquotaIcms));
-        texto.append(this.codigoSubstituicaoTributaria);
         return texto.toString();
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "0200";
     }
 
@@ -85,11 +83,6 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
 
     public SF0200IdentificacaoItem setCodigoServico(String codigoServico) {
         this.codigoServico = codigoServico;
-        return this;
-    }
-
-    public SF0200IdentificacaoItem setCodigoSubstituicaoTributaria(String codigoSubstituicaoTributaria) {
-        this.codigoSubstituicaoTributaria = codigoSubstituicaoTributaria;
         return this;
     }
 

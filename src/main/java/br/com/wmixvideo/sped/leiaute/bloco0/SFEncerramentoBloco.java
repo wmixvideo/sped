@@ -21,7 +21,7 @@ public class SFEncerramentoBloco implements SFLinha {
     }
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return this.codigoRegistro;
     }
 }

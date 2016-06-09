@@ -48,14 +48,14 @@ public class SFC170ItemDocumento implements SFLinha {
     private SFIndicadorPeriodo indicadorPeriodo;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "C170";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
-        linha.append(this.getCodigoRegistro());
+        linha.append(this.getCampo01CodigoRegistro());
         linha.append(this.ordem);
         linha.append(this.codigo);
         linha.append(this.descricao);

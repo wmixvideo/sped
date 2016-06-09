@@ -19,7 +19,7 @@ public class SF0200IdentificacaoItemTest {
                 .setTipo(SFItemTipo.SERVIÇOS)
                 .setAliquotaIcms(BigDecimal.ZERO);
 
-        Assert.assertEquals("|0200|123456|FILME|123456789123||PC|09|85234029||||0||", linha.toString());
+        Assert.assertEquals("|0200|123456|FILME|123456789123||PC|09|85234029||||0|", linha.toString());
     }
 
     @Test
@@ -33,7 +33,7 @@ public class SF0200IdentificacaoItemTest {
                 .setTipo(SFItemTipo.SERVIÇOS)
                 .setAliquotaIcms(BigDecimal.ZERO);
 
-        Assert.assertEquals("|0200|123456|FILME|123456789123||PC|09|85234990||||0||", linha.toString());
+        Assert.assertEquals("|0200|123456|FILME|123456789123||PC|09|85234990||||0|", linha.toString());
     }
 
     @Test
@@ -47,6 +47,6 @@ public class SF0200IdentificacaoItemTest {
                 .setTipo(SFItemTipo.EMBALAGEM)
                 .setAliquotaIcms(BigDecimal.ZERO);
 
-        Assert.assertEquals("|0200|123456|FILME|||PC|02|85234029||||0||", linha.toString());
+        Assert.assertEquals("|0200|123456|FILME|||PC|02|85234029||||0|", linha.toString());
     }
 }

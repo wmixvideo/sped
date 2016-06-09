@@ -12,14 +12,14 @@ public class SFE100PeriodoApuracaoICMS implements SFLinha {
     private LocalDate dataFim;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "E100";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(SFUtil.formatToString(this.dataInicio));
         texto.append(SFUtil.formatToString(this.dataFim));
         return texto.toString();

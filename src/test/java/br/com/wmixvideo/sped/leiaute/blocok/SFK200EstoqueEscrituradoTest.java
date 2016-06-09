@@ -9,7 +9,7 @@ public class SFK200EstoqueEscrituradoTest {
 
     @Test
     public void deveObterSeuCodigo() {
-        Assert.assertEquals("K200", new SFK200EstoqueEscriturado(null, null, 0).getCodigoRegistro());
+        Assert.assertEquals("K200", new SFK200EstoqueEscriturado(null, null, 0).getCampo01CodigoRegistro());
     }
 
     @Test

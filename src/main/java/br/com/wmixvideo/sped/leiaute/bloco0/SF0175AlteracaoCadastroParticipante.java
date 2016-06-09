@@ -14,14 +14,14 @@ public class SF0175AlteracaoCadastroParticipante implements SFLinha {
     private String conteudoAnterior;
 
     @Override
-    public String getCodigoRegistro() {
+    public String getCampo01CodigoRegistro() {
         return "0175";
     }
 
     @Override
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCodigoRegistro());
+        texto.append(this.getCampo01CodigoRegistro());
         texto.append(SFUtil.formatToString(this.data));
         texto.append(this.campo.getNumero());
         texto.append(this.conteudoAnterior);
