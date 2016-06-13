@@ -8,14 +8,14 @@ import java.math.BigDecimal;
 
 public class SFD190RegistroAnaliticoTransporte implements SFLinha {
 
-    private String codigoSituacaoTributaria;
-    private String codigoFiscalOperacaoPrestacao;
-    private String codigoObservacao;
-    private BigDecimal valorICMSAliquota;
-    private BigDecimal valor;
-    private BigDecimal valorICMSBaseCalculo;
-    private BigDecimal valorICMS;
-    private BigDecimal valorNaoTributado;
+    private String campo02CodigoSituacaoTributaria;
+    private String campo03CodigoFiscalOperacaoPrestacao;
+    private String campo09CodigoObservacao;
+    private BigDecimal campo04ValorICMSAliquota;
+    private BigDecimal campo05Valor;
+    private BigDecimal campo06ValorICMSBaseCalculo;
+    private BigDecimal campo07ValorICMS;
+    private BigDecimal campo08ValorNaoTributado;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -26,54 +26,54 @@ public class SFD190RegistroAnaliticoTransporte implements SFLinha {
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
         texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.codigoSituacaoTributaria);
-        texto.append(this.codigoFiscalOperacaoPrestacao);
-        texto.append(SFUtil.formatToString(this.valorICMSAliquota));
-        texto.append(SFUtil.formatToString(this.valor));
-        texto.append(SFUtil.formatToString(this.valorICMSBaseCalculo));
-        texto.append(SFUtil.formatToString(this.valorICMS));
-        texto.append(SFUtil.formatToString(this.valorNaoTributado));
-        texto.append(this.codigoObservacao);
+        texto.append(this.campo02CodigoSituacaoTributaria);
+        texto.append(this.campo03CodigoFiscalOperacaoPrestacao);
+        texto.append(SFUtil.formatToString(this.campo04ValorICMSAliquota));
+        texto.append(SFUtil.formatToString(this.campo05Valor));
+        texto.append(SFUtil.formatToString(this.campo06ValorICMSBaseCalculo));
+        texto.append(SFUtil.formatToString(this.campo07ValorICMS));
+        texto.append(SFUtil.formatToString(this.campo08ValorNaoTributado));
+        texto.append(this.campo09CodigoObservacao);
         return texto.toString();
     }
 
-    public SFD190RegistroAnaliticoTransporte setCodigoFiscalOperacaoPrestacao(String codigoFiscalOperacaoPrestacao) {
-        this.codigoFiscalOperacaoPrestacao = codigoFiscalOperacaoPrestacao;
+    public SFD190RegistroAnaliticoTransporte setCampo03CodigoFiscalOperacaoPrestacao(String campo03CodigoFiscalOperacaoPrestacao) {
+        this.campo03CodigoFiscalOperacaoPrestacao = campo03CodigoFiscalOperacaoPrestacao;
         return this;
     }
 
-    public SFD190RegistroAnaliticoTransporte setCodigoObservacao(String codigoObservacao) {
-        this.codigoObservacao = codigoObservacao;
+    public SFD190RegistroAnaliticoTransporte setCampo09CodigoObservacao(String campo09CodigoObservacao) {
+        this.campo09CodigoObservacao = campo09CodigoObservacao;
         return this;
     }
 
-    public SFD190RegistroAnaliticoTransporte setCodigoSituacaoTributaria(String codigoSituacaoTributaria) {
-        this.codigoSituacaoTributaria = codigoSituacaoTributaria;
+    public SFD190RegistroAnaliticoTransporte setCampo02CodigoSituacaoTributaria(String campo02CodigoSituacaoTributaria) {
+        this.campo02CodigoSituacaoTributaria = campo02CodigoSituacaoTributaria;
         return this;
     }
 
-    public SFD190RegistroAnaliticoTransporte setValor(BigDecimal valor) {
-        this.valor = valor;
+    public SFD190RegistroAnaliticoTransporte setCampo05Valor(BigDecimal campo05Valor) {
+        this.campo05Valor = campo05Valor;
         return this;
     }
 
-    public SFD190RegistroAnaliticoTransporte setValorICMS(BigDecimal valorICMS) {
-        this.valorICMS = valorICMS;
+    public SFD190RegistroAnaliticoTransporte setCampo07ValorICMS(BigDecimal campo07ValorICMS) {
+        this.campo07ValorICMS = campo07ValorICMS;
         return this;
     }
 
-    public SFD190RegistroAnaliticoTransporte setValorICMSAliquota(BigDecimal valorICMSAliquota) {
-        this.valorICMSAliquota = valorICMSAliquota;
+    public SFD190RegistroAnaliticoTransporte setCampo04ValorICMSAliquota(BigDecimal campo04ValorICMSAliquota) {
+        this.campo04ValorICMSAliquota = campo04ValorICMSAliquota;
         return this;
     }
 
-    public SFD190RegistroAnaliticoTransporte setValorICMSBaseCalculo(BigDecimal valorICMSBaseCalculo) {
-        this.valorICMSBaseCalculo = valorICMSBaseCalculo;
+    public SFD190RegistroAnaliticoTransporte setCampo06ValorICMSBaseCalculo(BigDecimal campo06ValorICMSBaseCalculo) {
+        this.campo06ValorICMSBaseCalculo = campo06ValorICMSBaseCalculo;
         return this;
     }
 
-    public SFD190RegistroAnaliticoTransporte setValorNaoTributado(BigDecimal valorNaoTributado) {
-        this.valorNaoTributado = valorNaoTributado;
+    public SFD190RegistroAnaliticoTransporte setCampo08ValorNaoTributado(BigDecimal campo08ValorNaoTributado) {
+        this.campo08ValorNaoTributado = campo08ValorNaoTributado;
         return this;
     }
 }

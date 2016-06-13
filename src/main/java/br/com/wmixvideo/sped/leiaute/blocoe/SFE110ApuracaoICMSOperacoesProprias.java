@@ -8,37 +8,20 @@ import java.math.BigDecimal;
 
 public class SFE110ApuracaoICMSOperacoesProprias implements SFLinha {
 
-    private BigDecimal valorTotalDebitos;
-    private BigDecimal valorAjusteDebitos;
-    private BigDecimal valorTotalAjusteDebitos;
-    private BigDecimal valorEstornoCreditos;
-    private BigDecimal valorTotalCreditos;
-    private BigDecimal valorAjusteCreditos;
-    private BigDecimal valorTotalAjusteCreditos;
-    private BigDecimal valorEstornosDebito;
-    private BigDecimal valorSaldoCredorAnterior;
-    private BigDecimal valorSaldoApurado;
-    private BigDecimal valorTotalDeducoes;
-    private BigDecimal valorIcmsRecolher;
-    private BigDecimal valorSaldoCredorTransportar;
-    private BigDecimal valorExtraApuracao;
-
-    public SFE110ApuracaoICMSOperacoesProprias () {
-        this.valorTotalDebitos = BigDecimal.ZERO;
-        this.valorAjusteDebitos = BigDecimal.ZERO;
-        this.valorTotalAjusteDebitos = BigDecimal.ZERO;
-        this.valorEstornoCreditos = BigDecimal.ZERO;
-        this.valorTotalCreditos = BigDecimal.ZERO;
-        this.valorAjusteCreditos = BigDecimal.ZERO;
-        this.valorTotalAjusteCreditos = BigDecimal.ZERO;
-        this.valorEstornosDebito = BigDecimal.ZERO;
-        this.valorSaldoCredorAnterior = BigDecimal.ZERO;
-        this.valorSaldoApurado = BigDecimal.ZERO;
-        this.valorTotalDeducoes = BigDecimal.ZERO;
-        this.valorIcmsRecolher = BigDecimal.ZERO;
-        this.valorSaldoCredorTransportar = BigDecimal.ZERO;
-        this.valorExtraApuracao = BigDecimal.ZERO;
-    }
+    private BigDecimal campo02ValorTotalDebitos;
+    private BigDecimal campo03ValorAjusteDebitos;
+    private BigDecimal campo04ValorTotalAjusteDebitos;
+    private BigDecimal campo05ValorEstornoCreditos;
+    private BigDecimal campo06ValorTotalCreditos;
+    private BigDecimal campo07ValorAjusteCreditos;
+    private BigDecimal campo08ValorTotalAjusteCreditos;
+    private BigDecimal campo09ValorEstornosDebito;
+    private BigDecimal campo10ValorSaldoCredorAnterior;
+    private BigDecimal campo11ValorSaldoApurado;
+    private BigDecimal campo12ValorTotalDeducoes;
+    private BigDecimal campo13ValorIcmsRecolher;
+    private BigDecimal campo14ValorSaldoCredorTransportar;
+    private BigDecimal campo15ValorExtraApuracao;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -49,90 +32,90 @@ public class SFE110ApuracaoICMSOperacoesProprias implements SFLinha {
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
         texto.append(this.getCampo01CodigoRegistro());
-        texto.append(SFUtil.formatToString(this.valorTotalDebitos));
-        texto.append(SFUtil.formatToString(this.valorAjusteDebitos));
-        texto.append(SFUtil.formatToString(this.valorTotalAjusteDebitos));
-        texto.append(SFUtil.formatToString(this.valorEstornoCreditos));
-        texto.append(SFUtil.formatToString(this.valorTotalCreditos));
-        texto.append(SFUtil.formatToString(this.valorAjusteCreditos));
-        texto.append(SFUtil.formatToString(this.valorTotalAjusteCreditos));
-        texto.append(SFUtil.formatToString(this.valorEstornosDebito));
-        texto.append(SFUtil.formatToString(this.valorSaldoCredorAnterior));
-        texto.append(SFUtil.formatToString(this.valorSaldoApurado));
-        texto.append(SFUtil.formatToString(this.valorTotalDeducoes));
-        texto.append(SFUtil.formatToString(this.valorIcmsRecolher));
-        texto.append(SFUtil.formatToString(this.valorSaldoCredorTransportar));
-        texto.append(SFUtil.formatToString(this.valorExtraApuracao));
+        texto.append(SFUtil.formatToString(this.campo02ValorTotalDebitos));
+        texto.append(SFUtil.formatToString(this.campo03ValorAjusteDebitos));
+        texto.append(SFUtil.formatToString(this.campo04ValorTotalAjusteDebitos));
+        texto.append(SFUtil.formatToString(this.campo05ValorEstornoCreditos));
+        texto.append(SFUtil.formatToString(this.campo06ValorTotalCreditos));
+        texto.append(SFUtil.formatToString(this.campo07ValorAjusteCreditos));
+        texto.append(SFUtil.formatToString(this.campo08ValorTotalAjusteCreditos));
+        texto.append(SFUtil.formatToString(this.campo09ValorEstornosDebito));
+        texto.append(SFUtil.formatToString(this.campo10ValorSaldoCredorAnterior));
+        texto.append(SFUtil.formatToString(this.campo11ValorSaldoApurado));
+        texto.append(SFUtil.formatToString(this.campo12ValorTotalDeducoes));
+        texto.append(SFUtil.formatToString(this.campo13ValorIcmsRecolher));
+        texto.append(SFUtil.formatToString(this.campo14ValorSaldoCredorTransportar));
+        texto.append(SFUtil.formatToString(this.campo15ValorExtraApuracao));
         return texto.toString();
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorAjusteCreditos(BigDecimal valorAjusteCreditos) {
-        this.valorAjusteCreditos = valorAjusteCreditos;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo02ValorTotalDebitos(BigDecimal campo02ValorTotalDebitos) {
+        this.campo02ValorTotalDebitos = campo02ValorTotalDebitos;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorAjusteDebitos(BigDecimal valorAjusteDebitos) {
-        this.valorAjusteDebitos = valorAjusteDebitos;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo03ValorAjusteDebitos(BigDecimal campo03ValorAjusteDebitos) {
+        this.campo03ValorAjusteDebitos = campo03ValorAjusteDebitos;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorEstornoCreditos(BigDecimal valorEstornoCreditos) {
-        this.valorEstornoCreditos = valorEstornoCreditos;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo04ValorTotalAjusteDebitos(BigDecimal campo04ValorTotalAjusteDebitos) {
+        this.campo04ValorTotalAjusteDebitos = campo04ValorTotalAjusteDebitos;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorEstornosDebito(BigDecimal valorEstornosDebito) {
-        this.valorEstornosDebito = valorEstornosDebito;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo05ValorEstornoCreditos(BigDecimal campo05ValorEstornoCreditos) {
+        this.campo05ValorEstornoCreditos = campo05ValorEstornoCreditos;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorExtraApuracao(BigDecimal valorExtraApuracao) {
-        this.valorExtraApuracao = valorExtraApuracao;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo06ValorTotalCreditos(BigDecimal campo06ValorTotalCreditos) {
+        this.campo06ValorTotalCreditos = campo06ValorTotalCreditos;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorIcmsRecolher(BigDecimal valorIcmsRecolher) {
-        this.valorIcmsRecolher = valorIcmsRecolher;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo07ValorAjusteCreditos(BigDecimal campo07ValorAjusteCreditos) {
+        this.campo07ValorAjusteCreditos = campo07ValorAjusteCreditos;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorSaldoApurado(BigDecimal valorSaldoApurado) {
-        this.valorSaldoApurado = valorSaldoApurado;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo08ValorTotalAjusteCreditos(BigDecimal campo08ValorTotalAjusteCreditos) {
+        this.campo08ValorTotalAjusteCreditos = campo08ValorTotalAjusteCreditos;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorSaldoCredorAnterior(BigDecimal valorSaldoCredorAnterior) {
-        this.valorSaldoCredorAnterior = valorSaldoCredorAnterior;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo09ValorEstornosDebito(BigDecimal campo09ValorEstornosDebito) {
+        this.campo09ValorEstornosDebito = campo09ValorEstornosDebito;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorSaldoCredorTransportar(BigDecimal valorSaldoCredorTransportar) {
-        this.valorSaldoCredorTransportar = valorSaldoCredorTransportar;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo10ValorSaldoCredorAnterior(BigDecimal campo10ValorSaldoCredorAnterior) {
+        this.campo10ValorSaldoCredorAnterior = campo10ValorSaldoCredorAnterior;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorTotalAjusteCreditos(BigDecimal valorTotalAjusteCreditos) {
-        this.valorTotalAjusteCreditos = valorTotalAjusteCreditos;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo11ValorSaldoApurado(BigDecimal campo11ValorSaldoApurado) {
+        this.campo11ValorSaldoApurado = campo11ValorSaldoApurado;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorTotalAjusteDebitos(BigDecimal valorTotalAjusteDebitos) {
-        this.valorTotalAjusteDebitos = valorTotalAjusteDebitos;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo12ValorTotalDeducoes(BigDecimal campo12ValorTotalDeducoes) {
+        this.campo12ValorTotalDeducoes = campo12ValorTotalDeducoes;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorTotalCreditos(BigDecimal valorTotalCreditos) {
-        this.valorTotalCreditos = valorTotalCreditos;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo13ValorIcmsRecolher(BigDecimal campo13ValorIcmsRecolher) {
+        this.campo13ValorIcmsRecolher = campo13ValorIcmsRecolher;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorTotalDebitos(BigDecimal valorTotalDebitos) {
-        this.valorTotalDebitos = valorTotalDebitos;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo14ValorSaldoCredorTransportar(BigDecimal campo14ValorSaldoCredorTransportar) {
+        this.campo14ValorSaldoCredorTransportar = campo14ValorSaldoCredorTransportar;
         return this;
     }
 
-    public SFE110ApuracaoICMSOperacoesProprias setValorTotalDeducoes(BigDecimal valorTotalDeducoes) {
-        this.valorTotalDeducoes = valorTotalDeducoes;
+    public SFE110ApuracaoICMSOperacoesProprias setCampo15ValorExtraApuracao(BigDecimal campo15ValorExtraApuracao) {
+        this.campo15ValorExtraApuracao = campo15ValorExtraApuracao;
         return this;
     }
 }

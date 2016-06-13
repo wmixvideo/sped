@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 public class SFD101NotaFiscalTransporteInfoComplementar implements SFLinha {
 
-    private BigDecimal valorFundoCombatePobreza, valorICMSDestino, valorICMSRemetente;
+    private BigDecimal campo02ValorFundoCombatePobreza, campo03ValorICMSDestino, campo04ValorICMSRemetente;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -19,24 +19,24 @@ public class SFD101NotaFiscalTransporteInfoComplementar implements SFLinha {
     public String toString() {
         final SFStringBuilder texto = new SFStringBuilder();
         texto.append(this.getCampo01CodigoRegistro());
-        texto.append(SFUtil.formatToString(this.valorFundoCombatePobreza));
-        texto.append(SFUtil.formatToString(this.valorICMSDestino));
-        texto.append(SFUtil.formatToString(this.valorICMSRemetente));
+        texto.append(SFUtil.formatToString(this.campo02ValorFundoCombatePobreza));
+        texto.append(SFUtil.formatToString(this.campo03ValorICMSDestino));
+        texto.append(SFUtil.formatToString(this.campo04ValorICMSRemetente));
         return texto.toString();
     }
 
-    public SFD101NotaFiscalTransporteInfoComplementar setValorFundoCombatePobreza(BigDecimal valorFundoCombatePobreza) {
-        this.valorFundoCombatePobreza = valorFundoCombatePobreza;
+    public SFD101NotaFiscalTransporteInfoComplementar setCampo02ValorFundoCombatePobreza(BigDecimal campo02ValorFundoCombatePobreza) {
+        this.campo02ValorFundoCombatePobreza = campo02ValorFundoCombatePobreza;
         return this;
     }
 
-    public SFD101NotaFiscalTransporteInfoComplementar setValorICMSDestino(BigDecimal valorICMSDestino) {
-        this.valorICMSDestino = valorICMSDestino;
+    public SFD101NotaFiscalTransporteInfoComplementar setCampo03ValorICMSDestino(BigDecimal campo03ValorICMSDestino) {
+        this.campo03ValorICMSDestino = campo03ValorICMSDestino;
         return this;
     }
 
-    public SFD101NotaFiscalTransporteInfoComplementar setValorICMSRemetente(BigDecimal valorICMSRemetente) {
-        this.valorICMSRemetente = valorICMSRemetente;
+    public SFD101NotaFiscalTransporteInfoComplementar setCampo04ValorICMSRemetente(BigDecimal campo04ValorICMSRemetente) {
+        this.campo04ValorICMSRemetente = campo04ValorICMSRemetente;
         return this;
     }
 }

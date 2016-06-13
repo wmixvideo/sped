@@ -9,14 +9,14 @@ public class SFD190RegistroAnaliticoTransporteTest {
     @Test
     public void testeToString() throws Exception {
         final SFD190RegistroAnaliticoTransporte linha = new SFD190RegistroAnaliticoTransporte()
-                .setCodigoSituacaoTributaria("001")
-                .setCodigoFiscalOperacaoPrestacao("002")
-                .setValorICMSAliquota(BigDecimal.valueOf(2.55))
-                .setValor(BigDecimal.valueOf(2.56))
-                .setValorICMSBaseCalculo(BigDecimal.valueOf(2.57))
-                .setValorICMS(BigDecimal.valueOf(2.58))
-                .setValorNaoTributado(BigDecimal.valueOf(2.59))
-                .setCodigoObservacao("003");
+                .setCampo02CodigoSituacaoTributaria("001")
+                .setCampo03CodigoFiscalOperacaoPrestacao("002")
+                .setCampo04ValorICMSAliquota(BigDecimal.valueOf(2.55))
+                .setCampo05Valor(BigDecimal.valueOf(2.56))
+                .setCampo06ValorICMSBaseCalculo(BigDecimal.valueOf(2.57))
+                .setCampo07ValorICMS(BigDecimal.valueOf(2.58))
+                .setCampo08ValorNaoTributado(BigDecimal.valueOf(2.59))
+                .setCampo09CodigoObservacao("003");
 
         Assert.assertEquals("|D190|001|002|2,55|2,56|2,57|2,58|2,59|003|", linha.toString());
     }

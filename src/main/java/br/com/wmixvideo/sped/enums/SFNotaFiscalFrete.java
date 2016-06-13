@@ -21,4 +21,13 @@ public enum SFNotaFiscalFrete {
     public String toString() {
         return this.codigo;
     }
+
+    public static SFNotaFiscalFrete valueOfCodigo(final String codigo) {
+        for (SFNotaFiscalFrete frete : values()) {
+            if (frete.getCodigo().equals(codigo)) {
+                return frete;
+            }
+        }
+        return null;
+    }
 }
