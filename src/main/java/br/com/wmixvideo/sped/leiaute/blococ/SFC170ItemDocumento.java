@@ -10,42 +10,42 @@ import java.math.BigDecimal;
 
 public class SFC170ItemDocumento implements SFLinha {
 
-    private int quantidade;
-    private String ordem;
-    private String codigo;
-    private String descricao;
-    private String unidade;
-    private String codigoSituacaoTributaria;
-    private String codigoFiscalOperacaoPrestacao;
-    private String codigoNaturezaOperacao;
-    private String codigoSituacaoTributariaIpi;
-    private String codigoEnquadramentoIpi;
-    private String codigoStPis;
-    private String codigoStCofins;
-    private String contaContabil;
-    private BigDecimal valor;
-    private BigDecimal valorDesconto;
-    private BigDecimal valorBaseCalculoIcms;
-    private BigDecimal valorAliquotaIcms;
-    private BigDecimal valorIcms;
-    private BigDecimal valorBaseCalculoIcmsSt;
-    private BigDecimal valorAliquotaIcmsSt;
-    private BigDecimal valorIcmsSt;
-    private BigDecimal valorBaseCalculoIpi;
-    private BigDecimal valorAliquotaIpi;
-    private BigDecimal valorIpi;
-    private BigDecimal valorBaseCalculoPis;
-    private BigDecimal valorAliquotaPercentualPis;
-    private BigDecimal quantidadeBaseCalculoPis;
-    private BigDecimal valorAliquotaPis;
-    private BigDecimal valorPis;
-    private BigDecimal valorBaseCalculoCofins;
-    private BigDecimal valorAliquotaPercentualCofins;
-    private BigDecimal quantidadeBaseCalculoCofins;
-    private BigDecimal valorAliquotaCofins;
-    private BigDecimal valorCofins;
-    private SFMovimentacaoFisica movimentacaoFisica;
-    private SFIndicadorPeriodo indicadorPeriodo;
+    private int campo05Quantidade;
+    private String campo02Ordem;
+    private String campo03Codigo;
+    private String campo04Descricao;
+    private String campo06Unidade;
+    private String campo10CodigoSituacaoTributaria;
+    private String campo11CodigoFiscalOperacaoPrestacao;
+    private String campo12CodigoNaturezaOperacao;
+    private String campo20CodigoSituacaoTributariaIpi;
+    private String campo21CodigoEnquadramentoIpi;
+    private String campo25CodigoStPis;
+    private String campo31CodigoStCofins;
+    private String campo37ContaContabil;
+    private BigDecimal campo07Valor;
+    private BigDecimal campo08ValorDesconto;
+    private BigDecimal campo13ValorBaseCalculoIcms;
+    private BigDecimal campo14ValorAliquotaIcms;
+    private BigDecimal campo15ValorIcms;
+    private BigDecimal campo16ValorBaseCalculoIcmsSt;
+    private BigDecimal campo17ValorAliquotaIcmsSt;
+    private BigDecimal campo18ValorIcmsSt;
+    private BigDecimal campo22ValorBaseCalculoIpi;
+    private BigDecimal campo23ValorAliquotaIpi;
+    private BigDecimal campo24ValorIpi;
+    private BigDecimal campo26ValorBaseCalculoPis;
+    private BigDecimal campo27ValorAliquotaPercentualPis;
+    private BigDecimal campo28QuantidadeBaseCalculoPis;
+    private BigDecimal campo29ValorAliquotaPis;
+    private BigDecimal campo30ValorPis;
+    private BigDecimal campo32ValorBaseCalculoCofins;
+    private BigDecimal campo33ValorAliquotaPercentualCofins;
+    private BigDecimal campo34QuantidadeBaseCalculoCofins;
+    private BigDecimal campo35ValorAliquotaCofins;
+    private BigDecimal campo36ValorCofins;
+    private SFMovimentacaoFisica campo09MovimentacaoFisica;
+    private SFIndicadorPeriodo campo19IndicadorPeriodo;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -56,222 +56,222 @@ public class SFC170ItemDocumento implements SFLinha {
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
         linha.append(this.getCampo01CodigoRegistro());
-        linha.append(this.ordem);
-        linha.append(this.codigo);
-        linha.append(this.descricao);
-        linha.append(this.quantidade);
-        linha.append(this.unidade);
-        linha.append(SFUtil.formatToString(this.valor));
-        linha.append(SFUtil.formatToString(this.valorDesconto));
-        linha.append(SFUtil.formatToString(this.movimentacaoFisica));
-        linha.append(this.codigoSituacaoTributaria);
-        linha.append(this.codigoFiscalOperacaoPrestacao);
-        linha.append(this.codigoNaturezaOperacao);
-        linha.append(SFUtil.formatToString(this.valorBaseCalculoIcms));
-        linha.append(SFUtil.formatToString(this.valorAliquotaIcms));
-        linha.append(SFUtil.formatToString(this.valorIcms));
-        linha.append(SFUtil.formatToString(this.valorBaseCalculoIcmsSt));
-        linha.append(SFUtil.formatToString(this.valorAliquotaIcmsSt));
-        linha.append(SFUtil.formatToString(this.valorIcmsSt));
-        linha.append(SFUtil.formatToString(this.indicadorPeriodo));
-        linha.append(this.codigoSituacaoTributariaIpi);
-        linha.append(this.codigoEnquadramentoIpi);
-        linha.append(SFUtil.formatToString(this.valorBaseCalculoIpi));
-        linha.append(SFUtil.formatToString(this.valorAliquotaIpi));
-        linha.append(SFUtil.formatToString(this.valorIpi));
-        linha.append(this.codigoStPis);
-        linha.append(SFUtil.formatToString(this.valorBaseCalculoPis));
-        linha.append(SFUtil.formatToString(this.valorAliquotaPercentualPis));
-        linha.append(SFUtil.formatToString(this.quantidadeBaseCalculoPis));
-        linha.append(SFUtil.formatToString(this.valorAliquotaPis));
-        linha.append(SFUtil.formatToString(this.valorPis));
-        linha.append(this.codigoStCofins);
-        linha.append(SFUtil.formatToString(this.valorBaseCalculoCofins));
-        linha.append(SFUtil.formatToString(this.valorAliquotaPercentualCofins));
-        linha.append(SFUtil.formatToString(this.quantidadeBaseCalculoCofins));
-        linha.append(SFUtil.formatToString(this.valorAliquotaCofins));
-        linha.append(SFUtil.formatToString(this.valorCofins));
-        linha.append(this.contaContabil);
+        linha.append(this.campo02Ordem);
+        linha.append(this.campo03Codigo);
+        linha.append(this.campo04Descricao);
+        linha.append(this.campo05Quantidade);
+        linha.append(this.campo06Unidade);
+        linha.append(SFUtil.formatToString(this.campo07Valor));
+        linha.append(SFUtil.formatToString(this.campo08ValorDesconto));
+        linha.append(SFUtil.formatToString(this.campo09MovimentacaoFisica));
+        linha.append(this.campo10CodigoSituacaoTributaria);
+        linha.append(this.campo11CodigoFiscalOperacaoPrestacao);
+        linha.append(this.campo12CodigoNaturezaOperacao);
+        linha.append(SFUtil.formatToString(this.campo13ValorBaseCalculoIcms));
+        linha.append(SFUtil.formatToString(this.campo14ValorAliquotaIcms));
+        linha.append(SFUtil.formatToString(this.campo15ValorIcms));
+        linha.append(SFUtil.formatToString(this.campo16ValorBaseCalculoIcmsSt));
+        linha.append(SFUtil.formatToString(this.campo17ValorAliquotaIcmsSt));
+        linha.append(SFUtil.formatToString(this.campo18ValorIcmsSt));
+        linha.append(SFUtil.formatToString(this.campo19IndicadorPeriodo));
+        linha.append(this.campo20CodigoSituacaoTributariaIpi);
+        linha.append(this.campo21CodigoEnquadramentoIpi);
+        linha.append(SFUtil.formatToString(this.campo22ValorBaseCalculoIpi));
+        linha.append(SFUtil.formatToString(this.campo23ValorAliquotaIpi));
+        linha.append(SFUtil.formatToString(this.campo24ValorIpi));
+        linha.append(this.campo25CodigoStPis);
+        linha.append(SFUtil.formatToString(this.campo26ValorBaseCalculoPis));
+        linha.append(SFUtil.formatToString(this.campo27ValorAliquotaPercentualPis));
+        linha.append(SFUtil.formatToString(this.campo28QuantidadeBaseCalculoPis));
+        linha.append(SFUtil.formatToString(this.campo29ValorAliquotaPis));
+        linha.append(SFUtil.formatToString(this.campo30ValorPis));
+        linha.append(this.campo31CodigoStCofins);
+        linha.append(SFUtil.formatToString(this.campo32ValorBaseCalculoCofins));
+        linha.append(SFUtil.formatToString(this.campo33ValorAliquotaPercentualCofins));
+        linha.append(SFUtil.formatToString(this.campo34QuantidadeBaseCalculoCofins));
+        linha.append(SFUtil.formatToString(this.campo35ValorAliquotaCofins));
+        linha.append(SFUtil.formatToString(this.campo36ValorCofins));
+        linha.append(this.campo37ContaContabil);
         return linha.toString();
     }
 
-    public SFC170ItemDocumento setCodigo(String codigo) {
-        this.codigo = codigo;
+    public SFC170ItemDocumento setCampo03Codigo(String campo03Codigo) {
+        this.campo03Codigo = campo03Codigo;
         return this;
     }
 
-    public SFC170ItemDocumento setCodigoEnquadramentoIpi(String codigoEnquadramentoIpi) {
-        this.codigoEnquadramentoIpi = codigoEnquadramentoIpi;
+    public SFC170ItemDocumento setCampo21CodigoEnquadramentoIpi(String campo21CodigoEnquadramentoIpi) {
+        this.campo21CodigoEnquadramentoIpi = campo21CodigoEnquadramentoIpi;
         return this;
     }
 
-    public SFC170ItemDocumento setCodigoFiscalOperacaoPrestacao(String codigoFiscalOperacaoPrestacao) {
-        this.codigoFiscalOperacaoPrestacao = codigoFiscalOperacaoPrestacao;
+    public SFC170ItemDocumento setCampo11CodigoFiscalOperacaoPrestacao(String campo11CodigoFiscalOperacaoPrestacao) {
+        this.campo11CodigoFiscalOperacaoPrestacao = campo11CodigoFiscalOperacaoPrestacao;
         return this;
     }
 
-    public SFC170ItemDocumento setCodigoNaturezaOperacao(String codigoNaturezaOperacao) {
-        this.codigoNaturezaOperacao = codigoNaturezaOperacao;
+    public SFC170ItemDocumento setCampo12CodigoNaturezaOperacao(String campo12CodigoNaturezaOperacao) {
+        this.campo12CodigoNaturezaOperacao = campo12CodigoNaturezaOperacao;
         return this;
     }
 
-    public SFC170ItemDocumento setCodigoSituacaoTributaria(String codigoSituacaoTributaria) {
-        this.codigoSituacaoTributaria = codigoSituacaoTributaria;
+    public SFC170ItemDocumento setCampo10CodigoSituacaoTributaria(String campo10CodigoSituacaoTributaria) {
+        this.campo10CodigoSituacaoTributaria = campo10CodigoSituacaoTributaria;
         return this;
     }
 
-    public SFC170ItemDocumento setCodigoSituacaoTributariaIpi(String codigoSituacaoTributariaIpi) {
-        this.codigoSituacaoTributariaIpi = codigoSituacaoTributariaIpi;
+    public SFC170ItemDocumento setCampo20CodigoSituacaoTributariaIpi(String campo20CodigoSituacaoTributariaIpi) {
+        this.campo20CodigoSituacaoTributariaIpi = campo20CodigoSituacaoTributariaIpi;
         return this;
     }
 
-    public SFC170ItemDocumento setCodigoStCofins(String codigoStCofins) {
-        this.codigoStCofins = codigoStCofins;
+    public SFC170ItemDocumento setCampo31CodigoStCofins(String campo31CodigoStCofins) {
+        this.campo31CodigoStCofins = campo31CodigoStCofins;
         return this;
     }
 
-    public SFC170ItemDocumento setCodigoStPis(String codigoStPis) {
-        this.codigoStPis = codigoStPis;
+    public SFC170ItemDocumento setCampo25CodigoStPis(String campo25CodigoStPis) {
+        this.campo25CodigoStPis = campo25CodigoStPis;
         return this;
     }
 
-    public SFC170ItemDocumento setContaContabil(String contaContabil) {
-        this.contaContabil = contaContabil;
+    public SFC170ItemDocumento setCampo37ContaContabil(String campo37ContaContabil) {
+        this.campo37ContaContabil = campo37ContaContabil;
         return this;
     }
 
-    public SFC170ItemDocumento setDescricao(String descricao) {
-        this.descricao = descricao;
+    public SFC170ItemDocumento setCampo04Descricao(String campo04Descricao) {
+        this.campo04Descricao = campo04Descricao;
         return this;
     }
 
-    public SFC170ItemDocumento setIndicadorPeriodo(SFIndicadorPeriodo indicadorPeriodo) {
-        this.indicadorPeriodo = indicadorPeriodo;
+    public SFC170ItemDocumento setCampo19IndicadorPeriodo(SFIndicadorPeriodo campo19IndicadorPeriodo) {
+        this.campo19IndicadorPeriodo = campo19IndicadorPeriodo;
         return this;
     }
 
-    public SFC170ItemDocumento setMovimentacaoFisica(SFMovimentacaoFisica movimentacaoFisica) {
-        this.movimentacaoFisica = movimentacaoFisica;
+    public SFC170ItemDocumento setCampo09MovimentacaoFisica(SFMovimentacaoFisica campo09MovimentacaoFisica) {
+        this.campo09MovimentacaoFisica = campo09MovimentacaoFisica;
         return this;
     }
 
-    public SFC170ItemDocumento setOrdem(String ordem) {
-        this.ordem = ordem;
+    public SFC170ItemDocumento setCampo02Ordem(String campo02Ordem) {
+        this.campo02Ordem = campo02Ordem;
         return this;
     }
 
-    public SFC170ItemDocumento setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public SFC170ItemDocumento setCampo05Quantidade(int campo05Quantidade) {
+        this.campo05Quantidade = campo05Quantidade;
         return this;
     }
 
-    public SFC170ItemDocumento setQuantidadeBaseCalculoCofins(BigDecimal quantidadeBaseCalculoCofins) {
-        this.quantidadeBaseCalculoCofins = quantidadeBaseCalculoCofins;
+    public SFC170ItemDocumento setCampo34QuantidadeBaseCalculoCofins(BigDecimal campo34QuantidadeBaseCalculoCofins) {
+        this.campo34QuantidadeBaseCalculoCofins = campo34QuantidadeBaseCalculoCofins;
         return this;
     }
 
-    public SFC170ItemDocumento setQuantidadeBaseCalculoPis(BigDecimal quantidadeBaseCalculoPis) {
-        this.quantidadeBaseCalculoPis = quantidadeBaseCalculoPis;
+    public SFC170ItemDocumento setCampo28QuantidadeBaseCalculoPis(BigDecimal campo28QuantidadeBaseCalculoPis) {
+        this.campo28QuantidadeBaseCalculoPis = campo28QuantidadeBaseCalculoPis;
         return this;
     }
 
-    public SFC170ItemDocumento setUnidade(String unidade) {
-        this.unidade = unidade;
+    public SFC170ItemDocumento setCampo06Unidade(String campo06Unidade) {
+        this.campo06Unidade = campo06Unidade;
         return this;
     }
 
-    public SFC170ItemDocumento setValor(BigDecimal valor) {
-        this.valor = valor;
+    public SFC170ItemDocumento setCampo07Valor(BigDecimal campo07Valor) {
+        this.campo07Valor = campo07Valor;
         return this;
     }
 
-    public SFC170ItemDocumento setValorAliquotaCofins(BigDecimal valorAliquotaCofins) {
-        this.valorAliquotaCofins = valorAliquotaCofins;
+    public SFC170ItemDocumento setCampo35ValorAliquotaCofins(BigDecimal campo35ValorAliquotaCofins) {
+        this.campo35ValorAliquotaCofins = campo35ValorAliquotaCofins;
         return this;
     }
 
-    public SFC170ItemDocumento setValorAliquotaIcms(BigDecimal valorAliquotaIcms) {
-        this.valorAliquotaIcms = valorAliquotaIcms;
+    public SFC170ItemDocumento setCampo14ValorAliquotaIcms(BigDecimal campo14ValorAliquotaIcms) {
+        this.campo14ValorAliquotaIcms = campo14ValorAliquotaIcms;
         return this;
     }
 
-    public SFC170ItemDocumento setValorAliquotaIcmsSt(BigDecimal valorAliquotaIcmsSt) {
-        this.valorAliquotaIcmsSt = valorAliquotaIcmsSt;
+    public SFC170ItemDocumento setCampo17ValorAliquotaIcmsSt(BigDecimal campo17ValorAliquotaIcmsSt) {
+        this.campo17ValorAliquotaIcmsSt = campo17ValorAliquotaIcmsSt;
         return this;
     }
 
-    public SFC170ItemDocumento setValorAliquotaIpi(BigDecimal valorAliquotaIpi) {
-        this.valorAliquotaIpi = valorAliquotaIpi;
+    public SFC170ItemDocumento setCampo23ValorAliquotaIpi(BigDecimal campo23ValorAliquotaIpi) {
+        this.campo23ValorAliquotaIpi = campo23ValorAliquotaIpi;
         return this;
     }
 
-    public SFC170ItemDocumento setValorAliquotaPercentualCofins(BigDecimal valorAliquotaPercentualCofins) {
-        this.valorAliquotaPercentualCofins = valorAliquotaPercentualCofins;
+    public SFC170ItemDocumento setCampo33ValorAliquotaPercentualCofins(BigDecimal campo33ValorAliquotaPercentualCofins) {
+        this.campo33ValorAliquotaPercentualCofins = campo33ValorAliquotaPercentualCofins;
         return this;
     }
 
-    public SFC170ItemDocumento setValorAliquotaPercentualPis(BigDecimal valorAliquotaPercentualPis) {
-        this.valorAliquotaPercentualPis = valorAliquotaPercentualPis;
+    public SFC170ItemDocumento setCampo27ValorAliquotaPercentualPis(BigDecimal campo27ValorAliquotaPercentualPis) {
+        this.campo27ValorAliquotaPercentualPis = campo27ValorAliquotaPercentualPis;
         return this;
     }
 
-    public SFC170ItemDocumento setValorAliquotaPis(BigDecimal valorAliquotaPis) {
-        this.valorAliquotaPis = valorAliquotaPis;
+    public SFC170ItemDocumento setCampo29ValorAliquotaPis(BigDecimal campo29ValorAliquotaPis) {
+        this.campo29ValorAliquotaPis = campo29ValorAliquotaPis;
         return this;
     }
 
-    public SFC170ItemDocumento setValorBaseCalculoCofins(BigDecimal valorBaseCalculoCofins) {
-        this.valorBaseCalculoCofins = valorBaseCalculoCofins;
+    public SFC170ItemDocumento setCampo32ValorBaseCalculoCofins(BigDecimal campo32ValorBaseCalculoCofins) {
+        this.campo32ValorBaseCalculoCofins = campo32ValorBaseCalculoCofins;
         return this;
     }
 
-    public SFC170ItemDocumento setValorBaseCalculoIcms(BigDecimal valorBaseCalculoIcms) {
-        this.valorBaseCalculoIcms = valorBaseCalculoIcms;
+    public SFC170ItemDocumento setCampo13ValorBaseCalculoIcms(BigDecimal campo13ValorBaseCalculoIcms) {
+        this.campo13ValorBaseCalculoIcms = campo13ValorBaseCalculoIcms;
         return this;
     }
 
-    public SFC170ItemDocumento setValorBaseCalculoIcmsSt(BigDecimal valorBaseCalculoIcmsSt) {
-        this.valorBaseCalculoIcmsSt = valorBaseCalculoIcmsSt;
+    public SFC170ItemDocumento setCampo16ValorBaseCalculoIcmsSt(BigDecimal campo16ValorBaseCalculoIcmsSt) {
+        this.campo16ValorBaseCalculoIcmsSt = campo16ValorBaseCalculoIcmsSt;
         return this;
     }
 
-    public SFC170ItemDocumento setValorBaseCalculoIpi(BigDecimal valorBaseCalculoIpi) {
-        this.valorBaseCalculoIpi = valorBaseCalculoIpi;
+    public SFC170ItemDocumento setCampo22ValorBaseCalculoIpi(BigDecimal campo22ValorBaseCalculoIpi) {
+        this.campo22ValorBaseCalculoIpi = campo22ValorBaseCalculoIpi;
         return this;
     }
 
-    public SFC170ItemDocumento setValorBaseCalculoPis(BigDecimal valorBaseCalculoPis) {
-        this.valorBaseCalculoPis = valorBaseCalculoPis;
+    public SFC170ItemDocumento setCampo26ValorBaseCalculoPis(BigDecimal campo26ValorBaseCalculoPis) {
+        this.campo26ValorBaseCalculoPis = campo26ValorBaseCalculoPis;
         return this;
     }
 
-    public SFC170ItemDocumento setValorCofins(BigDecimal valorCofins) {
-        this.valorCofins = valorCofins;
+    public SFC170ItemDocumento setCampo36ValorCofins(BigDecimal campo36ValorCofins) {
+        this.campo36ValorCofins = campo36ValorCofins;
         return this;
     }
 
-    public SFC170ItemDocumento setValorDesconto(BigDecimal valorDesconto) {
-        this.valorDesconto = valorDesconto;
+    public SFC170ItemDocumento setCampo08ValorDesconto(BigDecimal campo08ValorDesconto) {
+        this.campo08ValorDesconto = campo08ValorDesconto;
         return this;
     }
 
-    public SFC170ItemDocumento setValorIcms(BigDecimal valorIcms) {
-        this.valorIcms = valorIcms;
+    public SFC170ItemDocumento setCampo15ValorIcms(BigDecimal campo15ValorIcms) {
+        this.campo15ValorIcms = campo15ValorIcms;
         return this;
     }
 
-    public SFC170ItemDocumento setValorIcmsSt(BigDecimal valorIcmsSt) {
-        this.valorIcmsSt = valorIcmsSt;
+    public SFC170ItemDocumento setCampo18ValorIcmsSt(BigDecimal campo18ValorIcmsSt) {
+        this.campo18ValorIcmsSt = campo18ValorIcmsSt;
         return this;
     }
 
-    public SFC170ItemDocumento setValorIpi(BigDecimal valorIpi) {
-        this.valorIpi = valorIpi;
+    public SFC170ItemDocumento setCampo24ValorIpi(BigDecimal campo24ValorIpi) {
+        this.campo24ValorIpi = campo24ValorIpi;
         return this;
     }
 
-    public SFC170ItemDocumento setValorPis(BigDecimal valorPis) {
-        this.valorPis = valorPis;
+    public SFC170ItemDocumento setCampo30ValorPis(BigDecimal campo30ValorPis) {
+        this.campo30ValorPis = campo30ValorPis;
         return this;
     }
 }
