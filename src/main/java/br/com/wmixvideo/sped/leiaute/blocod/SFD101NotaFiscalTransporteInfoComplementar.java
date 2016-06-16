@@ -17,12 +17,12 @@ public class SFD101NotaFiscalTransporteInfoComplementar implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(SFUtil.formatToString(this.campo02ValorFundoCombatePobreza));
-        texto.append(SFUtil.formatToString(this.campo03ValorICMSDestino));
-        texto.append(SFUtil.formatToString(this.campo04ValorICMSRemetente));
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02ValorFundoCombatePobreza));
+        linha.append(SFUtil.formatToString(this.campo03ValorICMSDestino));
+        linha.append(SFUtil.formatToString(this.campo04ValorICMSRemetente));
+        return linha.toString();
     }
 
     public SFD101NotaFiscalTransporteInfoComplementar setCampo02ValorFundoCombatePobreza(BigDecimal campo02ValorFundoCombatePobreza) {

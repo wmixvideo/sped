@@ -5,8 +5,9 @@ import br.com.wmixvideo.sped.util.SFStringBuilder;
 import org.apache.commons.lang3.StringUtils;
 
 public class SF0450InformacaoComplementarDocumentoFiscal implements SFLinha {
-    private int contador;
-    private String observacao;
+
+    private int campo02Contador;
+    private String campo03Observacao;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -15,20 +16,20 @@ public class SF0450InformacaoComplementarDocumentoFiscal implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(StringUtils.leftPad(String.valueOf(this.contador), 6, "0"));
-        texto.append(this.observacao);
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(StringUtils.leftPad(String.valueOf(this.campo02Contador), 6, "0"));
+        linha.append(this.campo03Observacao);
+        return linha.toString();
     }
 
-    public SF0450InformacaoComplementarDocumentoFiscal setContador(int contador) {
-        this.contador = contador;
+    public SF0450InformacaoComplementarDocumentoFiscal setCampo02Contador(int campo02Contador) {
+        this.campo02Contador = campo02Contador;
         return this;
     }
 
-    public SF0450InformacaoComplementarDocumentoFiscal setObservacao(String observacao) {
-        this.observacao = observacao;
+    public SF0450InformacaoComplementarDocumentoFiscal setCampo03Observacao(String campo03Observacao) {
+        this.campo03Observacao = campo03Observacao;
         return this;
     }
 }

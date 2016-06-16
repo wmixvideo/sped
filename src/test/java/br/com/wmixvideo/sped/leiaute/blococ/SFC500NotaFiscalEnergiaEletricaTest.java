@@ -16,7 +16,7 @@ import java.time.Month;
 public class SFC500NotaFiscalEnergiaEletricaTest {
 
     @Test
-    public void testeToString() throws Exception {
+    public void deveGerarLinhaCompleta() throws Exception {
         final SFC500NotaFiscalEnergiaEletrica linha = new SFC500NotaFiscalEnergiaEletrica()
                 .setCampo02Operacao(SFNotaFiscalOperacao.ENTRADA)
                 .setCampo03Emissao(SFNotaFiscalEmissao.TERCEIROS)

@@ -8,25 +8,36 @@ import java.util.Objects;
 
 public class SF0150CadastroParticipante implements SFLinha, Comparable<SF0150CadastroParticipante> {
 
-    private String codigoParticipante, nome, codigoPais, cnpj, cpf, inscricaoEstadual, codigoMunicipio, suframa, logradouro, numero, complemento, bairro;
+    private String campo02CodigoParticipante;
+    private String campo03Nome;
+    private String campo04CodigoPais;
+    private String campo05Cnpj;
+    private String campo06Cpf;
+    private String campo07InscricaoEstadual;
+    private String campo08CodigoMunicipio;
+    private String campo09Suframa;
+    private String campo10Logradouro;
+    private String campo11Numero;
+    private String campo12Complemento;
+    private String campo13Bairro;
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.codigoParticipante);
-        texto.append(this.nome);
-        texto.append(this.codigoPais);
-        texto.append(this.cnpj);
-        texto.append(this.cpf);
-        texto.append(this.inscricaoEstadual);
-        texto.append(this.codigoMunicipio);
-        texto.append(this.suframa);
-        texto.append(StringUtils.trimToEmpty(this.logradouro));
-        texto.append(StringUtils.trimToEmpty(this.numero));
-        texto.append(this.complemento);
-        texto.append(StringUtils.trimToEmpty(this.bairro));
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(this.campo02CodigoParticipante);
+        linha.append(this.campo03Nome);
+        linha.append(this.campo04CodigoPais);
+        linha.append(this.campo05Cnpj);
+        linha.append(this.campo06Cpf);
+        linha.append(this.campo07InscricaoEstadual);
+        linha.append(this.campo08CodigoMunicipio);
+        linha.append(this.campo09Suframa);
+        linha.append(StringUtils.trimToEmpty(this.campo10Logradouro));
+        linha.append(StringUtils.trimToEmpty(this.campo11Numero));
+        linha.append(this.campo12Complemento);
+        linha.append(StringUtils.trimToEmpty(this.campo13Bairro));
+        return linha.toString();
     }
 
     @Override
@@ -39,79 +50,79 @@ public class SF0150CadastroParticipante implements SFLinha, Comparable<SF0150Cad
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SF0150CadastroParticipante that = (SF0150CadastroParticipante) o;
-        return Objects.equals(cnpj, that.cnpj) &&
-                Objects.equals(cpf, that.cpf);
+        return Objects.equals(campo05Cnpj, that.campo05Cnpj) &&
+                Objects.equals(campo06Cpf, that.campo06Cpf);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cnpj, cpf);
+        return Objects.hash(campo05Cnpj, campo06Cpf);
     }
 
     @Override
     public int compareTo(SF0150CadastroParticipante o) {
-        final String cnpjBase = StringUtils.defaultIfBlank(this.cnpj, StringUtils.defaultIfBlank(this.cpf, StringUtils.EMPTY));
-        final String cnpjComparador = StringUtils.defaultIfBlank(o.cnpj, StringUtils.defaultIfBlank(o.cpf, StringUtils.EMPTY));
+        final String cnpjBase = StringUtils.defaultIfBlank(this.campo05Cnpj, StringUtils.defaultIfBlank(this.campo06Cpf, StringUtils.EMPTY));
+        final String cnpjComparador = StringUtils.defaultIfBlank(o.campo05Cnpj, StringUtils.defaultIfBlank(o.campo06Cpf, StringUtils.EMPTY));
         return cnpjBase.compareTo(cnpjComparador);
     }
 
-    public SF0150CadastroParticipante setBairro(String bairro) {
-        this.bairro = bairro;
+    public SF0150CadastroParticipante setCampo02CodigoParticipante(String campo02CodigoParticipante) {
+        this.campo02CodigoParticipante = campo02CodigoParticipante;
         return this;
     }
 
-    public SF0150CadastroParticipante setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public SF0150CadastroParticipante setCampo03Nome(String campo03Nome) {
+        this.campo03Nome = campo03Nome;
         return this;
     }
 
-    public SF0150CadastroParticipante setCodigoMunicipio(String codigoMunicipio) {
-        this.codigoMunicipio = codigoMunicipio;
+    public SF0150CadastroParticipante setCampo04CodigoPais(String campo04CodigoPais) {
+        this.campo04CodigoPais = campo04CodigoPais;
         return this;
     }
 
-    public SF0150CadastroParticipante setCodigoPais(String codigoPais) {
-        this.codigoPais = codigoPais;
+    public SF0150CadastroParticipante setCampo05Cnpj(String campo05Cnpj) {
+        this.campo05Cnpj = campo05Cnpj;
         return this;
     }
 
-    public SF0150CadastroParticipante setCodigoParticipante(String codigoParticipante) {
-        this.codigoParticipante = codigoParticipante;
+    public SF0150CadastroParticipante setCampo06Cpf(String campo06Cpf) {
+        this.campo06Cpf = campo06Cpf;
         return this;
     }
 
-    public SF0150CadastroParticipante setComplemento(String complemento) {
-        this.complemento = complemento;
+    public SF0150CadastroParticipante setCampo07InscricaoEstadual(String campo07InscricaoEstadual) {
+        this.campo07InscricaoEstadual = campo07InscricaoEstadual;
         return this;
     }
 
-    public SF0150CadastroParticipante setCpf(String cpf) {
-        this.cpf = cpf;
+    public SF0150CadastroParticipante setCampo08CodigoMunicipio(String campo08CodigoMunicipio) {
+        this.campo08CodigoMunicipio = campo08CodigoMunicipio;
         return this;
     }
 
-    public SF0150CadastroParticipante setInscricaoEstadual(String inscricaoEstadual) {
-        this.inscricaoEstadual = inscricaoEstadual;
+    public SF0150CadastroParticipante setCampo09Suframa(String campo09Suframa) {
+        this.campo09Suframa = campo09Suframa;
         return this;
     }
 
-    public SF0150CadastroParticipante setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
+    public SF0150CadastroParticipante setCampo10Logradouro(String campo10Logradouro) {
+        this.campo10Logradouro = campo10Logradouro;
         return this;
     }
 
-    public SF0150CadastroParticipante setNome(String nome) {
-        this.nome = nome;
+    public SF0150CadastroParticipante setCampo11Numero(String campo11Numero) {
+        this.campo11Numero = campo11Numero;
         return this;
     }
 
-    public SF0150CadastroParticipante setNumero(String numero) {
-        this.numero = numero;
+    public SF0150CadastroParticipante setCampo12Complemento(String campo12Complemento) {
+        this.campo12Complemento = campo12Complemento;
         return this;
     }
 
-    public SF0150CadastroParticipante setSuframa(String suframa) {
-        this.suframa = suframa;
+    public SF0150CadastroParticipante setCampo13Bairro(String campo13Bairro) {
+        this.campo13Bairro = campo13Bairro;
         return this;
     }
 }

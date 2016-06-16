@@ -24,17 +24,17 @@ public class SFD190RegistroAnaliticoTransporte implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.campo02CodigoSituacaoTributaria);
-        texto.append(this.campo03CodigoFiscalOperacaoPrestacao);
-        texto.append(SFUtil.formatToString(this.campo04ValorICMSAliquota));
-        texto.append(SFUtil.formatToString(this.campo05Valor));
-        texto.append(SFUtil.formatToString(this.campo06ValorICMSBaseCalculo));
-        texto.append(SFUtil.formatToString(this.campo07ValorICMS));
-        texto.append(SFUtil.formatToString(this.campo08ValorNaoTributado));
-        texto.append(this.campo09CodigoObservacao);
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(this.campo02CodigoSituacaoTributaria);
+        linha.append(this.campo03CodigoFiscalOperacaoPrestacao);
+        linha.append(SFUtil.formatToString(this.campo04ValorICMSAliquota));
+        linha.append(SFUtil.formatToString(this.campo05Valor));
+        linha.append(SFUtil.formatToString(this.campo06ValorICMSBaseCalculo));
+        linha.append(SFUtil.formatToString(this.campo07ValorICMS));
+        linha.append(SFUtil.formatToString(this.campo08ValorNaoTributado));
+        linha.append(this.campo09CodigoObservacao);
+        return linha.toString();
     }
 
     public SFD190RegistroAnaliticoTransporte setCampo03CodigoFiscalOperacaoPrestacao(String campo03CodigoFiscalOperacaoPrestacao) {

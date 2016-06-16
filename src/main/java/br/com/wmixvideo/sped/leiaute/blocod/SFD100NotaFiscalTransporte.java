@@ -44,31 +44,31 @@ public class SFD100NotaFiscalTransporte implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(SFUtil.formatToString(this.campo02IndicadorOperacao));
-        texto.append(SFUtil.formatToString(this.campo03IndicadorEmitente));
-        texto.append(this.campo04CodigoParticipante);
-        texto.append(SFUtil.formatToString(this.campo05Modelo));
-        texto.append(SFUtil.formatToString(this.campo06Situacao));
-        texto.append(this.campo07Serie);
-        texto.append(this.campo08Subserie);
-        texto.append(this.campo09Numero);
-        texto.append(this.campo10ChaveTransporteEletronico);
-        texto.append(SFUtil.formatToString(this.campo11DataEmissao));
-        texto.append(SFUtil.formatToString(this.campo12DataAquisicao));
-        texto.append(this.campo13TipoTransporteEletronico);
-        texto.append(this.campo14ChaveTransporteEletronicoReferencia);
-        texto.append(SFUtil.formatToString(this.campo15Valor));
-        texto.append(SFUtil.formatToString(this.campo16ValorDesconto));
-        texto.append(SFUtil.formatToString(this.campo17Frete));
-        texto.append(SFUtil.formatToString(this.campo18ValorPrestacaoServico));
-        texto.append(SFUtil.formatToString(this.campo19ValorBaseCalculo));
-        texto.append(SFUtil.formatToString(this.campo20ValorICMS));
-        texto.append(SFUtil.formatToString(this.campo21ValorNaoTributado));
-        texto.append(this.campo22CodigoInformacaoComplementar);
-        texto.append(this.campo23CodigoContaAnalitica);
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02IndicadorOperacao));
+        linha.append(SFUtil.formatToString(this.campo03IndicadorEmitente));
+        linha.append(this.campo04CodigoParticipante);
+        linha.append(SFUtil.formatToString(this.campo05Modelo));
+        linha.append(SFUtil.formatToString(this.campo06Situacao));
+        linha.append(this.campo07Serie);
+        linha.append(this.campo08Subserie);
+        linha.append(this.campo09Numero);
+        linha.append(this.campo10ChaveTransporteEletronico);
+        linha.append(SFUtil.formatToString(this.campo11DataEmissao));
+        linha.append(SFUtil.formatToString(this.campo12DataAquisicao));
+        linha.append(this.campo13TipoTransporteEletronico);
+        linha.append(this.campo14ChaveTransporteEletronicoReferencia);
+        linha.append(SFUtil.formatToString(this.campo15Valor));
+        linha.append(SFUtil.formatToString(this.campo16ValorDesconto));
+        linha.append(SFUtil.formatToString(this.campo17Frete));
+        linha.append(SFUtil.formatToString(this.campo18ValorPrestacaoServico));
+        linha.append(SFUtil.formatToString(this.campo19ValorBaseCalculo));
+        linha.append(SFUtil.formatToString(this.campo20ValorICMS));
+        linha.append(SFUtil.formatToString(this.campo21ValorNaoTributado));
+        linha.append(this.campo22CodigoInformacaoComplementar);
+        linha.append(this.campo23CodigoContaAnalitica);
+        return linha.toString();
     }
 
     public SFD100NotaFiscalTransporte setCampo10ChaveTransporteEletronico(String campo10ChaveTransporteEletronico) {

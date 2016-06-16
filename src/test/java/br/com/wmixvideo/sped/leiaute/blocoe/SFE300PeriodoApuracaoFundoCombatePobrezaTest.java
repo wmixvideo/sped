@@ -10,11 +10,11 @@ import java.time.Month;
 public class SFE300PeriodoApuracaoFundoCombatePobrezaTest {
 
     @Test
-    public void testeToString() {
+    public void deveGerarLinhaCompleta() {
         final SFE300PeriodoApuracaoFundoCombatePobreza linha = new SFE300PeriodoApuracaoFundoCombatePobreza()
-                .setUf(SFUnidadeFederativa.BA)
-                .setDataInicial(LocalDate.of(2016, Month.FEBRUARY, 1))
-                .setDataFinal(LocalDate.of(2016, Month.FEBRUARY, 28));
+                .setCampo02Uf(SFUnidadeFederativa.BA)
+                .setCampo03DataInicial(LocalDate.of(2016, Month.FEBRUARY, 1))
+                .setCampo04DataFinal(LocalDate.of(2016, Month.FEBRUARY, 28));
 
         Assert.assertEquals("|E300|BA|01022016|28022016|", linha.toString());
     }

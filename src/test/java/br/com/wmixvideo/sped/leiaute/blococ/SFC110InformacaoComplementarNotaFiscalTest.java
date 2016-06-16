@@ -6,10 +6,10 @@ import org.junit.Test;
 public class SFC110InformacaoComplementarNotaFiscalTest {
 
     @Test
-    public void testeToString() throws Exception {
+    public void deveGerarLinhaCompleta() throws Exception {
         final SFC110InformacaoComplementarNotaFiscal linha = new SFC110InformacaoComplementarNotaFiscal()
-                .setCodigo("001")
-                .setDescricao("descricao");
+                .setCampo02Codigo("001")
+                .setCampo03Descricao("descricao");
 
         Assert.assertEquals("|C110|001|descricao|", linha.toString());
 

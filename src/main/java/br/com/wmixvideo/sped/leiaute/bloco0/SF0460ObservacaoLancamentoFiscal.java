@@ -5,8 +5,8 @@ import br.com.wmixvideo.sped.util.SFStringBuilder;
 
 public class SF0460ObservacaoLancamentoFiscal implements SFLinha {
 
-    private String codigo;
-    private String observacao;
+    private String campo02Codigo;
+    private String campo03Observacao;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -15,20 +15,20 @@ public class SF0460ObservacaoLancamentoFiscal implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.codigo);
-        texto.append(this.observacao);
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(this.campo02Codigo);
+        linha.append(this.campo03Observacao);
+        return linha.toString();
     }
 
-    public SF0460ObservacaoLancamentoFiscal setCodigo(String codigo) {
-        this.codigo = codigo;
+    public SF0460ObservacaoLancamentoFiscal setCampo02Codigo(String campo02Codigo) {
+        this.campo02Codigo = campo02Codigo;
         return this;
     }
 
-    public SF0460ObservacaoLancamentoFiscal setObservacao(String observacao) {
-        this.observacao = observacao;
+    public SF0460ObservacaoLancamentoFiscal setCampo03Observacao(String campo03Observacao) {
+        this.campo03Observacao = campo03Observacao;
         return this;
     }
 }

@@ -9,9 +9,9 @@ import java.time.LocalDate;
 
 public class SF0175AlteracaoCadastroParticipante implements SFLinha {
 
-    private LocalDate data;
-    private SFParticipanteAlteracaoCampo campo;
-    private String conteudoAnterior;
+    private LocalDate campo02Data;
+    private SFParticipanteAlteracaoCampo campo03AlteracaoCampo;
+    private String campo04ConteudoAnterior;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -20,26 +20,26 @@ public class SF0175AlteracaoCadastroParticipante implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(SFUtil.formatToString(this.data));
-        texto.append(this.campo.getNumero());
-        texto.append(this.conteudoAnterior);
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02Data));
+        linha.append(SFUtil.formatToString(this.campo03AlteracaoCampo));
+        linha.append(this.campo04ConteudoAnterior);
+        return linha.toString();
     }
 
-    public SF0175AlteracaoCadastroParticipante setCampo(SFParticipanteAlteracaoCampo campo) {
-        this.campo = campo;
+    public SF0175AlteracaoCadastroParticipante setCampo03AlteracaoCampo(SFParticipanteAlteracaoCampo campo03AlteracaoCampo) {
+        this.campo03AlteracaoCampo = campo03AlteracaoCampo;
         return this;
     }
 
-    public SF0175AlteracaoCadastroParticipante setConteudoAnterior(String conteudoAnterior) {
-        this.conteudoAnterior = conteudoAnterior;
+    public SF0175AlteracaoCadastroParticipante setCampo04ConteudoAnterior(String campo04ConteudoAnterior) {
+        this.campo04ConteudoAnterior = campo04ConteudoAnterior;
         return this;
     }
 
-    public SF0175AlteracaoCadastroParticipante setData(LocalDate data) {
-        this.data = data;
+    public SF0175AlteracaoCadastroParticipante setCampo02Data(LocalDate campo02Data) {
+        this.campo02Data = campo02Data;
         return this;
     }
 }

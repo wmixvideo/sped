@@ -9,7 +9,7 @@ import java.time.Month;
 
 public class SFC176RessarcimentoIcmsTest {
     @Test
-    public void testeToString() throws Exception {
+    public void deveGerarLinhaCompleta() throws Exception {
         final SFC176RessarcimentoIcms linha = new SFC176RessarcimentoIcms()
                 .setCampo02CodigoModelo("0000")
                 .setCampo03Numero("0001")

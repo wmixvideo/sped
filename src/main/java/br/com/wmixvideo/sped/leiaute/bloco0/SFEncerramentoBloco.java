@@ -4,24 +4,30 @@ import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 
 public class SFEncerramentoBloco implements SFLinha {
-    private final int totalLinhas;
-    private final String codigoRegistro;
 
-    public SFEncerramentoBloco(final String codigoRegistro, final int totalLinhas) {
-        this.totalLinhas = totalLinhas;
-        this.codigoRegistro = codigoRegistro;
-    }
+    private String campo01CodigoRegistro;
+    private int campo02TotalLinhas;
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.codigoRegistro);
-        texto.append(this.totalLinhas);
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.campo01CodigoRegistro);
+        linha.append(this.campo02TotalLinhas);
+        return linha.toString();
     }
 
     @Override
     public String getCampo01CodigoRegistro() {
-        return this.codigoRegistro;
+        return this.campo01CodigoRegistro;
+    }
+
+    public SFEncerramentoBloco setCampo01CodigoRegistro(String campo01CodigoRegistro) {
+        this.campo01CodigoRegistro = campo01CodigoRegistro;
+        return this;
+    }
+
+    public SFEncerramentoBloco setCampo02TotalLinhas(int campo02TotalLinhas) {
+        this.campo02TotalLinhas = campo02TotalLinhas;
+        return this;
     }
 }

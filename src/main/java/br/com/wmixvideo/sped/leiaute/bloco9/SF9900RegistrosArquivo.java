@@ -5,21 +5,21 @@ import br.com.wmixvideo.sped.util.SFStringBuilder;
 
 public class SF9900RegistrosArquivo implements SFLinha {
 
-    private String codigo;
-    private int totalLinhas;
+    private String campo02Codigo;
+    private int campo03TotalLinhas;
 
-    public SF9900RegistrosArquivo(final String codigo, final int totalLinhas) {
-        this.codigo = codigo;
-        this.totalLinhas = totalLinhas;
+    public SF9900RegistrosArquivo(final String campo02Codigo, final int campo03TotalLinhas) {
+        this.campo02Codigo = campo02Codigo;
+        this.campo03TotalLinhas = campo03TotalLinhas;
     }
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.codigo);
-        texto.append(this.totalLinhas);
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(this.campo02Codigo);
+        linha.append(this.campo03TotalLinhas);
+        return linha.toString();
     }
 
     public String getCampo01CodigoRegistro() {

@@ -9,32 +9,32 @@ import java.math.BigDecimal;
 
 public class SFH010Inventario implements SFLinha {
 
-    private String codigo;
-    private String unidadeMedida;
-    private int quantidade;
-    private BigDecimal valorUnitario;
-    private BigDecimal valorTotal;
-    private SFIndicadorPropriedade indicadorPropriedade;
-    private String codigoParticipante;
-    private String descricaoComplementar;
-    private String codigoContaAnaliticaContabil;
-    private BigDecimal valorImpostoRenda;
+    private String campo02Codigo;
+    private String campo03UnidadeMedida;
+    private int campo04Quantidade;
+    private BigDecimal campo05ValorUnitario;
+    private BigDecimal campo06ValorTotal;
+    private SFIndicadorPropriedade campo07IndicadorPropriedade;
+    private String campo08CodigoParticipante;
+    private String campo09DescricaoComplementar;
+    private String campo10CodigoContaAnaliticaContabil;
+    private BigDecimal campo11ValorImpostoRenda;
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.codigo);
-        texto.append(this.unidadeMedida);
-        texto.append(this.quantidade);
-        texto.append(SFUtil.formatToString(this.valorUnitario));
-        texto.append(SFUtil.formatToString(this.valorTotal));
-        texto.append(this.indicadorPropriedade != null ? this.indicadorPropriedade.getCodigo() : "");
-        texto.append(this.codigoParticipante);
-        texto.append(this.descricaoComplementar);
-        texto.append(this.codigoContaAnaliticaContabil);
-        texto.append(SFUtil.formatToString(this.valorImpostoRenda));
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(this.campo02Codigo);
+        linha.append(this.campo03UnidadeMedida);
+        linha.append(this.campo04Quantidade);
+        linha.append(SFUtil.formatToString(this.campo05ValorUnitario));
+        linha.append(SFUtil.formatToString(this.campo06ValorTotal));
+        linha.append(SFUtil.formatToString(this.campo07IndicadorPropriedade));
+        linha.append(this.campo08CodigoParticipante);
+        linha.append(this.campo09DescricaoComplementar);
+        linha.append(this.campo10CodigoContaAnaliticaContabil);
+        linha.append(SFUtil.formatToString(this.campo11ValorImpostoRenda));
+        return linha.toString();
     }
 
     @Override
@@ -42,53 +42,53 @@ public class SFH010Inventario implements SFLinha {
         return "H010";
     }
 
-    public SFH010Inventario setCodigo(String codigo) {
-        this.codigo = codigo;
+    public SFH010Inventario setCampo02Codigo(String campo02Codigo) {
+        this.campo02Codigo = campo02Codigo;
         return this;
     }
 
-    public SFH010Inventario setCodigoContaAnaliticaContabil(String codigoContaAnaliticaContabil) {
-        this.codigoContaAnaliticaContabil = codigoContaAnaliticaContabil;
+    public SFH010Inventario setCampo10CodigoContaAnaliticaContabil(String campo10CodigoContaAnaliticaContabil) {
+        this.campo10CodigoContaAnaliticaContabil = campo10CodigoContaAnaliticaContabil;
         return this;
     }
 
-    public SFH010Inventario setCodigoParticipante(String codigoParticipante) {
-        this.codigoParticipante = codigoParticipante;
+    public SFH010Inventario setCampo08CodigoParticipante(String campo08CodigoParticipante) {
+        this.campo08CodigoParticipante = campo08CodigoParticipante;
         return this;
     }
 
-    public SFH010Inventario setDescricaoComplementar(String descricaoComplementar) {
-        this.descricaoComplementar = descricaoComplementar;
+    public SFH010Inventario setCampo09DescricaoComplementar(String campo09DescricaoComplementar) {
+        this.campo09DescricaoComplementar = campo09DescricaoComplementar;
         return this;
     }
 
-    public SFH010Inventario setIndicadorPropriedade(SFIndicadorPropriedade indicadorPropriedade) {
-        this.indicadorPropriedade = indicadorPropriedade;
+    public SFH010Inventario setCampo07IndicadorPropriedade(SFIndicadorPropriedade campo07IndicadorPropriedade) {
+        this.campo07IndicadorPropriedade = campo07IndicadorPropriedade;
         return this;
     }
 
-    public SFH010Inventario setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
+    public SFH010Inventario setCampo04Quantidade(int campo04Quantidade) {
+        this.campo04Quantidade = campo04Quantidade;
         return this;
     }
 
-    public SFH010Inventario setUnidadeMedida(String unidadeMedida) {
-        this.unidadeMedida = unidadeMedida;
+    public SFH010Inventario setCampo03UnidadeMedida(String campo03UnidadeMedida) {
+        this.campo03UnidadeMedida = campo03UnidadeMedida;
         return this;
     }
 
-    public SFH010Inventario setValorTotal(BigDecimal valorTotal) {
-        this.valorTotal = valorTotal;
+    public SFH010Inventario setCampo06ValorTotal(BigDecimal campo06ValorTotal) {
+        this.campo06ValorTotal = campo06ValorTotal;
         return this;
     }
 
-    public SFH010Inventario setValorImpostoRenda(BigDecimal valorImpostoRenda) {
-        this.valorImpostoRenda = valorImpostoRenda;
+    public SFH010Inventario setCampo11ValorImpostoRenda(BigDecimal campo11ValorImpostoRenda) {
+        this.campo11ValorImpostoRenda = campo11ValorImpostoRenda;
         return this;
     }
 
-    public SFH010Inventario setValorUnitario(BigDecimal valorUnitario) {
-        this.valorUnitario = valorUnitario;
+    public SFH010Inventario setCampo05ValorUnitario(BigDecimal campo05ValorUnitario) {
+        this.campo05ValorUnitario = campo05ValorUnitario;
         return this;
     }
 }

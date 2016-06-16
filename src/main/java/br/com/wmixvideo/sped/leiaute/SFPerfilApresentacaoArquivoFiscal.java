@@ -15,4 +15,9 @@ public enum SFPerfilApresentacaoArquivoFiscal {
     public String getCodigo() {
         return this.codigo;
     }
+
+    @Override
+    public String toString() {
+        return this.codigo;
+    }
 }

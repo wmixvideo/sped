@@ -9,18 +9,19 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class SFH005TotaisInventario implements SFLinha {
-    private LocalDate dataInventario;
-    private BigDecimal valorTotalEstoque;
-    private SFMotivoInventario motivoInventario;
+
+    private LocalDate campo02DataInventario;
+    private BigDecimal campo03ValorTotalEstoque;
+    private SFMotivoInventario campo04MotivoInventario;
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(SFUtil.formatToString(this.dataInventario));
-        texto.append(SFUtil.formatToString(this.valorTotalEstoque));
-        texto.append(this.motivoInventario.getCodigo());
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02DataInventario));
+        linha.append(SFUtil.formatToString(this.campo03ValorTotalEstoque));
+        linha.append(SFUtil.formatToString(this.campo04MotivoInventario));
+        return linha.toString();
     }
 
     @Override
@@ -28,18 +29,18 @@ public class SFH005TotaisInventario implements SFLinha {
         return "H005";
     }
 
-    public SFH005TotaisInventario setDataInventario(LocalDate dataInventario) {
-        this.dataInventario = dataInventario;
+    public SFH005TotaisInventario setCampo02DataInventario(LocalDate campo02DataInventario) {
+        this.campo02DataInventario = campo02DataInventario;
         return this;
     }
 
-    public SFH005TotaisInventario setMotivoInventario(SFMotivoInventario motivoInventario) {
-        this.motivoInventario = motivoInventario;
+    public SFH005TotaisInventario setCampo04MotivoInventario(SFMotivoInventario campo04MotivoInventario) {
+        this.campo04MotivoInventario = campo04MotivoInventario;
         return this;
     }
 
-    public SFH005TotaisInventario setValorTotalEstoque(BigDecimal valorTotalEstoque) {
-        this.valorTotalEstoque = valorTotalEstoque;
+    public SFH005TotaisInventario setCampo03ValorTotalEstoque(BigDecimal campo03ValorTotalEstoque) {
+        this.campo03ValorTotalEstoque = campo03ValorTotalEstoque;
         return this;
     }
 }

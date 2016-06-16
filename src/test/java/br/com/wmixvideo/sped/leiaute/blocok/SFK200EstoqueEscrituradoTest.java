@@ -9,12 +9,7 @@ import java.time.LocalDate;
 public class SFK200EstoqueEscrituradoTest {
 
     @Test
-    public void deveObterSeuCodigo() {
-        Assert.assertEquals("K200", new SFK200EstoqueEscriturado().getCampo01CodigoRegistro());
-    }
-
-    @Test
-    public void deveGerarTextoDaFonte() {
+    public void deveGerarLinhaCompleta() {
         final SFK200EstoqueEscriturado linha = new SFK200EstoqueEscriturado()
                 .setCampo02DataEstoqueFinal(LocalDate.of(2010, 7, 31))
                 .setCampo03CodigoProduto("124315")

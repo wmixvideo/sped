@@ -5,10 +5,10 @@ import org.junit.Test;
 
 public class SF0450InformacaoComplementarDocumentoFiscalTest {
     @Test
-    public void geraLinha() {
+    public void deveGerarLinhaCompleta() {
         final SF0450InformacaoComplementarDocumentoFiscal linha = new SF0450InformacaoComplementarDocumentoFiscal()
-                .setContador(1)
-                .setObservacao("ICMS RETIDO CONF. TARE 008/08-SAT");
+                .setCampo02Contador(1)
+                .setCampo03Observacao("ICMS RETIDO CONF. TARE 008/08-SAT");
 
         Assert.assertEquals("|0450|000001|ICMS RETIDO CONF. TARE 008/08-SAT|", linha.toString());
     }

@@ -11,34 +11,34 @@ import java.util.Objects;
 
 public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200IdentificacaoItem> {
 
-    private String codigo;
-    private String codigoAnterior;
-    private String codigoBarras;
-    private String codigoNcm;
-    private String codigoExIpi;
-    private String codigoGenero;
-    private String codigoServico;
-    private String descricao;
-    private String unidadeMedida;
-    private SFItemTipo tipo;
-    private BigDecimal aliquotaIcms;
+    private String campo02Codigo;
+    private String campo03Descricao;
+    private String campo04CodigoBarras;
+    private String campo05CodigoAnterior;
+    private String campo06UnidadeMedida;
+    private SFItemTipo campo07Tipo;
+    private String campo08CodigoNcm;
+    private String campo09CodigoExIpi;
+    private String campo10CodigoGenero;
+    private String campo11CodigoServico;
+    private BigDecimal campo12AliquotaIcms;
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.codigo);
-        texto.append(this.descricao);
-        texto.append(StringUtils.trimToEmpty(this.codigoBarras));
-        texto.append(this.codigoAnterior);
-        texto.append(this.unidadeMedida);
-        texto.append(this.tipo != null ? this.tipo.getCodigo() : "");
-        texto.append(this.codigoNcm);
-        texto.append(this.codigoExIpi);
-        texto.append(this.codigoGenero);
-        texto.append(this.codigoServico);
-        texto.append(SFUtil.formatToString(this.aliquotaIcms));
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(this.campo02Codigo);
+        linha.append(this.campo03Descricao);
+        linha.append(StringUtils.trimToEmpty(this.campo04CodigoBarras));
+        linha.append(this.campo05CodigoAnterior);
+        linha.append(this.campo06UnidadeMedida);
+        linha.append(SFUtil.formatToString(this.campo07Tipo));
+        linha.append(this.campo08CodigoNcm);
+        linha.append(this.campo09CodigoExIpi);
+        linha.append(this.campo10CodigoGenero);
+        linha.append(this.campo11CodigoServico);
+        linha.append(SFUtil.formatToString(this.campo12AliquotaIcms));
+        return linha.toString();
     }
 
     @Override
@@ -46,58 +46,58 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
         return "0200";
     }
 
-    public SF0200IdentificacaoItem setAliquotaIcms(BigDecimal aliquotaIcms) {
-        this.aliquotaIcms = aliquotaIcms;
+    public SF0200IdentificacaoItem setCampo02Codigo(String campo02Codigo) {
+        this.campo02Codigo = campo02Codigo;
         return this;
     }
 
-    public SF0200IdentificacaoItem setCodigo(String codigo) {
-        this.codigo = codigo;
+    public SF0200IdentificacaoItem setCampo03Descricao(String campo03Descricao) {
+        this.campo03Descricao = campo03Descricao;
         return this;
     }
 
-    public SF0200IdentificacaoItem setCodigoAnterior(String codigoAnterior) {
-        this.codigoAnterior = codigoAnterior;
+    public SF0200IdentificacaoItem setCampo04CodigoBarras(String campo04CodigoBarras) {
+        this.campo04CodigoBarras = campo04CodigoBarras;
         return this;
     }
 
-    public SF0200IdentificacaoItem setCodigoBarras(String codigoBarras) {
-        this.codigoBarras = codigoBarras;
+    public SF0200IdentificacaoItem setCampo05CodigoAnterior(String campo05CodigoAnterior) {
+        this.campo05CodigoAnterior = campo05CodigoAnterior;
         return this;
     }
 
-    public SF0200IdentificacaoItem setCodigoExIpi(String codigoExIpi) {
-        this.codigoExIpi = codigoExIpi;
+    public SF0200IdentificacaoItem setCampo06UnidadeMedida(String campo06UnidadeMedida) {
+        this.campo06UnidadeMedida = campo06UnidadeMedida;
         return this;
     }
 
-    public SF0200IdentificacaoItem setCodigoGenero(String codigoGenero) {
-        this.codigoGenero = codigoGenero;
+    public SF0200IdentificacaoItem setCampo07Tipo(SFItemTipo campo07Tipo) {
+        this.campo07Tipo = campo07Tipo;
         return this;
     }
 
-    public SF0200IdentificacaoItem setCodigoNcm(String codigoNcm) {
-        this.codigoNcm = codigoNcm;
+    public SF0200IdentificacaoItem setCampo08CodigoNcm(String campo08CodigoNcm) {
+        this.campo08CodigoNcm = campo08CodigoNcm;
         return this;
     }
 
-    public SF0200IdentificacaoItem setCodigoServico(String codigoServico) {
-        this.codigoServico = codigoServico;
+    public SF0200IdentificacaoItem setCampo09CodigoExIpi(String campo09CodigoExIpi) {
+        this.campo09CodigoExIpi = campo09CodigoExIpi;
         return this;
     }
 
-    public SF0200IdentificacaoItem setDescricao(String descricao) {
-        this.descricao = descricao;
+    public SF0200IdentificacaoItem setCampo10CodigoGenero(String campo10CodigoGenero) {
+        this.campo10CodigoGenero = campo10CodigoGenero;
         return this;
     }
 
-    public SF0200IdentificacaoItem setTipo(SFItemTipo tipo) {
-        this.tipo = tipo;
+    public SF0200IdentificacaoItem setCampo11CodigoServico(String campo11CodigoServico) {
+        this.campo11CodigoServico = campo11CodigoServico;
         return this;
     }
 
-    public SF0200IdentificacaoItem setUnidadeMedida(String unidadeMedida) {
-        this.unidadeMedida = unidadeMedida;
+    public SF0200IdentificacaoItem setCampo12AliquotaIcms(BigDecimal campo12AliquotaIcms) {
+        this.campo12AliquotaIcms = campo12AliquotaIcms;
         return this;
     }
 
@@ -106,18 +106,18 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SF0200IdentificacaoItem that = (SF0200IdentificacaoItem) o;
-        return Objects.equals(codigo, that.codigo);
+        return Objects.equals(campo02Codigo, that.campo02Codigo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(codigo);
+        return Objects.hash(campo02Codigo);
     }
 
     @Override
     public int compareTo(SF0200IdentificacaoItem o) {
-        final String codigoBase = StringUtils.defaultIfBlank(this.codigo, StringUtils.EMPTY);
-        final String codigoComparador = StringUtils.defaultIfBlank(o.codigo, StringUtils.EMPTY);
+        final String codigoBase = StringUtils.defaultIfBlank(this.campo02Codigo, StringUtils.EMPTY);
+        final String codigoComparador = StringUtils.defaultIfBlank(o.campo02Codigo, StringUtils.EMPTY);
         return codigoBase.compareTo(codigoComparador);
     }
 }

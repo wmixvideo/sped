@@ -7,10 +7,10 @@ import org.junit.Test;
 public class SFC111ProcessoReferenciadoTest {
 
     @Test
-    public void testeToString() throws Exception {
+    public void deveGerarLinhaCompleta() throws Exception {
         final SFC111ProcessoReferenciado linha = new SFC111ProcessoReferenciado()
-                .setNumero("123")
-                .setIndicadorOrigem(SFIndicadorProcessoOrigem.SECEX_SRF);
+                .setCampo02Numero("123")
+                .setCampo03IndicadorOrigem(SFIndicadorProcessoOrigem.SECEX_SRF);
 
         Assert.assertEquals("|C111|123|3|", linha.toString());
     }

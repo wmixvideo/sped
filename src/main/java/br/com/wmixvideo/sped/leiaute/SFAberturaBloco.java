@@ -2,26 +2,33 @@ package br.com.wmixvideo.sped.leiaute;
 
 import br.com.wmixvideo.sped.enums.SFIndicadorMovimentoAberturaBloco;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
+import br.com.wmixvideo.sped.util.SFUtil;
 
 public class SFAberturaBloco implements SFLinha {
-    private final SFIndicadorMovimentoAberturaBloco indicadorMovimento;
-    private final String codigoRegistro;
 
-    public SFAberturaBloco(final String codigoRegistro, final SFIndicadorMovimentoAberturaBloco indicadorMovimento) {
-        this.indicadorMovimento = indicadorMovimento;
-        this.codigoRegistro = codigoRegistro;
-    }
+    private String campo01CodigoRegistro;
+    private SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento;
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.indicadorMovimento.getCodigo());
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02IndicadorMovimento));
+        return linha.toString();
     }
 
     @Override
     public String getCampo01CodigoRegistro() {
-        return this.codigoRegistro;
+        return this.campo01CodigoRegistro;
+    }
+
+    public SFAberturaBloco setCampo01CodigoRegistro(String campo01CodigoRegistro) {
+        this.campo01CodigoRegistro = campo01CodigoRegistro;
+        return this;
+    }
+
+    public SFAberturaBloco setCampo02IndicadorMovimento(SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento) {
+        this.campo02IndicadorMovimento = campo02IndicadorMovimento;
+        return this;
     }
 }

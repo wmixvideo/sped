@@ -8,8 +8,8 @@ import java.time.LocalDate;
 
 public class SFE100PeriodoApuracaoICMS implements SFLinha {
 
-    private LocalDate dataInicio;
-    private LocalDate dataFim;
+    private LocalDate campo02DataInicio;
+    private LocalDate campo03DataFim;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -18,20 +18,20 @@ public class SFE100PeriodoApuracaoICMS implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(SFUtil.formatToString(this.dataInicio));
-        texto.append(SFUtil.formatToString(this.dataFim));
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02DataInicio));
+        linha.append(SFUtil.formatToString(this.campo03DataFim));
+        return linha.toString();
     }
 
-    public SFE100PeriodoApuracaoICMS setDataFim(LocalDate dataFim) {
-        this.dataFim = dataFim;
+    public SFE100PeriodoApuracaoICMS setCampo03DataFim(LocalDate campo03DataFim) {
+        this.campo03DataFim = campo03DataFim;
         return this;
     }
 
-    public SFE100PeriodoApuracaoICMS setDataInicio(LocalDate dataInicio) {
-        this.dataInicio = dataInicio;
+    public SFE100PeriodoApuracaoICMS setCampo02DataInicio(LocalDate campo02DataInicio) {
+        this.campo02DataInicio = campo02DataInicio;
         return this;
     }
 }

@@ -11,11 +11,11 @@ import java.time.LocalDate;
 
 public class SFE316ObrigacoesFundoCombatePobreza implements SFLinha {
 
-    private String codigo, codigoReceita, numeroProcesso, descricaoResumida, descricaoComplementar;
-    private BigDecimal valor;
-    private LocalDate dataVencimento;
-    private SFIndicadorProcessoOrigem indicadorProcessoOrigem;
-    private SFReferencia referencia;
+    private String campo02Codigo, campo05CodigoReceita, campo06NumeroProcesso, campo08DescricaoResumida, campo09DescricaoComplementar;
+    private BigDecimal campo03Valor;
+    private LocalDate campo04DataVencimento;
+    private SFIndicadorProcessoOrigem campo07IndicadorProcessoOrigem;
+    private SFReferencia campo10Referencia;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -24,62 +24,62 @@ public class SFE316ObrigacoesFundoCombatePobreza implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.codigo);
-        texto.append(SFUtil.formatToString(this.valor));
-        texto.append(SFUtil.formatToString(this.dataVencimento));
-        texto.append(this.codigoReceita);
-        texto.append(this.numeroProcesso);
-        texto.append(SFUtil.formatToString(this.indicadorProcessoOrigem));
-        texto.append(this.descricaoResumida);
-        texto.append(this.descricaoComplementar);
-        texto.append(SFUtil.formatToString(this.referencia));
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(this.campo02Codigo);
+        linha.append(SFUtil.formatToString(this.campo03Valor));
+        linha.append(SFUtil.formatToString(this.campo04DataVencimento));
+        linha.append(this.campo05CodigoReceita);
+        linha.append(this.campo06NumeroProcesso);
+        linha.append(SFUtil.formatToString(this.campo07IndicadorProcessoOrigem));
+        linha.append(this.campo08DescricaoResumida);
+        linha.append(this.campo09DescricaoComplementar);
+        linha.append(SFUtil.formatToString(this.campo10Referencia));
+        return linha.toString();
     }
 
-    public SFE316ObrigacoesFundoCombatePobreza setCodigo(String codigo) {
-        this.codigo = codigo;
+    public SFE316ObrigacoesFundoCombatePobreza setCampo02Codigo(String campo02Codigo) {
+        this.campo02Codigo = campo02Codigo;
         return this;
     }
 
-    public SFE316ObrigacoesFundoCombatePobreza setCodigoReceita(String codigoReceita) {
-        this.codigoReceita = codigoReceita;
+    public SFE316ObrigacoesFundoCombatePobreza setCampo05CodigoReceita(String campo05CodigoReceita) {
+        this.campo05CodigoReceita = campo05CodigoReceita;
         return this;
     }
 
-    public SFE316ObrigacoesFundoCombatePobreza setDataVencimento(LocalDate dataVencimento) {
-        this.dataVencimento = dataVencimento;
+    public SFE316ObrigacoesFundoCombatePobreza setCampo04DataVencimento(LocalDate campo04DataVencimento) {
+        this.campo04DataVencimento = campo04DataVencimento;
         return this;
     }
 
-    public SFE316ObrigacoesFundoCombatePobreza setDescricaoComplementar(String descricaoComplementar) {
-        this.descricaoComplementar = descricaoComplementar;
+    public SFE316ObrigacoesFundoCombatePobreza setCampo09DescricaoComplementar(String campo09DescricaoComplementar) {
+        this.campo09DescricaoComplementar = campo09DescricaoComplementar;
         return this;
     }
 
-    public SFE316ObrigacoesFundoCombatePobreza setDescricaoResumida(String descricaoResumida) {
-        this.descricaoResumida = descricaoResumida;
+    public SFE316ObrigacoesFundoCombatePobreza setCampo08DescricaoResumida(String campo08DescricaoResumida) {
+        this.campo08DescricaoResumida = campo08DescricaoResumida;
         return this;
     }
 
-    public SFE316ObrigacoesFundoCombatePobreza setIndicadorProcessoOrigem(SFIndicadorProcessoOrigem indicadorProcessoOrigem) {
-        this.indicadorProcessoOrigem = indicadorProcessoOrigem;
+    public SFE316ObrigacoesFundoCombatePobreza setCampo07IndicadorProcessoOrigem(SFIndicadorProcessoOrigem campo07IndicadorProcessoOrigem) {
+        this.campo07IndicadorProcessoOrigem = campo07IndicadorProcessoOrigem;
         return this;
     }
 
-    public SFE316ObrigacoesFundoCombatePobreza setNumeroProcesso(String numeroProcesso) {
-        this.numeroProcesso = numeroProcesso;
+    public SFE316ObrigacoesFundoCombatePobreza setCampo06NumeroProcesso(String campo06NumeroProcesso) {
+        this.campo06NumeroProcesso = campo06NumeroProcesso;
         return this;
     }
 
-    public SFE316ObrigacoesFundoCombatePobreza setReferencia(SFReferencia referencia) {
-        this.referencia = referencia;
+    public SFE316ObrigacoesFundoCombatePobreza setCampo10Referencia(SFReferencia campo10Referencia) {
+        this.campo10Referencia = campo10Referencia;
         return this;
     }
 
-    public SFE316ObrigacoesFundoCombatePobreza setValor(BigDecimal valor) {
-        this.valor = valor;
+    public SFE316ObrigacoesFundoCombatePobreza setCampo03Valor(BigDecimal campo03Valor) {
+        this.campo03Valor = campo03Valor;
         return this;
     }
 }

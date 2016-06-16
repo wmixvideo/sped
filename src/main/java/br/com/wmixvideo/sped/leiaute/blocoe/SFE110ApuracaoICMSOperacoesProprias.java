@@ -30,23 +30,23 @@ public class SFE110ApuracaoICMSOperacoesProprias implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(SFUtil.formatToString(this.campo02ValorTotalDebitos));
-        texto.append(SFUtil.formatToString(this.campo03ValorAjusteDebitos));
-        texto.append(SFUtil.formatToString(this.campo04ValorTotalAjusteDebitos));
-        texto.append(SFUtil.formatToString(this.campo05ValorEstornoCreditos));
-        texto.append(SFUtil.formatToString(this.campo06ValorTotalCreditos));
-        texto.append(SFUtil.formatToString(this.campo07ValorAjusteCreditos));
-        texto.append(SFUtil.formatToString(this.campo08ValorTotalAjusteCreditos));
-        texto.append(SFUtil.formatToString(this.campo09ValorEstornosDebito));
-        texto.append(SFUtil.formatToString(this.campo10ValorSaldoCredorAnterior));
-        texto.append(SFUtil.formatToString(this.campo11ValorSaldoApurado));
-        texto.append(SFUtil.formatToString(this.campo12ValorTotalDeducoes));
-        texto.append(SFUtil.formatToString(this.campo13ValorIcmsRecolher));
-        texto.append(SFUtil.formatToString(this.campo14ValorSaldoCredorTransportar));
-        texto.append(SFUtil.formatToString(this.campo15ValorExtraApuracao));
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02ValorTotalDebitos));
+        linha.append(SFUtil.formatToString(this.campo03ValorAjusteDebitos));
+        linha.append(SFUtil.formatToString(this.campo04ValorTotalAjusteDebitos));
+        linha.append(SFUtil.formatToString(this.campo05ValorEstornoCreditos));
+        linha.append(SFUtil.formatToString(this.campo06ValorTotalCreditos));
+        linha.append(SFUtil.formatToString(this.campo07ValorAjusteCreditos));
+        linha.append(SFUtil.formatToString(this.campo08ValorTotalAjusteCreditos));
+        linha.append(SFUtil.formatToString(this.campo09ValorEstornosDebito));
+        linha.append(SFUtil.formatToString(this.campo10ValorSaldoCredorAnterior));
+        linha.append(SFUtil.formatToString(this.campo11ValorSaldoApurado));
+        linha.append(SFUtil.formatToString(this.campo12ValorTotalDeducoes));
+        linha.append(SFUtil.formatToString(this.campo13ValorIcmsRecolher));
+        linha.append(SFUtil.formatToString(this.campo14ValorSaldoCredorTransportar));
+        linha.append(SFUtil.formatToString(this.campo15ValorExtraApuracao));
+        return linha.toString();
     }
 
     public SFE110ApuracaoICMSOperacoesProprias setCampo02ValorTotalDebitos(BigDecimal campo02ValorTotalDebitos) {

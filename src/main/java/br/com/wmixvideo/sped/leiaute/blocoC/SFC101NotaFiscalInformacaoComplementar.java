@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 public class SFC101NotaFiscalInformacaoComplementar implements SFLinha {
 
 
-    private BigDecimal valorIcmsPartilhaOrigem;
-    private BigDecimal valorIcmsPartilhaDestino;
-    private BigDecimal valorIcmsPartilhaDestinoFundoCombatePobreza;
+    private BigDecimal campo04ValorIcmsPartilhaOrigem;
+    private BigDecimal campo03ValorIcmsPartilhaDestino;
+    private BigDecimal campo02ValorIcmsPartilhaDestinoFundoCombatePobreza;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -20,26 +20,26 @@ public class SFC101NotaFiscalInformacaoComplementar implements SFLinha {
 
     @Override
     public String toString() {
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(SFUtil.formatToString(this.valorIcmsPartilhaDestinoFundoCombatePobreza));
-        texto.append(SFUtil.formatToString(this.valorIcmsPartilhaDestino));
-        texto.append(SFUtil.formatToString(this.valorIcmsPartilhaOrigem));
-        return texto.toString();
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02ValorIcmsPartilhaDestinoFundoCombatePobreza));
+        linha.append(SFUtil.formatToString(this.campo03ValorIcmsPartilhaDestino));
+        linha.append(SFUtil.formatToString(this.campo04ValorIcmsPartilhaOrigem));
+        return linha.toString();
     }
 
-    public SFC101NotaFiscalInformacaoComplementar setValorIcmsPartilhaDestino(BigDecimal valorIcmsPartilhaDestino) {
-        this.valorIcmsPartilhaDestino = valorIcmsPartilhaDestino;
+    public SFC101NotaFiscalInformacaoComplementar setCampo03ValorIcmsPartilhaDestino(BigDecimal campo03ValorIcmsPartilhaDestino) {
+        this.campo03ValorIcmsPartilhaDestino = campo03ValorIcmsPartilhaDestino;
         return this;
     }
 
-    public SFC101NotaFiscalInformacaoComplementar setValorIcmsPartilhaDestinoFundoCombatePobreza(BigDecimal valorIcmsPartilhaDestinoFundoCombatePobreza) {
-        this.valorIcmsPartilhaDestinoFundoCombatePobreza = valorIcmsPartilhaDestinoFundoCombatePobreza;
+    public SFC101NotaFiscalInformacaoComplementar setCampo02ValorIcmsPartilhaDestinoFundoCombatePobreza(BigDecimal campo02ValorIcmsPartilhaDestinoFundoCombatePobreza) {
+        this.campo02ValorIcmsPartilhaDestinoFundoCombatePobreza = campo02ValorIcmsPartilhaDestinoFundoCombatePobreza;
         return this;
     }
 
-    public SFC101NotaFiscalInformacaoComplementar setValorIcmsPartilhaOrigem(BigDecimal valorIcmsPartilhaOrigem) {
-        this.valorIcmsPartilhaOrigem = valorIcmsPartilhaOrigem;
+    public SFC101NotaFiscalInformacaoComplementar setCampo04ValorIcmsPartilhaOrigem(BigDecimal campo04ValorIcmsPartilhaOrigem) {
+        this.campo04ValorIcmsPartilhaOrigem = campo04ValorIcmsPartilhaOrigem;
         return this;
     }
 }

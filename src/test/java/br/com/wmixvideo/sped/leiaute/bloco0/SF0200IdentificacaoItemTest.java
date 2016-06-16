@@ -9,44 +9,20 @@ import java.math.BigDecimal;
 public class SF0200IdentificacaoItemTest {
 
     @Test
-    public void geraTexto() {
+    public void deveGerarLinhaCompleta() {
         final SF0200IdentificacaoItem linha = new SF0200IdentificacaoItem()
-                .setCodigo("123456")
-                .setDescricao("FILME")
-                .setCodigoBarras("123456789123")
-                .setUnidadeMedida("PC")
-                .setCodigoNcm("85234029")
-                .setTipo(SFItemTipo.SERVIÇOS)
-                .setAliquotaIcms(BigDecimal.ZERO);
+                .setCampo02Codigo("123456")
+                .setCampo03Descricao("FILME")
+                .setCampo04CodigoBarras("123456789123")
+                .setCampo05CodigoAnterior("654")
+                .setCampo06UnidadeMedida("PC")
+                .setCampo07Tipo(SFItemTipo.SERVIÇOS)
+                .setCampo08CodigoNcm("85234029")
+                .setCampo09CodigoExIpi("765")
+                .setCampo10CodigoGenero("876")
+                .setCampo11CodigoServico("987")
+                .setCampo12AliquotaIcms(BigDecimal.ZERO);
 
-        Assert.assertEquals("|0200|123456|FILME|123456789123||PC|09|85234029||||0|", linha.toString());
-    }
-
-    @Test
-    public void geraTextoOutroNCM() {
-        final SF0200IdentificacaoItem linha = new SF0200IdentificacaoItem()
-                .setCodigo("123456")
-                .setDescricao("FILME")
-                .setCodigoBarras("123456789123")
-                .setUnidadeMedida("PC")
-                .setCodigoNcm("85234990")
-                .setTipo(SFItemTipo.SERVIÇOS)
-                .setAliquotaIcms(BigDecimal.ZERO);
-
-        Assert.assertEquals("|0200|123456|FILME|123456789123||PC|09|85234990||||0|", linha.toString());
-    }
-
-    @Test
-    public void codigoDeBarrasNuloDeveConsiderarVazio() {
-        final SF0200IdentificacaoItem linha = new SF0200IdentificacaoItem()
-                .setCodigo("123456")
-                .setDescricao("FILME")
-                .setCodigoBarras(null)
-                .setUnidadeMedida("PC")
-                .setCodigoNcm("85234029")
-                .setTipo(SFItemTipo.EMBALAGEM)
-                .setAliquotaIcms(BigDecimal.ZERO);
-
-        Assert.assertEquals("|0200|123456|FILME|||PC|02|85234029||||0|", linha.toString());
+        Assert.assertEquals("|0200|123456|FILME|123456789123|654|PC|09|85234029|765|876|987|0|", linha.toString());
     }
 }

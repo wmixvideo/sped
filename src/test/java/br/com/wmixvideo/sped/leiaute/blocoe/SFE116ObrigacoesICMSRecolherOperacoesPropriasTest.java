@@ -12,29 +12,19 @@ import java.time.Month;
 public class SFE116ObrigacoesICMSRecolherOperacoesPropriasTest {
 
     @Test
-    public void geraTextoReferenteNovembro2008() {
+    public void deveGerarLinhaCompleta() {
         final SFE116ObrigacoesICMSRecolherOperacoesProprias linha = new SFE116ObrigacoesICMSRecolherOperacoesProprias()
-                .setReferencia(SFReferencia.of(2008, Month.NOVEMBER))
-                .setCodigo("000")
-                .setCodigoReceita("1449")
-                .setValor(new BigDecimal("279062.69"))
-                .setDataVencimento(LocalDate.of(2008, Month.DECEMBER, 10))
-                .setIndicadorProcessoOrigem(SFIndicadorProcessoOrigem.SEFAZ);
+                .setCampo02Codigo("02")
+                .setCampo03Valor(BigDecimal.valueOf(3))
+                .setCampo04DataVencimento(LocalDate.of(2013, Month.FEBRUARY, 4))
+                .setCampo05CodigoReceita("05")
+                .setCampo06NumeroProcesso("06")
+                .setCampo07IndicadorProcessoOrigem(SFIndicadorProcessoOrigem.SEFAZ)
+                .setCampo08DescricaoResumida("08")
+                .setCampo09DescricaoComplementar("09")
+                .setCampo10Referencia(SFReferencia.of(2013, Month.JANUARY));
 
-        Assert.assertEquals("|E116|000|279062,69|10122008|1449||0|||112008|", linha.toString());
-    }
-
-    @Test
-    public void geraTextoReferenteJaneiro2013() {
-        final SFE116ObrigacoesICMSRecolherOperacoesProprias linha = new SFE116ObrigacoesICMSRecolherOperacoesProprias()
-                .setReferencia(SFReferencia.of(2013, Month.JANUARY))
-                .setCodigo("000")
-                .setCodigoReceita("144910014")
-                .setValor(new BigDecimal("655580.89"))
-                .setDataVencimento(LocalDate.of(2013, Month.FEBRUARY, 10))
-                .setIndicadorProcessoOrigem(SFIndicadorProcessoOrigem.SEFAZ);
-
-        Assert.assertEquals("|E116|000|655580,89|10022013|144910014||0|||012013|", linha.toString());
+        Assert.assertEquals("|E116|02|3,00|04022013|05|06|0|08|09|012013|", linha.toString());
     }
 
 }

@@ -7,17 +7,17 @@ import org.junit.Test;
 public class SFC115LocalColetaEntregaTest {
 
     @Test
-    public void testeToString() throws Exception {
+    public void deveGerarLinhaCompleta() throws Exception {
         final SFC115LocalColetaEntrega linha = new SFC115LocalColetaEntrega()
-                .setTipoTransporte(SFTipoTransporte.FERROVIARIO)
-                .setColetaCnpj("00000000000000")
-                .setColetaInscricaoEstadual("00000")
-                .setColetaCpf("00000000000")
-                .setColetaCodigoMunicipio("0000")
-                .setEntregaCnpj("11111111111111")
-                .setEntregaInscricaoEstadual("11111")
-                .setEntregaCpf("11111111111")
-                .setEntregaCodigoMunicipio("1111");
+                .setCampo02TipoTransporte(SFTipoTransporte.FERROVIARIO)
+                .setCampo03ColetaCnpj("00000000000000")
+                .setCampo04ColetaInscricaoEstadual("00000")
+                .setCampo05ColetaCpf("00000000000")
+                .setCampo06ColetaCodigoMunicipio("0000")
+                .setCampo07EntregaCnpj("11111111111111")
+                .setCampo08EntregaInscricaoEstadual("11111")
+                .setCampo09EntregaCpf("11111111111")
+                .setCampo10EntregaCodigoMunicipio("1111");
 
         Assert.assertEquals("|C115|1|00000000000000|00000|00000000000|0000|11111111111111|11111|11111111111|1111|", linha.toString());
     }

@@ -9,9 +9,9 @@ import java.time.LocalDate;
 
 public class SFE200PeriodoApuracaoST implements SFLinha {
 
-    private SFUnidadeFederativa uf;
-    private LocalDate dataInicial;
-    private LocalDate dataFinal;
+    private SFUnidadeFederativa campo02Uf;
+    private LocalDate campo03DataInicial;
+    private LocalDate campo04DataFinal;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -22,24 +22,24 @@ public class SFE200PeriodoApuracaoST implements SFLinha {
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
         linha.append(this.getCampo01CodigoRegistro());
-        linha.append(SFUtil.formatToString(this.uf));
-        linha.append(SFUtil.formatToString(this.dataInicial));
-        linha.append(SFUtil.formatToString(this.dataFinal));
+        linha.append(SFUtil.formatToString(this.campo02Uf));
+        linha.append(SFUtil.formatToString(this.campo03DataInicial));
+        linha.append(SFUtil.formatToString(this.campo04DataFinal));
         return linha.toString();
     }
 
-    public SFE200PeriodoApuracaoST setDataFinal(LocalDate dataFinal) {
-        this.dataFinal = dataFinal;
+    public SFE200PeriodoApuracaoST setCampo04DataFinal(LocalDate campo04DataFinal) {
+        this.campo04DataFinal = campo04DataFinal;
         return this;
     }
 
-    public SFE200PeriodoApuracaoST setDataInicial(LocalDate dataInicial) {
-        this.dataInicial = dataInicial;
+    public SFE200PeriodoApuracaoST setCampo03DataInicial(LocalDate campo03DataInicial) {
+        this.campo03DataInicial = campo03DataInicial;
         return this;
     }
 
-    public SFE200PeriodoApuracaoST setUf(SFUnidadeFederativa uf) {
-        this.uf = uf;
+    public SFE200PeriodoApuracaoST setCampo02Uf(SFUnidadeFederativa campo02Uf) {
+        this.campo02Uf = campo02Uf;
         return this;
     }
 }

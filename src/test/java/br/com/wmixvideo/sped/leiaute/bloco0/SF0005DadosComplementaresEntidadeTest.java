@@ -6,17 +6,18 @@ import org.junit.Test;
 public class SF0005DadosComplementaresEntidadeTest {
 
     @Test
-    public void gerarTexto() {
+    public void deveGerarLinhaCompleta() {
         final SF0005DadosComplementaresEntidade linha = new SF0005DadosComplementaresEntidade()
-                .setNomeFantasia("Empresa")
-                .setTelefone("4844444444")
-                .setFax("4833333333")
-                .setEmail("teste@empresa.com.br")
-                .setCep("88000000")
-                .setLogradouro("AV Principal")
-                .setNumero("5000")
-                .setBairro("CAMPINAS");
+                .setCampo02NomeFantasia("Empresa")
+                .setCampo03Cep("88000000")
+                .setCampo04Logradouro("AV Principal")
+                .setCampo05Numero("5000")
+                .setCampo06Complemento("compl")
+                .setCampo07Bairro("CAMPINAS")
+                .setCampo08Telefone("4844444444")
+                .setCampo09Fax("4833333333")
+                .setCampo10Email("teste@empresa.com.br");
 
-        Assert.assertEquals("|0005|Empresa|88000000|AV Principal|5000||CAMPINAS|4844444444|4833333333|teste@empresa.com.br|", linha.toString());
+        Assert.assertEquals("|0005|Empresa|88000000|AV Principal|5000|compl|CAMPINAS|4844444444|4833333333|teste@empresa.com.br|", linha.toString());
     }
 }

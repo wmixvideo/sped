@@ -15,7 +15,7 @@ import java.time.Month;
 public class SFD100NotaFiscalTransporteTest {
 
     @Test
-    public void testeToString() throws Exception {
+    public void deveGerarLinhaCompleta() throws Exception {
         final SFD100NotaFiscalTransporte linha = new SFD100NotaFiscalTransporte()
                 .setCampo02IndicadorOperacao(SFIndicadorOperacao.PRESTACAO)
                 .setCampo03IndicadorEmitente(SFIndicadorEmitente.EMISSAO_PROPRIA)

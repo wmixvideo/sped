@@ -7,9 +7,9 @@ import br.com.wmixvideo.sped.util.SFUtil;
 
 public class SFC115LocalColetaEntrega implements SFLinha {
 
-    private String coletaCnpj, coletaInscricaoEstadual, coletaCpf, coletaCodigoMunicipio;
-    private String entregaCnpj, entregaInscricaoEstadual, entregaCpf, entregaCodigoMunicipio;
-    private SFTipoTransporte tipoTransporte;
+    private String campo03ColetaCnpj, campo04ColetaInscricaoEstadual, campo05ColetaCpf, campo06ColetaCodigoMunicipio;
+    private String campo07EntregaCnpj, campo08EntregaInscricaoEstadual, campo09EntregaCpf, campo10EntregaCodigoMunicipio;
+    private SFTipoTransporte campo02TipoTransporte;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -20,60 +20,60 @@ public class SFC115LocalColetaEntrega implements SFLinha {
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
         linha.append(this.getCampo01CodigoRegistro());
-        linha.append(SFUtil.formatToString(this.tipoTransporte));
-        linha.append(this.coletaCnpj);
-        linha.append(this.coletaInscricaoEstadual);
-        linha.append(this.coletaCpf);
-        linha.append(this.coletaCodigoMunicipio);
-        linha.append(this.entregaCnpj);
-        linha.append(this.entregaInscricaoEstadual);
-        linha.append(this.entregaCpf);
-        linha.append(this.entregaCodigoMunicipio);
+        linha.append(SFUtil.formatToString(this.campo02TipoTransporte));
+        linha.append(this.campo03ColetaCnpj);
+        linha.append(this.campo04ColetaInscricaoEstadual);
+        linha.append(this.campo05ColetaCpf);
+        linha.append(this.campo06ColetaCodigoMunicipio);
+        linha.append(this.campo07EntregaCnpj);
+        linha.append(this.campo08EntregaInscricaoEstadual);
+        linha.append(this.campo09EntregaCpf);
+        linha.append(this.campo10EntregaCodigoMunicipio);
         return linha.toString();
     }
 
-    public SFC115LocalColetaEntrega setColetaCnpj(String coletaCnpj) {
-        this.coletaCnpj = coletaCnpj;
+    public SFC115LocalColetaEntrega setCampo03ColetaCnpj(String campo03ColetaCnpj) {
+        this.campo03ColetaCnpj = campo03ColetaCnpj;
         return this;
     }
 
-    public SFC115LocalColetaEntrega setColetaCodigoMunicipio(String coletaCodigoMunicipio) {
-        this.coletaCodigoMunicipio = coletaCodigoMunicipio;
+    public SFC115LocalColetaEntrega setCampo06ColetaCodigoMunicipio(String campo06ColetaCodigoMunicipio) {
+        this.campo06ColetaCodigoMunicipio = campo06ColetaCodigoMunicipio;
         return this;
     }
 
-    public SFC115LocalColetaEntrega setColetaCpf(String coletaCpf) {
-        this.coletaCpf = coletaCpf;
+    public SFC115LocalColetaEntrega setCampo05ColetaCpf(String campo05ColetaCpf) {
+        this.campo05ColetaCpf = campo05ColetaCpf;
         return this;
     }
 
-    public SFC115LocalColetaEntrega setColetaInscricaoEstadual(String coletaInscricaoEstadual) {
-        this.coletaInscricaoEstadual = coletaInscricaoEstadual;
+    public SFC115LocalColetaEntrega setCampo04ColetaInscricaoEstadual(String campo04ColetaInscricaoEstadual) {
+        this.campo04ColetaInscricaoEstadual = campo04ColetaInscricaoEstadual;
         return this;
     }
 
-    public SFC115LocalColetaEntrega setEntregaCnpj(String entregaCnpj) {
-        this.entregaCnpj = entregaCnpj;
+    public SFC115LocalColetaEntrega setCampo07EntregaCnpj(String campo07EntregaCnpj) {
+        this.campo07EntregaCnpj = campo07EntregaCnpj;
         return this;
     }
 
-    public SFC115LocalColetaEntrega setEntregaCodigoMunicipio(String entregaCodigoMunicipio) {
-        this.entregaCodigoMunicipio = entregaCodigoMunicipio;
+    public SFC115LocalColetaEntrega setCampo10EntregaCodigoMunicipio(String campo10EntregaCodigoMunicipio) {
+        this.campo10EntregaCodigoMunicipio = campo10EntregaCodigoMunicipio;
         return this;
     }
 
-    public SFC115LocalColetaEntrega setEntregaCpf(String entregaCpf) {
-        this.entregaCpf = entregaCpf;
+    public SFC115LocalColetaEntrega setCampo09EntregaCpf(String campo09EntregaCpf) {
+        this.campo09EntregaCpf = campo09EntregaCpf;
         return this;
     }
 
-    public SFC115LocalColetaEntrega setEntregaInscricaoEstadual(String entregaInscricaoEstadual) {
-        this.entregaInscricaoEstadual = entregaInscricaoEstadual;
+    public SFC115LocalColetaEntrega setCampo08EntregaInscricaoEstadual(String campo08EntregaInscricaoEstadual) {
+        this.campo08EntregaInscricaoEstadual = campo08EntregaInscricaoEstadual;
         return this;
     }
 
-    public SFC115LocalColetaEntrega setTipoTransporte(SFTipoTransporte tipoTransporte) {
-        this.tipoTransporte = tipoTransporte;
+    public SFC115LocalColetaEntrega setCampo02TipoTransporte(SFTipoTransporte campo02TipoTransporte) {
+        this.campo02TipoTransporte = campo02TipoTransporte;
         return this;
     }
 }

@@ -12,17 +12,17 @@ import java.time.Month;
 public class SFE316ObrigacoesFundoCombatePobrezaTest {
 
     @Test
-    public void testeToString() throws Exception {
+    public void deveGerarLinhaCompleta() throws Exception {
         final SFE316ObrigacoesFundoCombatePobreza linha = new SFE316ObrigacoesFundoCombatePobreza()
-                .setCodigo("001")
-                .setCodigoReceita("002")
-                .setNumeroProcesso("101")
-                .setDescricaoResumida("Resumo")
-                .setDescricaoComplementar("Complemento")
-                .setReferencia(SFReferencia.of(2016, Month.APRIL))
-                .setValor(BigDecimal.valueOf(10.4))
-                .setDataVencimento(LocalDate.of(2016, Month.APRIL, 20))
-                .setIndicadorProcessoOrigem(SFIndicadorProcessoOrigem.JUSTICA_FEDERAL);
+                .setCampo02Codigo("001")
+                .setCampo03Valor(BigDecimal.valueOf(10.4))
+                .setCampo04DataVencimento(LocalDate.of(2016, Month.APRIL, 20))
+                .setCampo05CodigoReceita("002")
+                .setCampo06NumeroProcesso("101")
+                .setCampo07IndicadorProcessoOrigem(SFIndicadorProcessoOrigem.JUSTICA_FEDERAL)
+                .setCampo08DescricaoResumida("Resumo")
+                .setCampo09DescricaoComplementar("Complemento")
+                .setCampo10Referencia(SFReferencia.of(2016, Month.APRIL));
 
         Assert.assertEquals("|E316|001|10,40|20042016|002|101|1|Resumo|Complemento|042016|", linha.toString());
 

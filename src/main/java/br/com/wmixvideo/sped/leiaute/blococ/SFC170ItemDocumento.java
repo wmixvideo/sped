@@ -48,11 +48,6 @@ public class SFC170ItemDocumento implements SFLinha {
     private SFIndicadorPeriodo campo19IndicadorPeriodo;
 
     @Override
-    public String getCampo01CodigoRegistro() {
-        return "C170";
-    }
-
-    @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
         linha.append(this.getCampo01CodigoRegistro());
@@ -93,6 +88,11 @@ public class SFC170ItemDocumento implements SFLinha {
         linha.append(SFUtil.formatToString(this.campo36ValorCofins));
         linha.append(this.campo37ContaContabil);
         return linha.toString();
+    }
+
+    @Override
+    public String getCampo01CodigoRegistro() {
+        return "C170";
     }
 
     public SFC170ItemDocumento setCampo03Codigo(String campo03Codigo) {

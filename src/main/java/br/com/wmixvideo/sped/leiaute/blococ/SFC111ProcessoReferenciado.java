@@ -7,8 +7,8 @@ import br.com.wmixvideo.sped.util.SFUtil;
 
 public class SFC111ProcessoReferenciado implements SFLinha {
 
-    private String numero;
-    private SFIndicadorProcessoOrigem indicadorOrigem;
+    private String campo02Numero;
+    private SFIndicadorProcessoOrigem campo03IndicadorOrigem;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -19,18 +19,18 @@ public class SFC111ProcessoReferenciado implements SFLinha {
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
         linha.append(this.getCampo01CodigoRegistro());
-        linha.append(this.numero);
-        linha.append(SFUtil.formatToString(this.indicadorOrigem));
+        linha.append(this.campo02Numero);
+        linha.append(SFUtil.formatToString(this.campo03IndicadorOrigem));
         return linha.toString();
     }
 
-    public SFC111ProcessoReferenciado setIndicadorOrigem(SFIndicadorProcessoOrigem indicadorOrigem) {
-        this.indicadorOrigem = indicadorOrigem;
+    public SFC111ProcessoReferenciado setCampo03IndicadorOrigem(SFIndicadorProcessoOrigem campo03IndicadorOrigem) {
+        this.campo03IndicadorOrigem = campo03IndicadorOrigem;
         return this;
     }
 
-    public SFC111ProcessoReferenciado setNumero(String numero) {
-        this.numero = numero;
+    public SFC111ProcessoReferenciado setCampo02Numero(String campo02Numero) {
+        this.campo02Numero = campo02Numero;
         return this;
     }
 }

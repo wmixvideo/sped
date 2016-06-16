@@ -9,11 +9,11 @@ import java.time.LocalDate;
 
 public class SFH005TotaisInventarioTest {
     @Test
-    public void geraTexto() {
+    public void deveGerarLinhaCompleta() {
         final SFH005TotaisInventario linha = new SFH005TotaisInventario()
-                .setMotivoInventario(SFMotivoInventario.FINAL_NO_PERIODO)
-                .setDataInventario(LocalDate.of(2008, 11, 6))
-                .setValorTotalEstoque(BigDecimal.valueOf(10893622.45));
+                .setCampo04MotivoInventario(SFMotivoInventario.FINAL_NO_PERIODO)
+                .setCampo02DataInventario(LocalDate.of(2008, 11, 6))
+                .setCampo03ValorTotalEstoque(BigDecimal.valueOf(10893622.45));
 
         Assert.assertEquals("|H005|06112008|10893622,45|01|", linha.toString());
     }

@@ -6,10 +6,10 @@ import org.junit.Test;
 public class SF0015DadosContribuinteSubstitutoOuResponsavelICMSDestinoTest {
 
     @Test
-    public void deveGeraTextoFormatado() {
+    public void deveGerarLinhaCompleta() {
         final SF0015DadosContribuinteSubstitutoOuResponsavelICMSDestino linha = new SF0015DadosContribuinteSubstitutoOuResponsavelICMSDestino()
-                .setUf("SC")
-                .setInscricaoEstadual("00011122");
+                .setCampo02Uf("SC")
+                .setCampo03InscricaoEstadual("00011122");
 
         Assert.assertEquals("|0015|SC|00011122|", linha.toString());
     }

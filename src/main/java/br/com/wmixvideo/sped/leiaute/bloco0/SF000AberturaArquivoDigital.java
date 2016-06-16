@@ -5,74 +5,46 @@ import br.com.wmixvideo.sped.enums.SFIndicadorTipoAtividade;
 import br.com.wmixvideo.sped.enums.SFUnidadeFederativa;
 import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.leiaute.SFPerfilApresentacaoArquivoFiscal;
-import br.com.wmixvideo.sped.util.SFReferencia;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
 
 import java.time.LocalDate;
-import java.time.Month;
 
 public class SF000AberturaArquivoDigital implements SFLinha {
 
-    private String razaoSocial;
-    private String cnpj;
-    private String cpf;
-    private String inscricaoEstadual;
-    private String inscricaoMunicipal;
-    private String suframa;
-    private String codigoMunicipio;
-    private SFUnidadeFederativa uf;
-    private SFReferencia referencia;
-    private SFFinalidadeArquivo finalidade;
-    private SFPerfilApresentacaoArquivoFiscal perfilApresentacaoArquivoFiscal;
-    private SFIndicadorTipoAtividade indicadorTipoAtividade;
+    private SFFinalidadeArquivo campo03Finalidade;
+    private LocalDate campo04DataInicio;
+    private LocalDate campo05DataFim;
+    private String campo06RazaoSocial;
+    private String campo07Cnpj;
+    private String campo08Cpf;
+    private SFUnidadeFederativa campo09Uf;
+    private String campo10InscricaoEstadual;
+    private String campo11CodigoMunicipio;
+    private String campo12InscricaoMunicipal;
+    private String campo13Suframa;
+    private SFPerfilApresentacaoArquivoFiscal campo14PerfilApresentacaoArquivoFiscal;
+    private SFIndicadorTipoAtividade campo15IndicadorTipoAtividade;
 
     @Override
     public String toString() {
-        if (this.referencia == null) {
-            return null;
-        }
-
-        final SFStringBuilder texto = new SFStringBuilder();
-        texto.append(this.getCampo01CodigoRegistro());
-        texto.append(this.getCodigoVersaoLeiaute());
-        texto.append(this.finalidade != null ? this.finalidade.getCodigo() : "");
-        texto.append(SFUtil.formatToString(this.referencia.getInicio()));
-        texto.append(SFUtil.formatToString(this.referencia.getFim()));
-        texto.append(this.razaoSocial);
-        texto.append(this.cnpj);
-        texto.append(this.cpf);
-        texto.append(this.uf != null ? this.uf.getCodigo() : "");
-        texto.append(this.inscricaoEstadual);
-        texto.append(this.codigoMunicipio);
-        texto.append(this.inscricaoMunicipal);
-        texto.append(this.suframa);
-        texto.append(this.perfilApresentacaoArquivoFiscal != null ? this.perfilApresentacaoArquivoFiscal.getCodigo() : "");
-        texto.append(this.indicadorTipoAtividade != null ? this.indicadorTipoAtividade.getCodigo() : "");
-        return texto.toString();
-    }
-
-    private String getCodigoVersaoLeiaute() {
-        final LocalDate dataFinalReferencia = this.referencia.getFim();
-        if (dataFinalReferencia.isBefore(LocalDate.of(2010, Month.JANUARY, 1))) {
-            return "002";
-        } else if (dataFinalReferencia.isBefore(LocalDate.of(2011, Month.JANUARY, 1))) {
-            return "003";
-        } else if (dataFinalReferencia.isBefore(LocalDate.of(2012, Month.JANUARY, 1))) {
-            return "004";
-        } else if (dataFinalReferencia.isBefore(LocalDate.of(2012, Month.JULY, 1))) {
-            return "005";
-        } else if (dataFinalReferencia.isBefore(LocalDate.of(2013, Month.JANUARY, 1))) {
-            return "006";
-        } else if (dataFinalReferencia.isBefore(LocalDate.of(2014, Month.FEBRUARY, 1))) {
-            return "007";
-        } else if (dataFinalReferencia.isBefore(LocalDate.of(2015, Month.JANUARY, 1))) {
-            return "008";
-        } else if (dataFinalReferencia.isBefore(LocalDate.of(2016, Month.JANUARY, 1))) {
-            return "009";
-        } else {
-            return "010";
-        }
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(this.getCampo02CodigoVersaoLeiaute());
+        linha.append(SFUtil.formatToString(this.campo03Finalidade));
+        linha.append(SFUtil.formatToString(this.campo04DataInicio));
+        linha.append(SFUtil.formatToString(this.campo05DataFim));
+        linha.append(this.campo06RazaoSocial);
+        linha.append(this.campo07Cnpj);
+        linha.append(this.campo08Cpf);
+        linha.append(SFUtil.formatToString(this.campo09Uf));
+        linha.append(this.campo10InscricaoEstadual);
+        linha.append(this.campo11CodigoMunicipio);
+        linha.append(this.campo12InscricaoMunicipal);
+        linha.append(this.campo13Suframa);
+        linha.append(SFUtil.formatToString(this.campo14PerfilApresentacaoArquivoFiscal));
+        linha.append(SFUtil.formatToString(this.campo15IndicadorTipoAtividade));
+        return linha.toString();
     }
 
     @Override
@@ -80,63 +52,72 @@ public class SF000AberturaArquivoDigital implements SFLinha {
         return "0000";
     }
 
-    public SF000AberturaArquivoDigital setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    private String getCampo02CodigoVersaoLeiaute() {
+        return "010";
+    }
+
+    public SF000AberturaArquivoDigital setCampo03Finalidade(SFFinalidadeArquivo campo03Finalidade) {
+        this.campo03Finalidade = campo03Finalidade;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setCodigoMunicipio(String codigoMunicipio) {
-        this.codigoMunicipio = codigoMunicipio;
+    public SF000AberturaArquivoDigital setCampo04DataInicio(LocalDate campo04DataInicio) {
+        this.campo04DataInicio = campo04DataInicio;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setCpf(String cpf) {
-        this.cpf = cpf;
+    public SF000AberturaArquivoDigital setCampo05DataFim(LocalDate campo05DataFim) {
+        this.campo05DataFim = campo05DataFim;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setFinalidade(SFFinalidadeArquivo finalidade) {
-        this.finalidade = finalidade;
+    public SF000AberturaArquivoDigital setCampo06RazaoSocial(String campo06RazaoSocial) {
+        this.campo06RazaoSocial = campo06RazaoSocial;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setIndicadorTipoAtividade(SFIndicadorTipoAtividade indicadorTipoAtividade) {
-        this.indicadorTipoAtividade = indicadorTipoAtividade;
+    public SF000AberturaArquivoDigital setCampo07Cnpj(String campo07Cnpj) {
+        this.campo07Cnpj = campo07Cnpj;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setInscricaoEstadual(String inscricaoEstadual) {
-        this.inscricaoEstadual = inscricaoEstadual;
+    public SF000AberturaArquivoDigital setCampo08Cpf(String campo08Cpf) {
+        this.campo08Cpf = campo08Cpf;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setInscricaoMunicipal(String inscricaoMunicipal) {
-        this.inscricaoMunicipal = inscricaoMunicipal;
+    public SF000AberturaArquivoDigital setCampo09Uf(SFUnidadeFederativa campo09Uf) {
+        this.campo09Uf = campo09Uf;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setPerfilApresentacaoArquivoFiscal(SFPerfilApresentacaoArquivoFiscal perfilApresentacaoArquivoFiscal) {
-        this.perfilApresentacaoArquivoFiscal = perfilApresentacaoArquivoFiscal;
+    public SF000AberturaArquivoDigital setCampo10InscricaoEstadual(String campo10InscricaoEstadual) {
+        this.campo10InscricaoEstadual = campo10InscricaoEstadual;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setRazaoSocial(String razaoSocial) {
-        this.razaoSocial = razaoSocial;
+    public SF000AberturaArquivoDigital setCampo11CodigoMunicipio(String campo11CodigoMunicipio) {
+        this.campo11CodigoMunicipio = campo11CodigoMunicipio;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setReferencia(SFReferencia referencia) {
-        this.referencia = referencia;
+    public SF000AberturaArquivoDigital setCampo12InscricaoMunicipal(String campo12InscricaoMunicipal) {
+        this.campo12InscricaoMunicipal = campo12InscricaoMunicipal;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setSuframa(String suframa) {
-        this.suframa = suframa;
+    public SF000AberturaArquivoDigital setCampo13Suframa(String campo13Suframa) {
+        this.campo13Suframa = campo13Suframa;
         return this;
     }
 
-    public SF000AberturaArquivoDigital setUf(SFUnidadeFederativa uf) {
-        this.uf = uf;
+    public SF000AberturaArquivoDigital setCampo14PerfilApresentacaoArquivoFiscal(SFPerfilApresentacaoArquivoFiscal campo14PerfilApresentacaoArquivoFiscal) {
+        this.campo14PerfilApresentacaoArquivoFiscal = campo14PerfilApresentacaoArquivoFiscal;
+        return this;
+    }
+
+    public SF000AberturaArquivoDigital setCampo15IndicadorTipoAtividade(SFIndicadorTipoAtividade campo15IndicadorTipoAtividade) {
+        this.campo15IndicadorTipoAtividade = campo15IndicadorTipoAtividade;
         return this;
     }
 }
