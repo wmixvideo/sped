@@ -9,6 +9,11 @@ public class SFAberturaBloco implements SFLinha {
     private String campo01CodigoRegistro;
     private SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento;
 
+    public SFAberturaBloco(String campo01CodigoRegistro, SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento) {
+        this.campo01CodigoRegistro = campo01CodigoRegistro;
+        this.campo02IndicadorMovimento = campo02IndicadorMovimento;
+    }
+
     @Override
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
@@ -20,15 +25,5 @@ public class SFAberturaBloco implements SFLinha {
     @Override
     public String getCampo01CodigoRegistro() {
         return this.campo01CodigoRegistro;
-    }
-
-    public SFAberturaBloco setCampo01CodigoRegistro(String campo01CodigoRegistro) {
-        this.campo01CodigoRegistro = campo01CodigoRegistro;
-        return this;
-    }
-
-    public SFAberturaBloco setCampo02IndicadorMovimento(SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento) {
-        this.campo02IndicadorMovimento = campo02IndicadorMovimento;
-        return this;
     }
 }
