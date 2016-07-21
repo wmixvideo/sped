@@ -1,13 +1,12 @@
 package br.com.wmixvideo.sped.leiaute.blococ;
 
+import java.math.BigDecimal;
+
 import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
 
-import java.math.BigDecimal;
-
 public class SFC101NotaFiscalInformacaoComplementar implements SFLinha {
-
 
     private BigDecimal campo04ValorIcmsPartilhaOrigem;
     private BigDecimal campo03ValorIcmsPartilhaDestino;
@@ -28,17 +27,17 @@ public class SFC101NotaFiscalInformacaoComplementar implements SFLinha {
         return linha.toString();
     }
 
-    public SFC101NotaFiscalInformacaoComplementar setCampo03ValorIcmsPartilhaDestino(BigDecimal campo03ValorIcmsPartilhaDestino) {
+    public SFC101NotaFiscalInformacaoComplementar setCampo03ValorIcmsPartilhaDestino(final BigDecimal campo03ValorIcmsPartilhaDestino) {
         this.campo03ValorIcmsPartilhaDestino = campo03ValorIcmsPartilhaDestino;
         return this;
     }
 
-    public SFC101NotaFiscalInformacaoComplementar setCampo02ValorIcmsPartilhaDestinoFundoCombatePobreza(BigDecimal campo02ValorIcmsPartilhaDestinoFundoCombatePobreza) {
+    public SFC101NotaFiscalInformacaoComplementar setCampo02ValorIcmsPartilhaDestinoFundoCombatePobreza(final BigDecimal campo02ValorIcmsPartilhaDestinoFundoCombatePobreza) {
         this.campo02ValorIcmsPartilhaDestinoFundoCombatePobreza = campo02ValorIcmsPartilhaDestinoFundoCombatePobreza;
         return this;
     }
 
-    public SFC101NotaFiscalInformacaoComplementar setCampo04ValorIcmsPartilhaOrigem(BigDecimal campo04ValorIcmsPartilhaOrigem) {
+    public SFC101NotaFiscalInformacaoComplementar setCampo04ValorIcmsPartilhaOrigem(final BigDecimal campo04ValorIcmsPartilhaOrigem) {
         this.campo04ValorIcmsPartilhaOrigem = campo04ValorIcmsPartilhaOrigem;
         return this;
     }
