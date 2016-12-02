@@ -50,20 +50,17 @@ public class SF0150CadastroParticipante implements SFLinha, Comparable<SF0150Cad
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SF0150CadastroParticipante that = (SF0150CadastroParticipante) o;
-        return Objects.equals(campo05Cnpj, that.campo05Cnpj) &&
-                Objects.equals(campo06Cpf, that.campo06Cpf);
+        return Objects.equals(campo02CodigoParticipante, that.campo02CodigoParticipante);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(campo05Cnpj, campo06Cpf);
+        return Objects.hash(campo02CodigoParticipante);
     }
 
     @Override
     public int compareTo(SF0150CadastroParticipante o) {
-        final String cnpjBase = StringUtils.defaultIfBlank(this.campo05Cnpj, StringUtils.defaultIfBlank(this.campo06Cpf, StringUtils.EMPTY));
-        final String cnpjComparador = StringUtils.defaultIfBlank(o.campo05Cnpj, StringUtils.defaultIfBlank(o.campo06Cpf, StringUtils.EMPTY));
-        return cnpjBase.compareTo(cnpjComparador);
+        return this.campo02CodigoParticipante.compareTo(o.campo02CodigoParticipante);
     }
 
     public SF0150CadastroParticipante setCampo02CodigoParticipante(String campo02CodigoParticipante) {
