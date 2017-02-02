@@ -22,6 +22,7 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
     private String campo10CodigoGenero;
     private String campo11CodigoServico;
     private BigDecimal campo12AliquotaIcms;
+    private String campo13CodigoEspecificadorSubstituicaoTributaria;
 
     @Override
     public String toString() {
@@ -38,6 +39,7 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
         linha.append(this.campo10CodigoGenero);
         linha.append(this.campo11CodigoServico);
         linha.append(SFUtil.formatToString(this.campo12AliquotaIcms));
+        linha.append(this.campo13CodigoEspecificadorSubstituicaoTributaria);
         return linha.toString();
     }
 
@@ -98,6 +100,11 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
 
     public SF0200IdentificacaoItem setCampo12AliquotaIcms(BigDecimal campo12AliquotaIcms) {
         this.campo12AliquotaIcms = campo12AliquotaIcms;
+        return this;
+    }
+
+    public SF0200IdentificacaoItem setCampo13CodigoEspecificadorSubstituicaoTributaria(String campo13CodigoEspecificadorSubstituicaoTributaria) {
+        this.campo13CodigoEspecificadorSubstituicaoTributaria = campo13CodigoEspecificadorSubstituicaoTributaria;
         return this;
     }
 

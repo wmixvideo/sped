@@ -21,8 +21,9 @@ public class SF0200IdentificacaoItemTest {
                 .setCampo09CodigoExIpi("765")
                 .setCampo10CodigoGenero("876")
                 .setCampo11CodigoServico("987")
-                .setCampo12AliquotaIcms(BigDecimal.ZERO);
+                .setCampo12AliquotaIcms(BigDecimal.ZERO)
+                .setCampo13CodigoEspecificadorSubstituicaoTributaria("13");
 
-        Assert.assertEquals("|0200|123456|FILME|123456789123|654|PC|09|85234029|765|876|987|0|", linha.toString());
+        Assert.assertEquals("|0200|123456|FILME|123456789123|654|PC|09|85234029|765|876|987|0|13|", linha.toString());
     }
 }

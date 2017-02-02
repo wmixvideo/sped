@@ -1,5 +1,8 @@
 package br.com.wmixvideo.sped.leiaute.blococ;
 
+import br.com.wmixvideo.sped.enums.SFModeloDocumentoArrecadacao;
+import br.com.wmixvideo.sped.enums.SFMotivoRessarcimento;
+import br.com.wmixvideo.sped.enums.SFResponsavelRetencaoIcmsSt;
 import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
@@ -17,6 +20,23 @@ public class SFC176RessarcimentoIcms implements SFLinha {
     private int campo07Quantidade;
     private BigDecimal campo08ValorUnitario;
     private BigDecimal campo09ValorUnitarioBaseCalculoST;
+    private String campo10ChaveNFeUltimaEntrada;
+    private String campo11NumeroSequencialNFUltimaEntrada;
+    private BigDecimal campo12ValorUnitarioBaseCalculoUltimaEntrada;
+    private BigDecimal campo13AliquotaIcmsUltimaEntrada;
+    private BigDecimal campo14ValorUnitarioBaseCalculoIcmsUltimaEntrada;
+    private BigDecimal campo15ValorUnitarioCreditoIcmsUltimaEntrada;
+    private BigDecimal campo16AliquotaIcmsStUltimaEntrada;
+    private BigDecimal campo17ValorUnitarioRessarcimentoUltimaEntrada;
+    private SFResponsavelRetencaoIcmsSt campo18ResponsavelRetencaoIcmsSt;
+    private SFMotivoRessarcimento campo19MotivoRessarcimento;
+    private String campo20ChaveNFComRetencaoIcmsSt;
+    private String campo21CodigoParticipanteNFComRetencaoIcmsSt;
+    private String campo22SerieNFComRetencaoIcmsSt;
+    private String campo23NumeroNFComRetencaoIcmsSt;
+    private String campo24SequencialItemNumeroNFComRetencaoIcmsSt;
+    private SFModeloDocumentoArrecadacao campo25ModeloDocumentoArrecadacao;
+    private String campo26NumeroDocumentoArrecadacaoEstadual;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -35,6 +55,23 @@ public class SFC176RessarcimentoIcms implements SFLinha {
         linha.append(this.campo07Quantidade);
         linha.append(SFUtil.formatToString(this.campo08ValorUnitario));
         linha.append(SFUtil.formatToString(this.campo09ValorUnitarioBaseCalculoST));
+        linha.append(this.campo10ChaveNFeUltimaEntrada);
+        linha.append(this.campo11NumeroSequencialNFUltimaEntrada);
+        linha.append(SFUtil.formatToString(this.campo12ValorUnitarioBaseCalculoUltimaEntrada));
+        linha.append(SFUtil.formatToString(this.campo13AliquotaIcmsUltimaEntrada));
+        linha.append(SFUtil.formatToString(this.campo14ValorUnitarioBaseCalculoIcmsUltimaEntrada));
+        linha.append(SFUtil.formatToString(this.campo15ValorUnitarioCreditoIcmsUltimaEntrada));
+        linha.append(SFUtil.formatToString(this.campo16AliquotaIcmsStUltimaEntrada));
+        linha.append(SFUtil.formatToString(this.campo17ValorUnitarioRessarcimentoUltimaEntrada));
+        linha.append(SFUtil.formatToString(this.campo18ResponsavelRetencaoIcmsSt));
+        linha.append(SFUtil.formatToString(this.campo19MotivoRessarcimento));
+        linha.append(this.campo20ChaveNFComRetencaoIcmsSt);
+        linha.append(this.campo21CodigoParticipanteNFComRetencaoIcmsSt);
+        linha.append(this.campo22SerieNFComRetencaoIcmsSt);
+        linha.append(this.campo23NumeroNFComRetencaoIcmsSt);
+        linha.append(this.campo24SequencialItemNumeroNFComRetencaoIcmsSt);
+        linha.append(SFUtil.formatToString(this.campo25ModeloDocumentoArrecadacao));
+        linha.append(this.campo26NumeroDocumentoArrecadacaoEstadual);
         return linha.toString();
     }
 
@@ -75,6 +112,91 @@ public class SFC176RessarcimentoIcms implements SFLinha {
 
     public SFC176RessarcimentoIcms setCampo09ValorUnitarioBaseCalculoST(BigDecimal campo09ValorUnitarioBaseCalculoST) {
         this.campo09ValorUnitarioBaseCalculoST = campo09ValorUnitarioBaseCalculoST;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo10ChaveNFeUltimaEntrada(String campo10ChaveNFeUltimaEntrada) {
+        this.campo10ChaveNFeUltimaEntrada = campo10ChaveNFeUltimaEntrada;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo11NumeroSequencialNFUltimaEntrada(String campo11NumeroSequencialNFUltimaEntrada) {
+        this.campo11NumeroSequencialNFUltimaEntrada = campo11NumeroSequencialNFUltimaEntrada;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo12ValorUnitarioBaseCalculoUltimaEntrada(BigDecimal campo12ValorUnitarioBaseCalculoUltimaEntrada) {
+        this.campo12ValorUnitarioBaseCalculoUltimaEntrada = campo12ValorUnitarioBaseCalculoUltimaEntrada;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo13AliquotaIcmsUltimaEntrada(BigDecimal campo13AliquotaIcmsUltimaEntrada) {
+        this.campo13AliquotaIcmsUltimaEntrada = campo13AliquotaIcmsUltimaEntrada;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo14ValorUnitarioBaseCalculoIcmsUltimaEntrada(BigDecimal campo14ValorUnitarioBaseCalculoIcmsUltimaEntrada) {
+        this.campo14ValorUnitarioBaseCalculoIcmsUltimaEntrada = campo14ValorUnitarioBaseCalculoIcmsUltimaEntrada;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo15ValorUnitarioCreditoIcmsUltimaEntrada(BigDecimal campo15ValorUnitarioCreditoIcmsUltimaEntrada) {
+        this.campo15ValorUnitarioCreditoIcmsUltimaEntrada = campo15ValorUnitarioCreditoIcmsUltimaEntrada;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo16AliquotaIcmsStUltimaEntrada(BigDecimal campo16AliquotaIcmsStUltimaEntrada) {
+        this.campo16AliquotaIcmsStUltimaEntrada = campo16AliquotaIcmsStUltimaEntrada;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo17ValorUnitarioRessarcimentoUltimaEntrada(BigDecimal campo17ValorUnitarioRessarcimentoUltimaEntrada) {
+        this.campo17ValorUnitarioRessarcimentoUltimaEntrada = campo17ValorUnitarioRessarcimentoUltimaEntrada;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo18ResponsavelRetencaoIcmsSt(SFResponsavelRetencaoIcmsSt campo18ResponsavelRetencaoIcmsSt) {
+        this.campo18ResponsavelRetencaoIcmsSt = campo18ResponsavelRetencaoIcmsSt;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo19MotivoRessarcimento(SFMotivoRessarcimento campo19MotivoRessarcimento) {
+        this.campo19MotivoRessarcimento = campo19MotivoRessarcimento;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo20ChaveNFComRetencaoIcmsSt(String campo20ChaveNFComRetencaoIcmsSt) {
+        this.campo20ChaveNFComRetencaoIcmsSt = campo20ChaveNFComRetencaoIcmsSt;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo21CodigoParticipanteNFComRetencaoIcmsSt(String campo21CodigoParticipanteNFComRetencaoIcmsSt) {
+        this.campo21CodigoParticipanteNFComRetencaoIcmsSt = campo21CodigoParticipanteNFComRetencaoIcmsSt;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo22SerieNFComRetencaoIcmsSt(String campo22SerieNFComRetencaoIcmsSt) {
+        this.campo22SerieNFComRetencaoIcmsSt = campo22SerieNFComRetencaoIcmsSt;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo23NumeroNFComRetencaoIcmsSt(String campo23NumeroNFComRetencaoIcmsSt) {
+        this.campo23NumeroNFComRetencaoIcmsSt = campo23NumeroNFComRetencaoIcmsSt;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo24SequencialItemNumeroNFComRetencaoIcmsSt(String campo24SequencialItemNumeroNFComRetencaoIcmsSt) {
+        this.campo24SequencialItemNumeroNFComRetencaoIcmsSt = campo24SequencialItemNumeroNFComRetencaoIcmsSt;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo25ModeloDocumentoArrecadacao(SFModeloDocumentoArrecadacao campo25ModeloDocumentoArrecadacao) {
+        this.campo25ModeloDocumentoArrecadacao = campo25ModeloDocumentoArrecadacao;
+        return this;
+    }
+
+    public SFC176RessarcimentoIcms setCampo26NumeroDocumentoArrecadacaoEstadual(String campo26NumeroDocumentoArrecadacaoEstadual) {
+        this.campo26NumeroDocumentoArrecadacaoEstadual = campo26NumeroDocumentoArrecadacaoEstadual;
         return this;
     }
 }
