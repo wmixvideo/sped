@@ -21,30 +21,22 @@
     <description>Biblioteca de geração do Sped Fiscal</description>
     <url>https://github.com/wmixlabs/sped</url>
 
-    <properties>
-        <junit.version>4.12</junit.version>
-        <log4j.version>1.2.17</log4j.version>
-        <commons-lang3.version>3.4</commons-lang3.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
+            <version>[4,)</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.21</version>
+            <version>[1.7,)</version>
         </dependency>
-
-        <!-- Commons Lang -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang3.version}</version>
+            <version>[3.6,)</version>
         </dependency>
     </dependencies>
 </project>
