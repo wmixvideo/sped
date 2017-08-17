@@ -6,14 +6,18 @@ public final class SFStringBuilder {
     private final StringBuilder stringBuilder;
 
     public SFStringBuilder() {
-        this.stringBuilder = new StringBuilder(SEPARADOR);
+        this.stringBuilder = new StringBuilder(SFStringBuilder.SEPARADOR);
+    }
+
+    public SFStringBuilder(final String string) {
+        this.stringBuilder = new StringBuilder(string);
     }
 
     public SFStringBuilder append(final String string) {
         if (string != null) {
             this.stringBuilder.append(string.trim().replaceAll("\\|", " "));
         }
-        this.stringBuilder.append(SEPARADOR);
+        this.stringBuilder.append(SFStringBuilder.SEPARADOR);
         return this;
     }
 
