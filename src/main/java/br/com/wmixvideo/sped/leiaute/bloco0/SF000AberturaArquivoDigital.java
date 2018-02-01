@@ -53,7 +53,7 @@ public class SF000AberturaArquivoDigital implements SFLinha {
     }
 
     private String getCampo02CodigoVersaoLeiaute() {
-        return "011";
+        return "012";
     }
 
     public SF000AberturaArquivoDigital setCampo03Finalidade(SFFinalidadeArquivo campo03Finalidade) {

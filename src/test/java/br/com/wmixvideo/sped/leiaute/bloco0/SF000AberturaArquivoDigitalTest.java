@@ -29,6 +29,6 @@ public class SF000AberturaArquivoDigitalTest {
                 .setCampo14PerfilApresentacaoArquivoFiscal(SFPerfilApresentacaoArquivoFiscal.PERFIL_B)
                 .setCampo15IndicadorTipoAtividade(SFIndicadorTipoAtividade.OUTROS);
 
-        Assert.assertEquals("|0000|011|0|01022016|29022016|Empresa LTDA|00000000000000|00000000000|SC|00000|4216602|000|00|B|1|", header.toString());
+        Assert.assertEquals("|0000|012|0|01022016|29022016|Empresa LTDA|00000000000000|00000000000|SC|00000|4216602|000|00|B|1|", header.toString());
     }
 }

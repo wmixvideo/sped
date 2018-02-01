@@ -38,8 +38,10 @@ public class SFD100NotaFiscalTransporteTest {
                 .setCampo20ValorICMS(BigDecimal.valueOf(10.5))
                 .setCampo21ValorNaoTributado(BigDecimal.valueOf(10.6))
                 .setCampo22CodigoInformacaoComplementar("010")
-                .setCampo23CodigoContaAnalitica("011");
+                .setCampo23CodigoContaAnalitica("011")
+                .setCampo24CodigoMunicipioOrigem("4216602")
+                .setCampo25CodigoMunicipioDestino("4205407");
 
-        Assert.assertEquals("|D100|1|0|001|02|03|004|005|006|007|10032016|05032016|008|009|10,10|10,20|1|10,30|10,40|10,50|10,60|010|011|", linha.toString());
+        Assert.assertEquals("|D100|1|0|001|02|03|004|005|006|007|10032016|05032016|008|009|10,10|10,20|1|10,30|10,40|10,50|10,60|010|011|4216602|4205407|", linha.toString());
     }
 }
