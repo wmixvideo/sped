@@ -14,6 +14,8 @@ import java.time.LocalDate;
 
 public class SFD100NotaFiscalTransporte implements SFLinha {
 
+    private SFIndicadorOperacao campo02IndicadorOperacao;
+    private SFIndicadorEmitente campo03IndicadorEmitente;
     private String campo04CodigoParticipante;
     private SFDocumentoModelo campo05Modelo;
     private SFSituacaoDocumento campo06Situacao;
@@ -21,21 +23,21 @@ public class SFD100NotaFiscalTransporte implements SFLinha {
     private String campo08Subserie;
     private String campo09Numero;
     private String campo10ChaveTransporteEletronico;
-    private String campo13TipoTransporteEletronico;
-    private String campo14ChaveTransporteEletronicoReferencia;
-    private String campo22CodigoInformacaoComplementar;
-    private String campo23CodigoContaAnalitica;
     private LocalDate campo11DataEmissao;
     private LocalDate campo12DataAquisicao;
+    private String campo13TipoTransporteEletronico;
+    private String campo14ChaveTransporteEletronicoReferencia;
     private BigDecimal campo15Valor;
     private BigDecimal campo16ValorDesconto;
+    private SFNotaFiscalFrete campo17Frete;
     private BigDecimal campo18ValorPrestacaoServico;
     private BigDecimal campo19ValorBaseCalculo;
     private BigDecimal campo20ValorICMS;
     private BigDecimal campo21ValorNaoTributado;
-    private SFNotaFiscalFrete campo17Frete;
-    private SFIndicadorOperacao campo02IndicadorOperacao;
-    private SFIndicadorEmitente campo03IndicadorEmitente;
+    private String campo22CodigoInformacaoComplementar;
+    private String campo23CodigoContaAnalitica;
+    private String campo24CodigoMunicipioOrigem;
+    private String campo25CodigoMunicipioDestino;
 
     @Override
     public String getCampo01CodigoRegistro() {
@@ -68,6 +70,8 @@ public class SFD100NotaFiscalTransporte implements SFLinha {
         linha.append(SFUtil.formatToString(this.campo21ValorNaoTributado));
         linha.append(this.campo22CodigoInformacaoComplementar);
         linha.append(this.campo23CodigoContaAnalitica);
+        linha.append(this.campo24CodigoMunicipioOrigem);
+        linha.append(this.campo25CodigoMunicipioDestino);
         return linha.toString();
     }
 
@@ -178,6 +182,16 @@ public class SFD100NotaFiscalTransporte implements SFLinha {
 
     public SFD100NotaFiscalTransporte setCampo18ValorPrestacaoServico(BigDecimal campo18ValorPrestacaoServico) {
         this.campo18ValorPrestacaoServico = campo18ValorPrestacaoServico;
+        return this;
+    }
+
+    public SFD100NotaFiscalTransporte setCampo24CodigoMunicipioOrigem(String campo24CodigoMunicipioOrigem) {
+        this.campo24CodigoMunicipioOrigem = campo24CodigoMunicipioOrigem;
+        return this;
+    }
+
+    public SFD100NotaFiscalTransporte setCampo25CodigoMunicipioDestino(String campo25CodigoMunicipioDestino) {
+        this.campo25CodigoMunicipioDestino = campo25CodigoMunicipioDestino;
         return this;
     }
 }
