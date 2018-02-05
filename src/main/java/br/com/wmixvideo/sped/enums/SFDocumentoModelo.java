@@ -39,11 +39,20 @@ public enum SFDocumentoModelo {
     }
 
     public String getCodigo() {
-        return codigo;
+        return this.codigo;
     }
 
     @Override
     public String toString() {
         return this.codigo;
+    }
+
+    public static SFDocumentoModelo valueOfCodigo(final String codigo) {
+        for (final SFDocumentoModelo uf : SFDocumentoModelo.values()) {
+            if (uf.getCodigo().equalsIgnoreCase(codigo)) {
+                return uf;
+            }
+        }
+        throw new IllegalArgumentException(String.format("O codigo %s n\u00e3o foi encontrado.", codigo));
     }
 }
