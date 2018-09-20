@@ -53,7 +53,6 @@ public enum SFUnidadeFederativa {
 
     /**
      * Identifica a UF pela sigla.
-     *
      * @param sigla da UF.
      * @return Unidade Federativa.
      */
@@ -63,6 +62,6 @@ public enum SFUnidadeFederativa {
                 return uf;
             }
         }
-        throw new IllegalArgumentException(String.format("A sigla %s n\u00e3o foi encontrada.", sigla));
+        throw new IllegalArgumentException(String.format("A sigla da uf %s n\u00e3o foi encontrada.", sigla));
     }
 }
