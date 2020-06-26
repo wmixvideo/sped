@@ -7,10 +7,13 @@
     <packaging>jar</packaging>
 
     <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
         <repository>
-            <id>github</id>
-            <name>GitHub Wmix Video Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/wmixvideo/sped</url>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/releases</url>
         </repository>
     </distributionManagement>
 
