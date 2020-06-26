@@ -5,6 +5,15 @@
     <artifactId>sped</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Wmix Video Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/wmixvideo/sped</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
