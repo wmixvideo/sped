@@ -5,6 +5,13 @@
     <artifactId>sped</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <name>sped</name>
+    <description>Biblioteca de geração do Sped Fiscal</description>
+    <url>https://github.com/wmixlabs/sped</url>
+
+    <properties>
+        <java.version>11</java.version>
+    </properties>
 
     <distributionManagement>
         <snapshotRepository>
@@ -22,17 +29,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <release>${java.version}</release>
                     <encoding>UTF-8</encoding>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <name>sped</name>
-    <description>Biblioteca de geração do Sped Fiscal</description>
-    <url>https://github.com/wmixlabs/sped</url>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <dependency>
