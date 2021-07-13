@@ -4,7 +4,7 @@ import br.com.wmixvideo.sped.contribuicoes.enums.SCIncidenciaTributaria;
 import br.com.wmixvideo.sped.contribuicoes.enums.SCIndicadorCriterioEscrituracaoApuracao;
 import br.com.wmixvideo.sped.contribuicoes.enums.SCIndicadorMetodoApropriacaoCreditoComum;
 import br.com.wmixvideo.sped.contribuicoes.enums.SCIndicadorTipoContribuicao;
-import br.com.wmixvideo.sped.SFLinha;
+import br.com.wmixvideo.sped.fiscal.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
 

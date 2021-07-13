@@ -1,6 +1,6 @@
 package br.com.wmixvideo.sped.contribuicoes.leiaute.bloco0;
 
-import br.com.wmixvideo.sped.SFLinha;
+import br.com.wmixvideo.sped.fiscal.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 
 public class SC0100DadosContabilista implements SFLinha {
