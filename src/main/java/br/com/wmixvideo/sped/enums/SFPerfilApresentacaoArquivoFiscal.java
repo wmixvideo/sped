@@ -1,4 +1,4 @@
-package br.com.wmixvideo.sped.leiaute;
+package br.com.wmixvideo.sped.enums;
 
 public enum SFPerfilApresentacaoArquivoFiscal {
 
@@ -6,7 +6,7 @@ public enum SFPerfilApresentacaoArquivoFiscal {
     PERFIL_B("B"),
     PERFIL_C("C");
 
-    private String codigo;
+    private final String codigo;
 
     SFPerfilApresentacaoArquivoFiscal(final String codigo) {
         this.codigo = codigo;

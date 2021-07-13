@@ -15,7 +15,7 @@ import java.time.Month;
 public class SFC100NotaFiscalTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFC100NotaFiscal linha = new SFC100NotaFiscal()
                 .setCampo02Operacao(SFNotaFiscalOperacao.SAIDA)
                 .setCampo03Emissao(SFNotaFiscalEmissao.PROPRIA)

@@ -1,6 +1,7 @@
 package br.com.wmixvideo.sped.enums;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public enum SFNotaFiscalSituacao {
 
@@ -29,7 +30,7 @@ public enum SFNotaFiscalSituacao {
     }
 
     public boolean isInutilizada() {
-        return Arrays.asList(NFE_NUMERACAO_INUTILIZADA).contains(this);
+        return Objects.equals(NFE_NUMERACAO_INUTILIZADA, this);
     }
 
     @Override

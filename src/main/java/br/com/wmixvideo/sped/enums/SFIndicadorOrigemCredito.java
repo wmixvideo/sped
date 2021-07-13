@@ -5,7 +5,7 @@ public enum SFIndicadorOrigemCredito {
     MERCADO_INTERNO("0"),
     IMPORTACAO("1");
 
-    private String codigo;
+    private final String codigo;
 
     SFIndicadorOrigemCredito(final String codigo) {
         this.codigo = codigo;

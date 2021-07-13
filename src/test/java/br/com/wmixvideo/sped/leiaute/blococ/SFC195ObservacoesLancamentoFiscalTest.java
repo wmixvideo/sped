@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SFC195ObservacoesLancamentoFiscalTest {
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFC195ObservacoesLancamentoFiscal linha = new SFC195ObservacoesLancamentoFiscal()
                 .setCampo02Codigo("001")
                 .setCampo03Descricao("descricao");

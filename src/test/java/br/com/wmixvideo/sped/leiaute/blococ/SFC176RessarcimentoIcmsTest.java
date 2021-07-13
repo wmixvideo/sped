@@ -12,7 +12,7 @@ import java.time.Month;
 
 public class SFC176RessarcimentoIcmsTest {
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFC176RessarcimentoIcms linha = new SFC176RessarcimentoIcms()
                 .setCampo02CodigoModelo("0000")
                 .setCampo03Numero("0001")

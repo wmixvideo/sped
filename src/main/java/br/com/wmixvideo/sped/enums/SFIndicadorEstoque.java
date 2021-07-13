@@ -6,7 +6,7 @@ public enum SFIndicadorEstoque {
     DO_INFORMANTE_EM_POSSE_DE_TERCEIROS("1"),
     DE_TERCEIROS_EM_POSSE_DO_INFORMANTE("2");
 
-    private String codigo;
+    private final String codigo;
 
     SFIndicadorEstoque(final String codigo) {
         this.codigo = codigo;

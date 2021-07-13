@@ -12,7 +12,7 @@ import java.time.Month;
 public class SFE250ObrigacoesICMSTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFE250ObrigacoesICMS linha = new SFE250ObrigacoesICMS()
                 .setCampo02Codigo("1")
                 .setCampo03Valor(BigDecimal.TEN)

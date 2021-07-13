@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 public class SFD190RegistroAnaliticoTransporteTest {
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFD190RegistroAnaliticoTransporte linha = new SFD190RegistroAnaliticoTransporte()
                 .setCampo02CodigoSituacaoTributaria("001")
                 .setCampo03CodigoFiscalOperacaoPrestacao("002")

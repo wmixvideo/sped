@@ -6,7 +6,7 @@ import org.junit.Test;
 public class SFC110InformacaoComplementarNotaFiscalTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFC110InformacaoComplementarNotaFiscal linha = new SFC110InformacaoComplementarNotaFiscal()
                 .setCampo02Codigo("001")
                 .setCampo03Descricao("descricao");

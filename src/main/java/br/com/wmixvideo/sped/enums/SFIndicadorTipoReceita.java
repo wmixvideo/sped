@@ -5,7 +5,7 @@ public enum SFIndicadorTipoReceita {
     PROPRIA("0"),
     TERCEIROS("1");
 
-    private String codigo;
+    private final String codigo;
 
     SFIndicadorTipoReceita(final String codigo) {
         this.codigo = codigo;

@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class SFE220AjusteApuracaoSTTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFE220AjusteApuracaoST linha = new SFE220AjusteApuracaoST()
                 .setCampo02CodigoAjuste("2")
                 .setCampo03DescricaoComplementar("3")

@@ -15,7 +15,7 @@ import br.com.wmixvideo.sped.enums.SFNotaFiscalSituacao;
 public class SFA100NotaFiscalServicoTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFA100NotaFiscalServico linha = new SFA100NotaFiscalServico()
                 .setCampo02IndicadorOperacao(SFIndicadorOperacao.AQUISICAO)
                 .setCampo03IdicadorEmitente(SFIndicadorEmitente.EMISSAO_PROPRIA)

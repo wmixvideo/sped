@@ -9,7 +9,7 @@ import java.time.Month;
 public class SF0205AlteracaoItemTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SF0205AlteracaoItem linha = new SF0205AlteracaoItem()
                 .setCampo02DescricaoAnterior("descricaoanterior")
                 .setCampo03DataInicialUtilizacaoDescricao(LocalDate.of(2016, Month.FEBRUARY, 1))
@@ -17,6 +17,5 @@ public class SF0205AlteracaoItemTest {
                 .setCampo05CodigoAnterior("codigoanterior");
 
         Assert.assertEquals("|0205|descricaoanterior|01022016|28022016|codigoanterior|", linha.toString());
-
     }
 }

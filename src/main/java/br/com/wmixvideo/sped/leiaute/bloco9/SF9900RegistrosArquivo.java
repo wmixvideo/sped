@@ -5,8 +5,8 @@ import br.com.wmixvideo.sped.util.SFStringBuilder;
 
 public class SF9900RegistrosArquivo implements SFLinha {
 
-    private String campo02Codigo;
-    private int campo03TotalLinhas;
+    private final String campo02Codigo;
+    private final int campo03TotalLinhas;
 
     public SF9900RegistrosArquivo(final String campo02Codigo, final int campo03TotalLinhas) {
         this.campo02Codigo = campo02Codigo;

@@ -12,7 +12,7 @@ import java.time.Month;
 public class SFE316ObrigacoesFundoCombatePobrezaTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFE316ObrigacoesFundoCombatePobreza linha = new SFE316ObrigacoesFundoCombatePobreza()
                 .setCampo02Codigo("001")
                 .setCampo03Valor(BigDecimal.valueOf(10.4))

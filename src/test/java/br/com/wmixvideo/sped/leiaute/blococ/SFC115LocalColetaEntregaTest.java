@@ -7,7 +7,7 @@ import org.junit.Test;
 public class SFC115LocalColetaEntregaTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFC115LocalColetaEntrega linha = new SFC115LocalColetaEntrega()
                 .setCampo02TipoTransporte(SFTipoTransporte.FERROVIARIO)
                 .setCampo03ColetaCnpj("00000000000000")

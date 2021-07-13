@@ -3,7 +3,7 @@ package br.com.wmixvideo.sped.leiaute.bloco0;
 import br.com.wmixvideo.sped.enums.SFFinalidadeArquivo;
 import br.com.wmixvideo.sped.enums.SFIndicadorTipoAtividade;
 import br.com.wmixvideo.sped.enums.SFUnidadeFederativa;
-import br.com.wmixvideo.sped.leiaute.SFPerfilApresentacaoArquivoFiscal;
+import br.com.wmixvideo.sped.enums.SFPerfilApresentacaoArquivoFiscal;
 import org.junit.Assert;
 import org.junit.Test;
 
