@@ -4,7 +4,6 @@ import br.com.wmixvideo.sped.enums.SFItemTipo;
 import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
-import org.apache.commons.lang3.StringUtils;
 
 import java.math.BigDecimal;
 import java.util.Objects;
@@ -30,7 +29,7 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
         linha.append(this.getCampo01CodigoRegistro());
         linha.append(this.campo02Codigo);
         linha.append(this.campo03Descricao);
-        linha.append(StringUtils.trimToEmpty(this.campo04CodigoBarras));
+        linha.append(this.campo04CodigoBarras);
         linha.append(this.campo05CodigoAnterior);
         linha.append(this.campo06UnidadeMedida);
         linha.append(SFUtil.formatToString(this.campo07Tipo));
@@ -123,8 +122,6 @@ public class SF0200IdentificacaoItem implements SFLinha, Comparable<SF0200Identi
 
     @Override
     public int compareTo(SF0200IdentificacaoItem o) {
-        final String codigoBase = StringUtils.defaultIfBlank(this.campo02Codigo, StringUtils.EMPTY);
-        final String codigoComparador = StringUtils.defaultIfBlank(o.campo02Codigo, StringUtils.EMPTY);
-        return codigoBase.compareTo(codigoComparador);
+        return SFUtil.formatToString(this.campo02Codigo).compareTo(SFUtil.formatToString(o.campo02Codigo));
     }
 }

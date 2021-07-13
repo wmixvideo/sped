@@ -2,7 +2,7 @@ package br.com.wmixvideo.sped.leiaute.bloco0;
 
 import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
-import org.apache.commons.lang3.StringUtils;
+import br.com.wmixvideo.sped.util.SFUtil;
 
 public class SF0450InformacaoComplementarDocumentoFiscal implements SFLinha {
 
@@ -18,7 +18,7 @@ public class SF0450InformacaoComplementarDocumentoFiscal implements SFLinha {
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
         linha.append(this.getCampo01CodigoRegistro());
-        linha.append(StringUtils.leftPad(String.valueOf(this.campo02Contador), 6, "0"));
+        linha.append(SFUtil.leftPad(this.campo02Contador, 6, '0'));
         linha.append(this.campo03Observacao);
         return linha.toString();
     }

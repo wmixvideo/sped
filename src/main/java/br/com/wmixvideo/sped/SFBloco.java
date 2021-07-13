@@ -5,7 +5,7 @@ import br.com.wmixvideo.sped.leiaute.SFLinha;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SFBloco {
+class SFBloco {
 
     private final List<SFLinha> linhas;
 
