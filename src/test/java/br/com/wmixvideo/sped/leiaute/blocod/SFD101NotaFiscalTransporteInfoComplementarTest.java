@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class SFD101NotaFiscalTransporteInfoComplementarTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFD101NotaFiscalTransporteInfoComplementar linha = new SFD101NotaFiscalTransporteInfoComplementar()
                 .setCampo02ValorFundoCombatePobreza(BigDecimal.valueOf(3.05))
                 .setCampo03ValorICMSDestino(BigDecimal.valueOf(3.1))

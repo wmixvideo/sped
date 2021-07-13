@@ -16,7 +16,7 @@ public enum SFParticipanteAlteracaoCampo {
 
     private final String numero;
 
-    private SFParticipanteAlteracaoCampo(String numero) {
+    SFParticipanteAlteracaoCampo(String numero) {
         this.numero = numero;
     }
 

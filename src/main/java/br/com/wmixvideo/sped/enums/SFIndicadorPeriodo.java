@@ -5,7 +5,7 @@ public enum SFIndicadorPeriodo {
     MENSAL("0"),
     DECENDIAL("1");
 
-    private String codigo;
+    private final String codigo;
 
     SFIndicadorPeriodo(final String codigo) {
         this.codigo = codigo;

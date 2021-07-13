@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 public class SFC170ItemDocumentoTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFC170ItemDocumento linha = new SFC170ItemDocumento()
                 .setCampo02Ordem("000000")
                 .setCampo03Codigo("000001")

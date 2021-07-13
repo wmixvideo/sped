@@ -6,7 +6,7 @@ import org.junit.Test;
 public class SF0460ObservacaoLancamentoFiscalTest {
 
     @Test
-    public void deveGerarLinha() throws Exception {
+    public void deveGerarLinha() {
         final SF0460ObservacaoLancamentoFiscal linha = new SF0460ObservacaoLancamentoFiscal()
                 .setCampo02Codigo("321")
                 .setCampo03Observacao("Observacao do lancamento");

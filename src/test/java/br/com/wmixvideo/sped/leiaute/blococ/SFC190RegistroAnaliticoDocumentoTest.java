@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class SFC190RegistroAnaliticoDocumentoTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFC190RegistroAnaliticoDocumento linha = new SFC190RegistroAnaliticoDocumento()
                 .setCampo02CodigoSituacaoTributaria("001")
                 .setCampo03CodigoFiscalOperacaoPrestacao("002")

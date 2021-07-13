@@ -5,7 +5,8 @@ public enum SFFinalidadeArquivo {
     REMESSA_ORIGINAL("0", "Remessa original"),
     REMESSA_SUBSTITUTA("1", "Remessa substituta");
 
-    private String codigo, descricao;
+    private final String codigo;
+    private final String descricao;
 
     SFFinalidadeArquivo(final String codigo, final String descricao) {
         this.codigo = codigo;

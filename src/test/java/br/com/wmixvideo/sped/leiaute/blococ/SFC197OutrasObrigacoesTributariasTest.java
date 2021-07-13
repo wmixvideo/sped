@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class SFC197OutrasObrigacoesTributariasTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFC197OutrasObrigacoesTributarias linha = new SFC197OutrasObrigacoesTributarias()
                 .setCampo02Codigo("010")
                 .setCampo03Descricao("des cri cao")

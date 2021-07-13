@@ -6,7 +6,7 @@ public enum SFPerfilApresentacaoArquivoFiscal {
     PERFIL_B("B"),
     PERFIL_C("C");
 
-    private String codigo;
+    private final String codigo;
 
     SFPerfilApresentacaoArquivoFiscal(final String codigo) {
         this.codigo = codigo;

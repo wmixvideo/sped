@@ -11,7 +11,7 @@ import br.com.wmixvideo.sped.enums.SFNaturezaBaseCalculoCredito;
 public class SFA170ItemDocumentoTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFA170ItemDocumento linha = new SFA170ItemDocumento()
                 .setCampo02NumeroItem(1)
                 .setCampo03CodigoItem("03")
