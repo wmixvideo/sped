@@ -25,19 +25,20 @@ public class SFSpedFiscal {
         this.bloco9 = new SFBloco();
     }
 
-    public List<String> gerarSpedFiscal() {
-        final List<SFLinha> linhas = new ArrayList<>();
-        this.getBlocos().forEach(b -> linhas.addAll(b.getLinhas()));
-        return linhas.stream().map(SFLinha::toString).collect(Collectors.toList());
-    }
-
     @Override
     public String toString() {
-        return String.join(System.lineSeparator(), this.gerarSpedFiscal()).concat(System.lineSeparator());
-    }
-
-    public List<SFBloco> getBlocos() {
-        return Arrays.asList(this.bloco0, this.blocoA, this.blocoC, this.blocoD, this.blocoE, this.blocoG, this.blocoH, this.blocoK, this.bloco1, this.bloco9);
+        final StringBuilder sped = new StringBuilder();
+        this.getBloco0().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoA().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoC().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoD().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoE().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoG().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoH().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoK().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBloco1().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBloco9().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        return sped.toString();
     }
 
     public SFBloco getBloco0() {
