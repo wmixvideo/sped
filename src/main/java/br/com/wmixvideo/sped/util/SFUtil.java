@@ -1,6 +1,6 @@
 package br.com.wmixvideo.sped.util;
 
-import br.com.wmixvideo.sped.enums.SFUnidadeFederativa;
+import br.com.wmixvideo.sped.fiscal.enums.SFUnidadeFederativa;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;

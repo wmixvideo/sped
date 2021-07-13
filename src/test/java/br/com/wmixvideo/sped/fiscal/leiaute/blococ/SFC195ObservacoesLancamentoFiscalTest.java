@@ -1,0 +1,15 @@
+package br.com.wmixvideo.sped.fiscal.leiaute.blococ;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class SFC195ObservacoesLancamentoFiscalTest {
+    @Test
+    public void deveGerarLinhaCompleta() {
+        final SFC195ObservacoesLancamentoFiscal linha = new SFC195ObservacoesLancamentoFiscal()
+                .setCampo02Codigo("001")
+                .setCampo03Descricao("descricao");
+
+        Assert.assertEquals("|C195|001|descricao|", linha.toString());
+    }
+}
