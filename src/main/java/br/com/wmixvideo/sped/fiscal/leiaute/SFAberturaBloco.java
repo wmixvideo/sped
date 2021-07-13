@@ -1,0 +1,29 @@
+package br.com.wmixvideo.sped.fiscal.leiaute;
+
+import br.com.wmixvideo.sped.fiscal.enums.SFIndicadorMovimentoAberturaBloco;
+import br.com.wmixvideo.sped.util.SFStringBuilder;
+import br.com.wmixvideo.sped.util.SFUtil;
+
+public class SFAberturaBloco implements SFLinha {
+
+    private final String campo01CodigoRegistro;
+    private final SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento;
+
+    public SFAberturaBloco(String campo01CodigoRegistro, SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento) {
+        this.campo01CodigoRegistro = campo01CodigoRegistro;
+        this.campo02IndicadorMovimento = campo02IndicadorMovimento;
+    }
+
+    @Override
+    public String toString() {
+        final SFStringBuilder linha = new SFStringBuilder();
+        linha.append(this.getCampo01CodigoRegistro());
+        linha.append(SFUtil.formatToString(this.campo02IndicadorMovimento));
+        return linha.toString();
+    }
+
+    @Override
+    public String getCampo01CodigoRegistro() {
+        return this.campo01CodigoRegistro;
+    }
+}
