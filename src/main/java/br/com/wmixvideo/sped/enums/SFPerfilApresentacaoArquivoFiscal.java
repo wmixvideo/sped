@@ -1,4 +1,4 @@
-package br.com.wmixvideo.sped.leiaute;
+package br.com.wmixvideo.sped.enums;
 
 public enum SFPerfilApresentacaoArquivoFiscal {
 
