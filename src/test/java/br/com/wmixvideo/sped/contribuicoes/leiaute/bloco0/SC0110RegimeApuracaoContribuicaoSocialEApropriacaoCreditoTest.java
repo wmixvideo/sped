@@ -19,5 +19,4 @@ public class SC0110RegimeApuracaoContribuicaoSocialEApropriacaoCreditoTest {
 
         Assert.assertEquals("|0110|2|1|1|1|", linha.toString());
     }
-
 }
