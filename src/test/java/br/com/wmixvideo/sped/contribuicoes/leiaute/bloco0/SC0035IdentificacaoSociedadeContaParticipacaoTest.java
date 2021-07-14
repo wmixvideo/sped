@@ -3,7 +3,7 @@ package br.com.wmixvideo.sped.contribuicoes.leiaute.bloco0;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SF0035IdentificacaoSociedadeContaParticipacaoTest {
+public class SC0035IdentificacaoSociedadeContaParticipacaoTest {
 
     @Test
     public void deveGerarLinhaCompleta() {

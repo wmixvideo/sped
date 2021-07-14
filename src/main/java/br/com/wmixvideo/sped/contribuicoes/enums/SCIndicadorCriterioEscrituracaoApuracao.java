@@ -5,7 +5,7 @@ public enum SCIndicadorCriterioEscrituracaoApuracao {
     REGIME_COMPETENCIA_ESCRITURACAO_CONSOLIDADA("2"),
     REGIME_COMPETENCIA_ESCRITURACAO_DETALHADA("9");
 
-    private String codigo;
+    private final String codigo;
 
     SCIndicadorCriterioEscrituracaoApuracao(final String codigo) {
         this.codigo = codigo;

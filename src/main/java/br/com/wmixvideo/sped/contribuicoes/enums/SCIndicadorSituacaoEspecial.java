@@ -8,7 +8,7 @@ public enum SCIndicadorSituacaoEspecial {
     INCORPORACAO("3"),
     ENCERRAMENTO("4");
 
-    private String codigo;
+    private final String codigo;
 
     SCIndicadorSituacaoEspecial(final String codigo) {
         this.codigo = codigo;

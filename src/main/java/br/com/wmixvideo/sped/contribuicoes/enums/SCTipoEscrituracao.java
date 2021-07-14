@@ -5,7 +5,7 @@ public enum SCTipoEscrituracao {
     ORIGINAL("0"),
     RETIFICADORA("1");
 
-    private String codigo;
+    private final String codigo;
 
     SCTipoEscrituracao(final String codigo) {
         this.codigo = codigo;

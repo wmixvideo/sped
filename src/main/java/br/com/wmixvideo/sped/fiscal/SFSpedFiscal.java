@@ -1,11 +1,5 @@
 package br.com.wmixvideo.sped.fiscal;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
-import br.com.wmixvideo.sped.fiscal.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFBloco;
 
 public class SFSpedFiscal {
@@ -28,16 +22,16 @@ public class SFSpedFiscal {
     @Override
     public String toString() {
         final StringBuilder sped = new StringBuilder();
-        this.getBloco0().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
-        this.getBlocoA().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
-        this.getBlocoC().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
-        this.getBlocoD().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
-        this.getBlocoE().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
-        this.getBlocoG().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
-        this.getBlocoH().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
-        this.getBlocoK().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
-        this.getBloco1().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
-        this.getBloco9().getLinhas().forEach(l-> sped.append(l).append(System.lineSeparator()));
+        this.getBloco0().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoA().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoC().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoD().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoE().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoG().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoH().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
+        this.getBlocoK().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
+        this.getBloco1().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
+        this.getBloco9().getLinhas().forEach(l -> sped.append(l).append(System.lineSeparator()));
         return sped.toString();
     }
 

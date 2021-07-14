@@ -5,7 +5,7 @@ public enum SCIndicadorMetodoApropriacaoCreditoComum {
     APROPRIACAO_DIRETA("1"),
     RATEIO_PROPORCIONAL("2");
 
-    private String codigo;
+    private final String codigo;
 
     SCIndicadorMetodoApropriacaoCreditoComum(final String codigo) {
         this.codigo = codigo;

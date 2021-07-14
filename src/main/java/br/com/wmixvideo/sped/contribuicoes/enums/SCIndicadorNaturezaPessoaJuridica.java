@@ -9,7 +9,7 @@ public enum SCIndicadorNaturezaPessoaJuridica {
     SOCIEDADE_COOPERATIVA_SCP("04"),
     SOCIEDADE_CONTA_PARTICIPACAO("05");
 
-    private String codigo;
+    private final String codigo;
 
     SCIndicadorNaturezaPessoaJuridica(final String codigo) {
         this.codigo = codigo;

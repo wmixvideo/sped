@@ -4,7 +4,7 @@ import br.com.wmixvideo.sped.contribuicoes.enums.SCIndicadorMovimento;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SF0001AberturaBloco0Test {
+public class SC0001AberturaBloco0Test {
 
 
     @Test

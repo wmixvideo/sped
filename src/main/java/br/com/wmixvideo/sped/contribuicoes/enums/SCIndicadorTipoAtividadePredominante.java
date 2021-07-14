@@ -8,7 +8,7 @@ public enum SCIndicadorTipoAtividadePredominante {
     IMOBILIARIA("4"),
     OUTROS("9");
 
-    private String codigo;
+    private final String codigo;
 
     SCIndicadorTipoAtividadePredominante(final String codigo) {
         this.codigo = codigo;

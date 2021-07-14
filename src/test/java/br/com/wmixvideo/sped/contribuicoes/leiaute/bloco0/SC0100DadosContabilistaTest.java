@@ -3,7 +3,7 @@ package br.com.wmixvideo.sped.contribuicoes.leiaute.bloco0;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SF0100DadosContabilistaTest {
+public class SC0100DadosContabilistaTest {
     @Test
     public void deveGerarLinhaCompleta() {
         final SC0100DadosContabilista linha = new SC0100DadosContabilista()

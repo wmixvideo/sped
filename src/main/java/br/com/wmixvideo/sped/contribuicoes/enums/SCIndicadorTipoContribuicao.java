@@ -5,7 +5,7 @@ public enum SCIndicadorTipoContribuicao {
     EXCLUSIVAMENTE_ALIQUOTA_BASICA("1"),
     ALIQUOTAS_ESPECIFICAS("2");
 
-    private String codigo;
+    private final String codigo;
 
     SCIndicadorTipoContribuicao(final String codigo) {
         this.codigo = codigo;

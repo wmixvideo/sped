@@ -5,7 +5,7 @@ public enum SCIndicadorMovimento {
     COM_DADOS("0"),
     SEM_DADOS("1");
 
-    private String codigo;
+    private final String codigo;
 
     SCIndicadorMovimento(final String codigo) {
         this.codigo = codigo;

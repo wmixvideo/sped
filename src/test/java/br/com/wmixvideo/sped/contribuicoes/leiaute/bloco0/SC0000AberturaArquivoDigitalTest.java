@@ -11,7 +11,7 @@ import org.junit.Test;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class SF0000AberturaArquivoDigitalTest {
+public class SC0000AberturaArquivoDigitalTest {
 
     @Test
     public void deveGerarLinhaCompleta() {
@@ -19,7 +19,7 @@ public class SF0000AberturaArquivoDigitalTest {
                 .setCampo03TipoEscrituracao(SCTipoEscrituracao.ORIGINAL)
                 .setCampo04IndicadorSituacaoEspecial(SCIndicadorSituacaoEspecial.ABERTURA)
                 .setCampo05NumeroReciboEscrituracaoAnterior(null)
-                .setCampo06DataInicio(LocalDate.of(2019, Month.APRIL, 01))
+                .setCampo06DataInicio(LocalDate.of(2019, Month.APRIL, 1))
                 .setCampo07DataFim(LocalDate.of(2019, Month.APRIL, 30))
                 .setCampo08RazaoSocial("Empresa LTDA")
                 .setCampo09Cnpj("00000000000000")

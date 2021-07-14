@@ -7,7 +7,7 @@ import br.com.wmixvideo.sped.contribuicoes.enums.SCIndicadorTipoContribuicao;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SF0110RegimeApuracaoContribuicaoSocialEApropriacaoCreditoTest {
+public class SC0110RegimeApuracaoContribuicaoSocialEApropriacaoCreditoTest {
 
     @Test
     public void deveGerarLinhaCompleta() {
