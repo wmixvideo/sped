@@ -2,7 +2,6 @@ package br.com.wmixvideo.sped.leiaute.bloco0;
 
 import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.Objects;
 
@@ -33,10 +32,10 @@ public class SF0150CadastroParticipante implements SFLinha, Comparable<SF0150Cad
         linha.append(this.campo07InscricaoEstadual);
         linha.append(this.campo08CodigoMunicipio);
         linha.append(this.campo09Suframa);
-        linha.append(StringUtils.trimToEmpty(this.campo10Logradouro));
-        linha.append(StringUtils.trimToEmpty(this.campo11Numero));
+        linha.append(this.campo10Logradouro);
+        linha.append(this.campo11Numero);
         linha.append(this.campo12Complemento);
-        linha.append(StringUtils.trimToEmpty(this.campo13Bairro));
+        linha.append(this.campo13Bairro);
         return linha.toString();
     }
 

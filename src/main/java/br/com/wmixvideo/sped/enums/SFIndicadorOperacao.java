@@ -5,7 +5,7 @@ public enum SFIndicadorOperacao {
     AQUISICAO("0"),
     PRESTACAO("1");
 
-    private String codigo;
+    private final String codigo;
 
     SFIndicadorOperacao(final String codigo) {
         this.codigo = codigo;

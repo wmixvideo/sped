@@ -5,7 +5,7 @@ import br.com.wmixvideo.sped.util.SFStringBuilder;
 
 public class SF9999EncerramentoArquivoDigital implements SFLinha {
 
-    private int campo02TotalLinhasArquivo;
+    private final int campo02TotalLinhasArquivo;
 
     public SF9999EncerramentoArquivoDigital(final int campo02TotalLinhasArquivo) {
         this.campo02TotalLinhasArquivo = campo02TotalLinhasArquivo;

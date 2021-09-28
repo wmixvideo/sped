@@ -7,7 +7,7 @@ import org.junit.Test;
 public class SFC111ProcessoReferenciadoTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFC111ProcessoReferenciado linha = new SFC111ProcessoReferenciado()
                 .setCampo02Numero("123")
                 .setCampo03IndicadorOrigem(SFIndicadorProcessoOrigem.SECEX_SRF);

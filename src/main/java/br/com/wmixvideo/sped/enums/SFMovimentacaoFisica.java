@@ -5,7 +5,7 @@ public enum SFMovimentacaoFisica {
     SIM("0"),
     NAO("1");
 
-    private String codigo;
+    private final String codigo;
 
     SFMovimentacaoFisica(final String codigo) {
         this.codigo = codigo;

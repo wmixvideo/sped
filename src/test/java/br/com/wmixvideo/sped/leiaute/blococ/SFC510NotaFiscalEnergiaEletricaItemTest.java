@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 public class SFC510NotaFiscalEnergiaEletricaItemTest {
 
     @Test
-    public void deveRetornarLinhaCompleta() throws Exception {
+    public void deveRetornarLinhaCompleta() {
         final SFC510NotaFiscalEnergiaEletricaItem linha = new SFC510NotaFiscalEnergiaEletricaItem()
                 .setCampo02Sequencial(2)
                 .setCampo03Codigo("3")

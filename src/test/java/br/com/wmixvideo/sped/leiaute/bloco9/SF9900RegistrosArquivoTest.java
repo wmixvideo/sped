@@ -6,7 +6,7 @@ import org.junit.Test;
 public class SF9900RegistrosArquivoTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         Assert.assertEquals("|9900|001|10|", new SF9900RegistrosArquivo("001", 10).toString());
 
     }

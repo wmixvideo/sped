@@ -6,8 +6,8 @@ import br.com.wmixvideo.sped.util.SFUtil;
 
 public class SFAberturaBloco implements SFLinha {
 
-    private String campo01CodigoRegistro;
-    private SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento;
+    private final String campo01CodigoRegistro;
+    private final SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento;
 
     public SFAberturaBloco(String campo01CodigoRegistro, SFIndicadorMovimentoAberturaBloco campo02IndicadorMovimento) {
         this.campo01CodigoRegistro = campo01CodigoRegistro;

@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 public class SFE310ApuracaoFundoCombatePobrezaTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFE310ApuracaoFundoCombatePobreza linha = new SFE310ApuracaoFundoCombatePobreza()
                 .setCampo02IndicadorMovimento(SFIndicadorMovimento.COM)
                 .setCampo03ValorSaldoCredorAnteriorDifal(BigDecimal.valueOf(3))

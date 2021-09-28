@@ -15,6 +15,10 @@ public final class SFUtil {
         return data != null ? data.format(DATE_PATTERN) : "";
     }
 
+    public static String formatToString(final String string) {
+        return string != null ? string.trim() : "";
+    }
+
     public static String formatToString(final BigDecimal valor) {
         return formatToString(valor, 2);
     }
@@ -45,5 +49,21 @@ public final class SFUtil {
 
     public static String formatToString(SFReferencia referencia) {
         return referencia != null ? referencia.toString() : "";
+    }
+
+    public static String leftPad(final int campo, final int tamanho, final char caractere) {
+            final StringBuilder valorSanitizado = new StringBuilder(String.valueOf(campo));
+
+            // verifica se a string que veio nao eh maior ou igual do que o tamanho
+            if (valorSanitizado.length() >= tamanho) {
+                return valorSanitizado.toString();
+            }
+
+            // se nao for maior, preenche com zeros a principal
+            while (valorSanitizado.length() < tamanho) {
+                valorSanitizado.insert(0, caractere);
+            }
+            return valorSanitizado.toString();
+
     }
 }

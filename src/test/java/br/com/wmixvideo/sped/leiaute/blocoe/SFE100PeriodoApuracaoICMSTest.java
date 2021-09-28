@@ -9,7 +9,7 @@ import java.time.Month;
 public class SFE100PeriodoApuracaoICMSTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SFE100PeriodoApuracaoICMS linha = new SFE100PeriodoApuracaoICMS()
                 .setCampo02DataInicio(LocalDate.of(2016, Month.DECEMBER, 1))
                 .setCampo03DataFim(LocalDate.of(2016, Month.DECEMBER, 31));

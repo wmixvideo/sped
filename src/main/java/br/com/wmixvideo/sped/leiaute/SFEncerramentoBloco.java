@@ -4,8 +4,8 @@ import br.com.wmixvideo.sped.util.SFStringBuilder;
 
 public class SFEncerramentoBloco implements SFLinha {
 
-    private String campo01CodigoRegistro;
-    private int campo02TotalLinhas;
+    private final String campo01CodigoRegistro;
+    private final int campo02TotalLinhas;
 
     public SFEncerramentoBloco(String campo01CodigoRegistro, int campo02TotalLinhas) {
         this.campo01CodigoRegistro = campo01CodigoRegistro;

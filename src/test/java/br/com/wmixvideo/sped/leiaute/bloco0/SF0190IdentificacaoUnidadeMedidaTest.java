@@ -6,7 +6,7 @@ import org.junit.Test;
 public class SF0190IdentificacaoUnidadeMedidaTest {
 
     @Test
-    public void deveGerarLinhaCompleta() throws Exception {
+    public void deveGerarLinhaCompleta() {
         final SF0190IdentificacaoUnidadeMedida linha = new SF0190IdentificacaoUnidadeMedida()
                 .setCampo02Codigo("11235")
                 .setCampo03Descricao("112358");
