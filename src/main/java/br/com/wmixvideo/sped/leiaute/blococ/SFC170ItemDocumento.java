@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 
 public class SFC170ItemDocumento implements SFLinha {
 
-    private int campo05Quantidade;
     private String campo02Ordem;
     private String campo03Codigo;
     private String campo04Descricao;
@@ -23,6 +22,7 @@ public class SFC170ItemDocumento implements SFLinha {
     private String campo25CodigoStPis;
     private String campo31CodigoStCofins;
     private String campo37ContaContabil;
+    private BigDecimal campo05Quantidade;
     private BigDecimal campo07Valor;
     private BigDecimal campo08ValorDesconto;
     private BigDecimal campo13ValorBaseCalculoIcms;
@@ -54,7 +54,7 @@ public class SFC170ItemDocumento implements SFLinha {
         linha.append(this.campo02Ordem);
         linha.append(this.campo03Codigo);
         linha.append(this.campo04Descricao);
-        linha.append(this.campo05Quantidade);
+        linha.append(SFUtil.formatToString(this.campo05Quantidade, 5));
         linha.append(this.campo06Unidade);
         linha.append(SFUtil.formatToString(this.campo07Valor));
         linha.append(SFUtil.formatToString(this.campo08ValorDesconto));
@@ -160,7 +160,7 @@ public class SFC170ItemDocumento implements SFLinha {
         return this;
     }
 
-    public SFC170ItemDocumento setCampo05Quantidade(int campo05Quantidade) {
+    public SFC170ItemDocumento setCampo05Quantidade(BigDecimal campo05Quantidade) {
         this.campo05Quantidade = campo05Quantidade;
         return this;
     }
