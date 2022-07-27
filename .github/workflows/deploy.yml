@@ -1,8 +1,7 @@
 name: Publish package to the Maven Central Repository and GitHub Packages
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
 jobs:
   publish:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
