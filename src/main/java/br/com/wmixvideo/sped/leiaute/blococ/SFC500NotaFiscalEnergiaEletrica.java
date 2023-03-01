@@ -1,11 +1,6 @@
 package br.com.wmixvideo.sped.leiaute.blococ;
 
-import br.com.wmixvideo.sped.enums.SFClasseConsumoEnergial;
-import br.com.wmixvideo.sped.enums.SFGrupoTensaoEletrica;
-import br.com.wmixvideo.sped.enums.SFNotaFiscalEmissao;
-import br.com.wmixvideo.sped.enums.SFNotaFiscalOperacao;
-import br.com.wmixvideo.sped.enums.SFNotaFiscalSituacao;
-import br.com.wmixvideo.sped.enums.SFTipoLigacaoEletrica;
+import br.com.wmixvideo.sped.enums.*;
 import br.com.wmixvideo.sped.leiaute.SFLinha;
 import br.com.wmixvideo.sped.util.SFStringBuilder;
 import br.com.wmixvideo.sped.util.SFUtil;
@@ -25,7 +20,7 @@ public class SFC500NotaFiscalEnergiaEletrica implements SFLinha {
     private String campo07Serie;
     private String campo08Subserie;
     private String campo04CodigoParticipante;
-    private String campo05CodigoModeloFiscal;
+    private SFDocumentoModelo campo05CodigoModeloFiscal;
     private String campo23CodigoInformacaoComplementar;
     private LocalDate campo11DataEmissao;
     private LocalDate campo12DataOperacao;
@@ -54,7 +49,7 @@ public class SFC500NotaFiscalEnergiaEletrica implements SFLinha {
         linha.append(SFUtil.formatToString(this.campo02Operacao));
         linha.append(SFUtil.formatToString(this.campo03Emissao));
         linha.append(this.campo04CodigoParticipante);
-        linha.append(this.campo05CodigoModeloFiscal);
+        linha.append(SFUtil.formatToString(this.campo05CodigoModeloFiscal));
         linha.append(SFUtil.formatToString(this.campo06Situacao));
         linha.append(this.campo07Serie);
         linha.append(this.campo08Subserie);
@@ -90,7 +85,7 @@ public class SFC500NotaFiscalEnergiaEletrica implements SFLinha {
         return this;
     }
 
-    public SFC500NotaFiscalEnergiaEletrica setCampo05CodigoModeloFiscal(String campo05CodigoModeloFiscal) {
+    public SFC500NotaFiscalEnergiaEletrica setCampo05CodigoModeloFiscal(SFDocumentoModelo campo05CodigoModeloFiscal) {
         this.campo05CodigoModeloFiscal = campo05CodigoModeloFiscal;
         return this;
     }
