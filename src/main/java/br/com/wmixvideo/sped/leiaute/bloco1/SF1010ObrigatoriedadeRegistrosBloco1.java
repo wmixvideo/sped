@@ -7,26 +7,34 @@ import br.com.wmixvideo.sped.util.SFUtil;
 
 public class SF1010ObrigatoriedadeRegistrosBloco1 implements SFLinha {
 
-    private SFConfirmacao campo06OcorreuAverbacaoDeExportacao;
-    private SFConfirmacao campo05ExistemInformacoesDeCreditosDeIcms;
-    private SFConfirmacao campo03EhComercioVarejistaDeCombustiveis;
-    private SFConfirmacao campo08UsinasDeAcucarEAlcool;
-    private SFConfirmacao campo04ExistemInformacoesASeremPrestadasNesteRegistro;
-    private SFConfirmacao campo02DistribuidoraDeEnergiaOutraUF;
-    private SFConfirmacao campo10VendasComCartaoDeCreditoOuDeDebito;
+    private SFConfirmacao campo02OcorreuAverbacaoDeExportacao;
+    private SFConfirmacao campo03ExistemInformacoesDeCreditosDeIcms;
+    private SFConfirmacao campo04EhComercioVarejistaDeCombustiveis;
+    private SFConfirmacao campo05UsinasDeAcucarEAlcool;
+    private SFConfirmacao campo06ExistemInformacoesASeremPrestadasNesteRegistro;
+    private SFConfirmacao campo07DistribuidoraDeEnergiaOutraUF;
+    private SFConfirmacao campo08VendasComInstrumentosDePagamentosEletronicos;
     private SFConfirmacao campo09UtilizacaoDeDocumentosFiscaisEmPapel;
-    private SFConfirmacao campo07PrestouServicosDeTransporteAereo;
+    private SFConfirmacao campo10PrestouServicosDeTransporteAereo;
+    private SFConfirmacao campo11PossuiInfoGaf1;
+    private SFConfirmacao campo12PossuiInfoGaf3;
+    private SFConfirmacao campo13PossuiInfoGaf4;
+    private SFConfirmacao campo14PossuiInformacaoConsolidadaDeRestituicaoRessarcimentoEComplementacaoDoIcms;
 
     public SF1010ObrigatoriedadeRegistrosBloco1() {
-        this.campo02DistribuidoraDeEnergiaOutraUF = SFConfirmacao.NAO;
-        this.campo03EhComercioVarejistaDeCombustiveis = SFConfirmacao.NAO;
-        this.campo04ExistemInformacoesASeremPrestadasNesteRegistro = SFConfirmacao.NAO;
-        this.campo05ExistemInformacoesDeCreditosDeIcms = SFConfirmacao.NAO;
-        this.campo06OcorreuAverbacaoDeExportacao = SFConfirmacao.NAO;
-        this.campo07PrestouServicosDeTransporteAereo = SFConfirmacao.NAO;
-        this.campo08UsinasDeAcucarEAlcool = SFConfirmacao.NAO;
+        this.campo02OcorreuAverbacaoDeExportacao = SFConfirmacao.NAO;
+        this.campo03ExistemInformacoesDeCreditosDeIcms = SFConfirmacao.NAO;
+        this.campo04EhComercioVarejistaDeCombustiveis = SFConfirmacao.NAO;
+        this.campo05UsinasDeAcucarEAlcool = SFConfirmacao.NAO;
+        this.campo06ExistemInformacoesASeremPrestadasNesteRegistro = SFConfirmacao.NAO;
+        this.campo07DistribuidoraDeEnergiaOutraUF = SFConfirmacao.NAO;
+        this.campo08VendasComInstrumentosDePagamentosEletronicos = SFConfirmacao.NAO;
         this.campo09UtilizacaoDeDocumentosFiscaisEmPapel = SFConfirmacao.NAO;
-        this.campo10VendasComCartaoDeCreditoOuDeDebito = SFConfirmacao.NAO;
+        this.campo10PrestouServicosDeTransporteAereo = SFConfirmacao.NAO;
+        this.campo11PossuiInfoGaf1 = SFConfirmacao.NAO;
+        this.campo12PossuiInfoGaf3 = SFConfirmacao.NAO;
+        this.campo13PossuiInfoGaf4 = SFConfirmacao.NAO;
+        this.campo14PossuiInformacaoConsolidadaDeRestituicaoRessarcimentoEComplementacaoDoIcms = SFConfirmacao.NAO;
     }
 
     @Override
@@ -38,50 +46,54 @@ public class SF1010ObrigatoriedadeRegistrosBloco1 implements SFLinha {
     public String toString() {
         final SFStringBuilder linha = new SFStringBuilder();
         linha.append(this.getCampo01CodigoRegistro());
-        linha.append(SFUtil.formatToString(this.campo02DistribuidoraDeEnergiaOutraUF));
-        linha.append(SFUtil.formatToString(this.campo03EhComercioVarejistaDeCombustiveis));
-        linha.append(SFUtil.formatToString(this.campo04ExistemInformacoesASeremPrestadasNesteRegistro));
-        linha.append(SFUtil.formatToString(this.campo05ExistemInformacoesDeCreditosDeIcms));
-        linha.append(SFUtil.formatToString(this.campo06OcorreuAverbacaoDeExportacao));
-        linha.append(SFUtil.formatToString(this.campo07PrestouServicosDeTransporteAereo));
-        linha.append(SFUtil.formatToString(this.campo08UsinasDeAcucarEAlcool));
+        linha.append(SFUtil.formatToString(this.campo02OcorreuAverbacaoDeExportacao));
+        linha.append(SFUtil.formatToString(this.campo03ExistemInformacoesDeCreditosDeIcms));
+        linha.append(SFUtil.formatToString(this.campo04EhComercioVarejistaDeCombustiveis));
+        linha.append(SFUtil.formatToString(this.campo05UsinasDeAcucarEAlcool));
+        linha.append(SFUtil.formatToString(this.campo06ExistemInformacoesASeremPrestadasNesteRegistro));
+        linha.append(SFUtil.formatToString(this.campo07DistribuidoraDeEnergiaOutraUF));
+        linha.append(SFUtil.formatToString(this.campo08VendasComInstrumentosDePagamentosEletronicos));
         linha.append(SFUtil.formatToString(this.campo09UtilizacaoDeDocumentosFiscaisEmPapel));
-        linha.append(SFUtil.formatToString(this.campo10VendasComCartaoDeCreditoOuDeDebito));
+        linha.append(SFUtil.formatToString(this.campo10PrestouServicosDeTransporteAereo));
+        linha.append(SFUtil.formatToString(this.campo11PossuiInfoGaf1));
+        linha.append(SFUtil.formatToString(this.campo12PossuiInfoGaf3));
+        linha.append(SFUtil.formatToString(this.campo13PossuiInfoGaf4));
+        linha.append(SFUtil.formatToString(this.campo14PossuiInformacaoConsolidadaDeRestituicaoRessarcimentoEComplementacaoDoIcms));
         return linha.toString();
     }
 
-    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo02DistribuidoraDeEnergiaOutraUF(SFConfirmacao campo02DistribuidoraDeEnergiaOutraUF) {
-        this.campo02DistribuidoraDeEnergiaOutraUF = campo02DistribuidoraDeEnergiaOutraUF;
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo02OcorreuAverbacaoDeExportacao(SFConfirmacao campo02OcorreuAverbacaoDeExportacao) {
+        this.campo02OcorreuAverbacaoDeExportacao = campo02OcorreuAverbacaoDeExportacao;
         return this;
     }
 
-    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo03EhComercioVarejistaDeCombustiveis(SFConfirmacao campo03EhComercioVarejistaDeCombustiveis) {
-        this.campo03EhComercioVarejistaDeCombustiveis = campo03EhComercioVarejistaDeCombustiveis;
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo03ExistemInformacoesDeCreditosDeIcms(SFConfirmacao campo03ExistemInformacoesDeCreditosDeIcms) {
+        this.campo03ExistemInformacoesDeCreditosDeIcms = campo03ExistemInformacoesDeCreditosDeIcms;
         return this;
     }
 
-    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo04ExistemInformacoesASeremPrestadasNesteRegistro(SFConfirmacao campo04ExistemInformacoesASeremPrestadasNesteRegistro) {
-        this.campo04ExistemInformacoesASeremPrestadasNesteRegistro = campo04ExistemInformacoesASeremPrestadasNesteRegistro;
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo04EhComercioVarejistaDeCombustiveis(SFConfirmacao campo04EhComercioVarejistaDeCombustiveis) {
+        this.campo04EhComercioVarejistaDeCombustiveis = campo04EhComercioVarejistaDeCombustiveis;
         return this;
     }
 
-    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo05ExistemInformacoesDeCreditosDeIcms(SFConfirmacao campo05ExistemInformacoesDeCreditosDeIcms) {
-        this.campo05ExistemInformacoesDeCreditosDeIcms = campo05ExistemInformacoesDeCreditosDeIcms;
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo05UsinasDeAcucarEAlcool(SFConfirmacao campo05UsinasDeAcucarEAlcool) {
+        this.campo05UsinasDeAcucarEAlcool = campo05UsinasDeAcucarEAlcool;
         return this;
     }
 
-    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo06OcorreuAverbacaoDeExportacao(SFConfirmacao campo06OcorreuAverbacaoDeExportacao) {
-        this.campo06OcorreuAverbacaoDeExportacao = campo06OcorreuAverbacaoDeExportacao;
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo06ExistemInformacoesASeremPrestadasNesteRegistro(SFConfirmacao campo06ExistemInformacoesASeremPrestadasNesteRegistro) {
+        this.campo06ExistemInformacoesASeremPrestadasNesteRegistro = campo06ExistemInformacoesASeremPrestadasNesteRegistro;
         return this;
     }
 
-    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo07PrestouServicosDeTransporteAereo(SFConfirmacao campo07PrestouServicosDeTransporteAereo) {
-        this.campo07PrestouServicosDeTransporteAereo = campo07PrestouServicosDeTransporteAereo;
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo07DistribuidoraDeEnergiaOutraUF(SFConfirmacao campo07DistribuidoraDeEnergiaOutraUF) {
+        this.campo07DistribuidoraDeEnergiaOutraUF = campo07DistribuidoraDeEnergiaOutraUF;
         return this;
     }
 
-    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo08UsinasDeAcucarEAlcool(SFConfirmacao campo08UsinasDeAcucarEAlcool) {
-        this.campo08UsinasDeAcucarEAlcool = campo08UsinasDeAcucarEAlcool;
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo08VendasComInstrumentosDePagamentosEletronicos(SFConfirmacao campo08VendasComInstrumentosDePagamentosEletronicos) {
+        this.campo08VendasComInstrumentosDePagamentosEletronicos = campo08VendasComInstrumentosDePagamentosEletronicos;
         return this;
     }
 
@@ -90,8 +102,28 @@ public class SF1010ObrigatoriedadeRegistrosBloco1 implements SFLinha {
         return this;
     }
 
-    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo10VendasComCartaoDeCreditoOuDeDebito(SFConfirmacao campo10VendasComCartaoDeCreditoOuDeDebito) {
-        this.campo10VendasComCartaoDeCreditoOuDeDebito = campo10VendasComCartaoDeCreditoOuDeDebito;
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo10PrestouServicosDeTransporteAereo(SFConfirmacao campo10PrestouServicosDeTransporteAereo) {
+        this.campo10PrestouServicosDeTransporteAereo = campo10PrestouServicosDeTransporteAereo;
+        return this;
+    }
+
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo11PossuiInfoGaf1(SFConfirmacao campo11PossuiInfoGaf1) {
+        this.campo11PossuiInfoGaf1 = campo11PossuiInfoGaf1;
+        return this;
+    }
+
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo12PossuiInfoGaf3(SFConfirmacao campo12PossuiInfoGaf3) {
+        this.campo12PossuiInfoGaf3 = campo12PossuiInfoGaf3;
+        return this;
+    }
+
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo13PossuiInfoGaf4(SFConfirmacao campo13PossuiInfoGaf4) {
+        this.campo13PossuiInfoGaf4 = campo13PossuiInfoGaf4;
+        return this;
+    }
+
+    public SF1010ObrigatoriedadeRegistrosBloco1 setCampo14PossuiInformacaoConsolidadaDeRestituicaoRessarcimentoEComplementacaoDoIcms(SFConfirmacao campo14PossuiInformacaoConsolidadaDeRestituicaoRessarcimentoEComplementacaoDoIcms) {
+        this.campo14PossuiInformacaoConsolidadaDeRestituicaoRessarcimentoEComplementacaoDoIcms = campo14PossuiInformacaoConsolidadaDeRestituicaoRessarcimentoEComplementacaoDoIcms;
         return this;
     }
 }
