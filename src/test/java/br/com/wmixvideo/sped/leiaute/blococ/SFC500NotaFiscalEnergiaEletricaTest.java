@@ -1,11 +1,6 @@
 package br.com.wmixvideo.sped.leiaute.blococ;
 
-import br.com.wmixvideo.sped.enums.SFClasseConsumoEnergial;
-import br.com.wmixvideo.sped.enums.SFGrupoTensaoEletrica;
-import br.com.wmixvideo.sped.enums.SFNotaFiscalEmissao;
-import br.com.wmixvideo.sped.enums.SFNotaFiscalOperacao;
-import br.com.wmixvideo.sped.enums.SFNotaFiscalSituacao;
-import br.com.wmixvideo.sped.enums.SFTipoLigacaoEletrica;
+import br.com.wmixvideo.sped.enums.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -21,7 +16,7 @@ public class SFC500NotaFiscalEnergiaEletricaTest {
                 .setCampo02Operacao(SFNotaFiscalOperacao.ENTRADA)
                 .setCampo03Emissao(SFNotaFiscalEmissao.TERCEIROS)
                 .setCampo04CodigoParticipante("11111111111")
-                .setCampo05CodigoModeloFiscal("111")
+                .setCampo05CodigoModeloFiscal(SFDocumentoModelo.NOTA_FISCAL_DE_ENERGIA_ELETRICA_ELETRONICA)
                 .setCampo06Situacao(SFNotaFiscalSituacao.DOCUMENTO_REGULAR)
                 .setCampo07Serie("001")
                 .setCampo08Subserie("0001")
@@ -45,6 +40,6 @@ public class SFC500NotaFiscalEnergiaEletricaTest {
                 .setCampo26TipoLigacao(SFTipoLigacaoEletrica.TRIFASICO)
                 .setCampo27GrupoTensao(SFGrupoTensaoEletrica.AS_ALTA_TENSAO);
 
-        Assert.assertEquals("|C500|0|1|11111111111|111|00|001|0001|02|123|10042016|09042016|10,50|10,60|10,70|10,80|10,90|11,00|11,10|11,20|11,30|11,40|321|11,50|11,60|3|06|", linha.toString());
+        Assert.assertEquals("|C500|0|1|11111111111|66|00|001|0001|02|123|10042016|09042016|10,50|10,60|10,70|10,80|10,90|11,00|11,10|11,20|11,30|11,40|321|11,50|11,60|3|06|", linha.toString());
     }
 }
